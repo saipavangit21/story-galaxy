@@ -2,6 +2,7 @@
 
 import { useMemo, useState, useRef, useCallback } from "react";
 import { signOut } from "next-auth/react";
+import Mascot from "./Mascot";
 import {
   stories,
   AGE_BANDS,
@@ -356,9 +357,7 @@ export default function AppShell({
       <section>
         <div className="hero-bg">
           <div className="hero-card">
-            <div className="hero-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4z" /></svg>
-            </div>
+            <Mascot size={110} className="hero-mascot" />
             <p className="hero-eyebrow">Story Galaxy</p>
             <h1>Welcome back, {userName}</h1>
             <p className="lede">A digital library of classic, curated stories for children ages 4&ndash;13 &mdash; ready to read or listen to, one shelf at a time.</p>
@@ -489,7 +488,12 @@ export default function AppShell({
             <button className={`chip ${lib.favOnly ? "active" : ""}`} onClick={() => setLib((p) => ({ ...p, favOnly: !p.favOnly }))}>&hearts; Favorites only</button>
           </div>
           <div className="book-grid">{filteredLibrary.map((s) => <BookCard key={s.id} story={s} showProgress />)}</div>
-          {filteredLibrary.length === 0 && <p className="empty-note">No stories match yet &mdash; try clearing a filter.</p>}
+          {filteredLibrary.length === 0 && (
+            <div>
+              <Mascot size={72} className="empty-mascot" />
+              <p className="empty-note">No stories match yet &mdash; try clearing a filter.</p>
+            </div>
+          )}
         </div>
       </section>
     );

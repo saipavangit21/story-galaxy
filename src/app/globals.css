@@ -81,11 +81,7 @@
     text-align:center;
     box-shadow:0 30px 70px -25px rgba(0,0,0,0.65);
   }
-  .hero-icon{
-    width:60px;height:60px;border-radius:50%;background:var(--gold);
-    display:flex;align-items:center;justify-content:center;margin:0 auto 1.3rem;color:var(--navy-deep);
-  }
-  .hero-icon svg{width:26px;height:26px;}
+  .hero-mascot{display:block;margin:0 auto 1rem;}
   .hero-eyebrow{
     font-weight:700;font-size:0.82rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--lavender);margin:0 0 0.9rem;
   }
@@ -275,7 +271,9 @@
   border-radius:22px;padding:2.4rem 2rem;
   box-shadow:0 30px 70px -25px rgba(0,0,0,0.65);
 }
+.auth-mascot{display:block;margin:-0.6rem auto 0.4rem;}
 .auth-brand{display:flex;align-items:center;justify-content:center;gap:0.6rem;font-family:"Playfair Display";font-style:italic;font-weight:700;font-size:1.3rem;color:var(--cream);margin-bottom:1.6rem;}
+.empty-mascot{display:block;margin:0 auto 0.8rem;}
 .auth-title{font-style:italic;font-size:1.7rem;margin:0 0 0.4rem;text-align:center;}
 .auth-sub{color:var(--ink-soft);font-size:0.92rem;text-align:center;margin:0 0 1.6rem;}
 .auth-field{display:flex;flex-direction:column;gap:0.35rem;margin-bottom:1.1rem;}

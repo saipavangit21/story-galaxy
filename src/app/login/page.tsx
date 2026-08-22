@@ -3,6 +3,7 @@
 import { useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { signIn } from "next-auth/react";
+import Mascot from "@/components/Mascot";
 
 function LoginForm() {
   const router = useRouter();
@@ -30,6 +31,7 @@ function LoginForm() {
   return (
     <div className="auth-bg">
       <div className="auth-card">
+        <Mascot size={88} className="auth-mascot" />
         <div className="auth-brand">
           <span className="brand-badge">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4z" /></svg>
