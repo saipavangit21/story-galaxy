@@ -30,36 +30,41 @@
   html,body{margin:0;color:var(--cream);font-family:"Nunito",ui-sans-serif,system-ui,sans-serif;}
   body{
     position:relative;
-    background-color:var(--navy);
+    background-color:#0a0e22;
     background-image:
-      radial-gradient(2.2px 2.2px at 10% 12%, rgba(255,255,255,0.85), transparent 60%),
-      radial-gradient(1.6px 1.6px at 32% 68%, rgba(255,255,255,0.65), transparent 60%),
-      radial-gradient(2.4px 2.4px at 58% 24%, rgba(255,255,255,0.8), transparent 60%),
-      radial-gradient(1.8px 1.8px at 78% 78%, rgba(255,255,255,0.65), transparent 60%),
-      radial-gradient(2px 2px at 88% 15%, rgba(255,255,255,0.75), transparent 60%),
-      radial-gradient(1.5px 1.5px at 46% 92%, rgba(255,255,255,0.55), transparent 60%),
-      radial-gradient(2.2px 2.2px at 6% 55%, rgba(255,255,255,0.65), transparent 60%),
-      radial-gradient(1.8px 1.8px at 22% 40%, rgba(240,198,116,0.7), transparent 60%),
-      radial-gradient(1.6px 1.6px at 70% 55%, rgba(240,198,116,0.6), transparent 60%),
-      radial-gradient(900px 500px at 12% -8%, rgba(138,47,174,0.3), transparent 60%),
-      radial-gradient(800px 460px at 92% 8%, rgba(224,71,154,0.22), transparent 60%),
-      radial-gradient(760px 500px at 50% 100%, rgba(240,198,116,0.12), transparent 65%);
-    background-repeat:repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,no-repeat,no-repeat,no-repeat;
-    background-size:340px 340px,340px 340px,340px 340px,340px 340px,340px 340px,340px 340px,340px 340px,280px 280px,280px 280px,auto,auto,auto;
-    background-attachment:fixed,fixed,fixed,fixed,fixed,fixed,fixed,fixed,fixed,fixed,fixed,fixed;
-  }
-  body::before,body::after{
-    content:"";position:fixed;z-index:-1;border-radius:50%;pointer-events:none;filter:blur(1px);
-  }
-  body::before{
-    width:280px;height:280px;top:-90px;right:-70px;
-    background:radial-gradient(circle at 35% 35%, var(--gold-soft), var(--grad-4) 55%, transparent 72%);
-    opacity:0.22;
-  }
-  body::after{
-    width:220px;height:220px;bottom:-70px;left:-50px;
-    background:radial-gradient(circle at 35% 35%, var(--grad-2), var(--grad-1) 60%, transparent 72%);
-    opacity:0.2;
+      /* nebula clouds */
+      radial-gradient(55% 48% at 28% 32%, rgba(45,190,196,0.5), transparent 72%),
+      radial-gradient(48% 42% at 48% 55%, rgba(56,120,220,0.42), transparent 72%),
+      radial-gradient(58% 55% at 74% 26%, rgba(130,70,205,0.42), transparent 72%),
+      radial-gradient(50% 46% at 88% 66%, rgba(190,60,150,0.36), transparent 72%),
+      radial-gradient(42% 42% at 12% 78%, rgba(90,55,180,0.32), transparent 72%),
+      radial-gradient(60% 50% at 50% 100%, rgba(15,15,40,0.7), transparent 70%),
+      /* dense small stars */
+      radial-gradient(1.6px 1.6px at 9% 14%, #fff, transparent 60%),
+      radial-gradient(1.2px 1.2px at 21% 33%, #fff, transparent 60%),
+      radial-gradient(1.8px 1.8px at 34% 8%, #fff, transparent 60%),
+      radial-gradient(1.3px 1.3px at 44% 46%, #fff, transparent 60%),
+      radial-gradient(1.6px 1.6px at 56% 19%, #fff, transparent 60%),
+      radial-gradient(1.2px 1.2px at 63% 62%, #fff, transparent 60%),
+      radial-gradient(1.9px 1.9px at 72% 12%, #fff, transparent 60%),
+      radial-gradient(1.3px 1.3px at 81% 40%, #fff, transparent 60%),
+      radial-gradient(1.6px 1.6px at 91% 22%, #fff, transparent 60%),
+      radial-gradient(1.2px 1.2px at 15% 61%, #fff, transparent 60%),
+      radial-gradient(1.7px 1.7px at 27% 84%, #fff, transparent 60%),
+      radial-gradient(1.3px 1.3px at 39% 71%, #fff, transparent 60%),
+      radial-gradient(1.6px 1.6px at 52% 88%, #fff, transparent 60%),
+      radial-gradient(1.2px 1.2px at 68% 78%, #fff, transparent 60%),
+      radial-gradient(1.8px 1.8px at 85% 90%, #fff, transparent 60%),
+      radial-gradient(1.3px 1.3px at 95% 58%, #fff, transparent 60%),
+      radial-gradient(1.6px 1.6px at 6% 45%, #fff, transparent 60%),
+      radial-gradient(1.2px 1.2px at 60% 35%, #fff, transparent 60%),
+      /* bright flare stars */
+      radial-gradient(2.6px 2.6px at 24% 22%, #fff, transparent 65%),
+      radial-gradient(2.6px 2.6px at 78% 68%, #fff, transparent 65%),
+      radial-gradient(2.2px 2.2px at 50% 12%, #fff, transparent 65%);
+    background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,no-repeat,no-repeat,no-repeat;
+    background-size:auto,auto,auto,auto,auto,auto,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,auto,auto,auto;
+    background-attachment:fixed;
   }
   h1,h2,h3,.serif{font-family:"Baloo 2",ui-rounded,"Nunito",sans-serif;}
   img{max-width:100%;}
