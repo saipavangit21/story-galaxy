@@ -32,39 +32,16 @@
     position:relative;
     background-color:#0a0e22;
     background-image:
-      /* nebula clouds */
-      radial-gradient(55% 48% at 28% 32%, rgba(45,190,196,0.5), transparent 72%),
-      radial-gradient(48% 42% at 48% 55%, rgba(56,120,220,0.42), transparent 72%),
-      radial-gradient(58% 55% at 74% 26%, rgba(130,70,205,0.42), transparent 72%),
-      radial-gradient(50% 46% at 88% 66%, rgba(190,60,150,0.36), transparent 72%),
-      radial-gradient(42% 42% at 12% 78%, rgba(90,55,180,0.32), transparent 72%),
-      radial-gradient(60% 50% at 50% 100%, rgba(15,15,40,0.7), transparent 70%),
-      /* dense small stars */
-      radial-gradient(1.6px 1.6px at 9% 14%, #fff, transparent 60%),
-      radial-gradient(1.2px 1.2px at 21% 33%, #fff, transparent 60%),
-      radial-gradient(1.8px 1.8px at 34% 8%, #fff, transparent 60%),
-      radial-gradient(1.3px 1.3px at 44% 46%, #fff, transparent 60%),
-      radial-gradient(1.6px 1.6px at 56% 19%, #fff, transparent 60%),
-      radial-gradient(1.2px 1.2px at 63% 62%, #fff, transparent 60%),
-      radial-gradient(1.9px 1.9px at 72% 12%, #fff, transparent 60%),
-      radial-gradient(1.3px 1.3px at 81% 40%, #fff, transparent 60%),
-      radial-gradient(1.6px 1.6px at 91% 22%, #fff, transparent 60%),
-      radial-gradient(1.2px 1.2px at 15% 61%, #fff, transparent 60%),
-      radial-gradient(1.7px 1.7px at 27% 84%, #fff, transparent 60%),
-      radial-gradient(1.3px 1.3px at 39% 71%, #fff, transparent 60%),
-      radial-gradient(1.6px 1.6px at 52% 88%, #fff, transparent 60%),
-      radial-gradient(1.2px 1.2px at 68% 78%, #fff, transparent 60%),
-      radial-gradient(1.8px 1.8px at 85% 90%, #fff, transparent 60%),
-      radial-gradient(1.3px 1.3px at 95% 58%, #fff, transparent 60%),
-      radial-gradient(1.6px 1.6px at 6% 45%, #fff, transparent 60%),
-      radial-gradient(1.2px 1.2px at 60% 35%, #fff, transparent 60%),
-      /* bright flare stars */
-      radial-gradient(2.6px 2.6px at 24% 22%, #fff, transparent 65%),
-      radial-gradient(2.6px 2.6px at 78% 68%, #fff, transparent 65%),
-      radial-gradient(2.2px 2.2px at 50% 12%, #fff, transparent 65%);
-    background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,no-repeat,no-repeat,no-repeat;
-    background-size:auto,auto,auto,auto,auto,auto,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,260px 260px,auto,auto,auto;
-    background-attachment:fixed;
+      linear-gradient(180deg, rgba(10,14,34,0.5) 0%, rgba(10,14,34,0.72) 45%, rgba(10,14,34,0.94) 100%),
+      url("/nebula-bg.jpg");
+    background-repeat:no-repeat,no-repeat;
+    background-position:center,center 30%;
+    background-size:cover,cover;
+    background-attachment:fixed,fixed;
+  }
+  .bg-credit{
+    position:fixed;bottom:0.4rem;right:0.6rem;z-index:1;
+    font-size:0.65rem;color:rgba(255,255,255,0.35);pointer-events:none;
   }
   h1,h2,h3,.serif{font-family:"Baloo 2",ui-rounded,"Nunito",sans-serif;}
   img{max-width:100%;}

@@ -16,7 +16,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <p className="bg-credit">Background: NASA, ESA, CSA, STScI</p>
+      </body>
     </html>
   );
 }
