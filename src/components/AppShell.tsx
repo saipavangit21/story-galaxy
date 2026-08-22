@@ -302,7 +302,7 @@ export default function AppShell({
   function AgeTile({ band }: { band: (typeof AGE_BANDS)[number] }) {
     const count = visibleStories.filter((s) => s.age === band.id).length;
     return (
-      <div className="age-tile" tabIndex={0} onClick={() => enterLibrary({ age: band.id })}>
+      <div className="age-tile" style={{ ["--accent" as any]: band.color }} tabIndex={0} onClick={() => enterLibrary({ age: band.id })}>
         <span className="emoji">{band.emoji}</span>
         <div className="label">{band.label}</div>
         <div className="count">{count} {count === 1 ? "story" : "stories"}</div>

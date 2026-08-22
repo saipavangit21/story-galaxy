@@ -171,11 +171,11 @@ export const ART: Record<string, string> = {
 };
 
 export const AGE_BANDS = [
-  { id:"4-5",  emoji:"🧸", label:"4–5 years",  name:"First Stories" },
-  { id:"6-7",  emoji:"🌈", label:"6–7 years",  name:"Bright Beginnings" },
-  { id:"8-9",  emoji:"🚀", label:"8–9 years",  name:"Story Explorers" },
-  { id:"10-11",emoji:"🧭", label:"10–11 years",name:"Chapter Seekers" },
-  { id:"12-13",emoji:"🧠", label:"12–13 years",name:"Deep Readers" }
+  { id:"4-5",  emoji:"🧸", label:"4–5 years",  name:"First Stories",     color:"#e08a6f" },
+  { id:"6-7",  emoji:"🌈", label:"6–7 years",  name:"Bright Beginnings", color:"#e0479a" },
+  { id:"8-9",  emoji:"🚀", label:"8–9 years",  name:"Story Explorers",   color:"#4f9fe0" },
+  { id:"10-11",emoji:"🧭", label:"10–11 years",name:"Chapter Seekers",   color:"#4fa39c" },
+  { id:"12-13",emoji:"🧠", label:"12–13 years",name:"Deep Readers",      color:"#b17bea" }
 ];
 export const AGE_MAP = Object.fromEntries(AGE_BANDS.map(a => [a.id, a]));
 
