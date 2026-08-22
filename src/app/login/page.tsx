@@ -34,7 +34,7 @@ function LoginForm() {
           <span className="brand-badge">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4z" /></svg>
           </span>
-          Story World
+          Story Galaxy
         </div>
         <h1 className="auth-title serif">Welcome back</h1>
         <p className="auth-sub">Log in to keep reading.</p>
@@ -53,7 +53,7 @@ function LoginForm() {
           </button>
         </form>
         <p className="auth-switch">
-          New to Story World? <a href="/register">Create an account</a>
+          New to Story Galaxy? <a href="/register">Create an account</a>
         </p>
       </div>
     </div>

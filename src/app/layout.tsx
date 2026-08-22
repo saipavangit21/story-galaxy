@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Story World",
+  title: "Story Galaxy",
   description: "A digital library of classic, curated stories for children ages 4–13.",
 };
 

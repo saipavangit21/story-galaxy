@@ -330,7 +330,7 @@ export default function AppShell({
           <span className="brand-badge">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4z" /></svg>
           </span>
-          Story World
+          Story Galaxy
         </button>
         <nav className="mainnav">
           {items.map(([v, label]) => (
@@ -359,7 +359,7 @@ export default function AppShell({
             <div className="hero-icon">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4z" /></svg>
             </div>
-            <p className="hero-eyebrow">Story World</p>
+            <p className="hero-eyebrow">Story Galaxy</p>
             <h1>Welcome back, {userName}</h1>
             <p className="lede">A digital library of classic, curated stories for children ages 4&ndash;13 &mdash; ready to read or listen to, one shelf at a time.</p>
             <div className="hero-actions">
@@ -397,7 +397,7 @@ export default function AppShell({
         </div>
 
         <div className="wrap tight">
-          <div className="section-head"><h2>&#10024; New on Story World</h2><button className="link-more" onClick={() => enterLibrary({ sort: "new" })}>See all &rarr;</button></div>
+          <div className="section-head"><h2>&#10024; New on Story Galaxy</h2><button className="link-more" onClick={() => enterLibrary({ sort: "new" })}>See all &rarr;</button></div>
           <div className="strip">{visibleStories.filter((s) => s.isNew).map((s) => <BookCard key={s.id} story={s} />)}</div>
         </div>
       </section>
@@ -623,7 +623,7 @@ export default function AppShell({
           <div className="parents-grid">
             <div className="parents-card">
               <h3>What&apos;s in the library</h3>
-              <p>About <strong>80% classic tales</strong>, marked <span className="pill-tag pill-classic" style={{ display: "inline-block" }}>Classic Tale</span>, and <strong>20% Story World originals</strong>, marked <span className="pill-tag pill-original" style={{ display: "inline-block" }}>Original</span>.</p>
+              <p>About <strong>80% classic tales</strong>, marked <span className="pill-tag pill-classic" style={{ display: "inline-block" }}>Classic Tale</span>, and <strong>20% Story Galaxy originals</strong>, marked <span className="pill-tag pill-original" style={{ display: "inline-block" }}>Original</span>.</p>
             </div>
             <div className="parents-card">
               <h3>Content settings</h3>
@@ -683,7 +683,7 @@ export default function AppShell({
         {view === "audio" && <AudioView />}
         {view === "parent" && <ParentView />}
       </main>
-      <footer>Story World &mdash; a shelf of tales for ages 4 to 13.</footer>
+      <footer>Story Galaxy &mdash; a shelf of tales for ages 4 to 13.</footer>
     </>
   );
 }
