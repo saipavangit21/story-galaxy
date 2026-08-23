@@ -24,7 +24,6 @@ export default function Mascot({ size = 96, className }: { size?: number; classN
         <path d="M54 27c5-7 4-16-1-19-2 5-1 8 1 12-3-2-6-2-9-1 3 3 6 6 6 8z" fill="var(--grad-2)" opacity="0.65" />
 
         <circle cx="36" cy="53" r="28" fill="var(--grad-4)" />
-        <path d="M18 58c2 10 9 16 18 16s16-6 18-16c-3 5-10 9-18 9s-15-4-18-9z" fill="var(--cream)" />
         <ellipse cx="18" cy="56" rx="5.5" ry="3.6" fill="var(--grad-2)" opacity="0.55" />
         <ellipse cx="54" cy="56" rx="5.5" ry="3.6" fill="var(--grad-2)" opacity="0.55" />
         <circle cx="26.5" cy="47" r="5.4" fill="var(--navy-deep)" />
