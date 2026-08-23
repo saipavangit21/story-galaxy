@@ -219,6 +219,8 @@
   .back-btn svg{width:16px;height:16px;}
   .detail-cover{position:relative;height:200px;border-radius:18px;overflow:hidden;margin-bottom:1.6rem;}
   .detail-cover svg{width:100%;height:100%;display:block;}
+  .reader-cover{position:relative;height:150px;border-radius:16px;overflow:hidden;margin-bottom:1.4rem;}
+  .reader-cover svg{width:100%;height:100%;display:block;}
   .detail-tags{display:flex;gap:0.5rem;margin-bottom:0.9rem;flex-wrap:wrap;}
   .detail-title{font-size:clamp(1.8rem,4vw,2.4rem);margin:0 0 0.6rem;text-wrap:balance;}
   .detail-blurb{color:var(--ink-soft);font-size:1.02rem;line-height:1.6;margin-bottom:1.4rem;}

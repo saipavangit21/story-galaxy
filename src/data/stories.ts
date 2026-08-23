@@ -167,6 +167,75 @@ export const ART: Record<string, string> = {
     <circle cx="43" cy="51" r="5" fill="var(--accent)"/>
     <line x1="43" y1="58" x2="43" y2="90" stroke="var(--silo)" stroke-width="2.4"/>
     <path d="M43 70 Q52 66 54 74" stroke="var(--silo)" stroke-width="2" fill="none"/>
+  `,
+  "lighthouse-lullaby": `
+    <path d="M0 92 H160 V100 H0 Z" fill="var(--silo)" opacity="0.6"/>
+    <path d="M0 90 Q40 82 80 90 T160 88 V100 H0 Z" fill="var(--silo)"/>
+    <polygon points="24,90 32,20 40,20 48,90" fill="var(--silo)"/>
+    <rect x="26" y="14" width="18" height="10" fill="var(--silo)"/>
+    <circle cx="35" cy="19" r="4" fill="var(--hl)"/>
+    <path d="M44 18 Q70 12 96 24" stroke="var(--hl)" stroke-width="1.6" fill="none" opacity="0.7"/>
+    <path d="M44 26 Q70 22 100 34" stroke="var(--hl)" stroke-width="1.2" fill="none" opacity="0.5"/>
+    <ellipse cx="118" cy="80" rx="20" ry="7" fill="var(--silo)"/>
+    <polygon points="112,80 116,64 122,80" fill="var(--silo)"/>
+  `,
+  "witch-wool-blanket": `
+    <path d="M0 92 H160 V100 H0 Z" fill="var(--silo)" opacity="0.5"/>
+    <path d="M20 92 Q30 40 60 30 Q56 60 50 92 Z" fill="var(--silo)"/>
+    <circle cx="58" cy="24" r="9" fill="var(--hl)"/>
+    <rect x="90" y="50" width="46" height="34" rx="4" fill="var(--silo)" opacity="0.85"/>
+    <path d="M90 58 Q113 50 136 58" stroke="var(--hl)" stroke-width="1.6" fill="none"/>
+    <path d="M90 68 Q113 60 136 68" stroke="var(--hl)" stroke-width="1.6" fill="none"/>
+    <path d="M90 78 Q113 70 136 78" stroke="var(--hl)" stroke-width="1.6" fill="none"/>
+    <circle cx="18" cy="20" r="1.4" fill="var(--hl)"/><circle cx="30" cy="14" r="1.2" fill="var(--hl)"/>
+  `,
+  "ghost-of-maple-house": `
+    <path d="M0 92 H160 V100 H0 Z" fill="var(--silo)" opacity="0.55"/>
+    <rect x="18" y="46" width="60" height="46" fill="var(--silo)"/>
+    <polygon points="10,46 48,20 86,46" fill="var(--silo)"/>
+    <rect x="40" y="64" width="16" height="28" fill="var(--hl)" opacity="0.4"/>
+    <path d="M110 40 Q100 40 100 55 Q100 72 112 74 Q124 72 124 55 Q124 40 114 40 Z" fill="var(--hl)" opacity="0.75"/>
+    <circle cx="106" cy="54" r="2.4" fill="var(--silo)"/><circle cx="118" cy="54" r="2.4" fill="var(--silo)"/>
+    <path d="M107 62 Q112 66 117 62" stroke="var(--silo)" stroke-width="1.6" fill="none"/>
+  `,
+  "attic-that-hummed": `
+    <path d="M0 92 H160 V100 H0 Z" fill="var(--silo)" opacity="0.55"/>
+    <rect x="30" y="52" width="70" height="40" fill="var(--silo)"/>
+    <polygon points="22,52 65,26 108,52" fill="var(--silo)"/>
+    <rect x="56" y="34" width="18" height="16" fill="var(--hl)" opacity="0.5"/>
+    <circle cx="128" cy="30" r="10" fill="var(--hl)"/>
+    <path d="M40 68 Q65 60 90 68" stroke="var(--hl)" stroke-width="1.4" fill="none" opacity="0.6"/>
+    <path d="M40 78 Q65 70 90 78" stroke="var(--hl)" stroke-width="1.2" fill="none" opacity="0.4"/>
+  `,
+  "case-of-missing-honey": `
+    <ellipse cx="80" cy="90" rx="78" ry="10" fill="var(--silo)" opacity="0.4"/>
+    <ellipse cx="120" cy="60" rx="18" ry="24" fill="var(--silo)"/>
+    <ellipse cx="120" cy="42" rx="12" ry="10" fill="var(--silo)"/>
+    <circle cx="40" cy="70" r="16" fill="var(--accent)" opacity="0.65"/>
+    <circle cx="40" cy="70" r="10" fill="var(--hl)" opacity="0.5"/>
+    <circle cx="66" cy="52" r="2" fill="var(--hl)"/><circle cx="74" cy="60" r="1.6" fill="var(--hl)"/><circle cx="60" cy="40" r="1.4" fill="var(--hl)"/>
+  `,
+  "clockmakers-riddle": `
+    <path d="M0 92 H160 V100 H0 Z" fill="var(--silo)" opacity="0.55"/>
+    <rect x="64" y="30" width="32" height="62" fill="var(--silo)"/>
+    <circle cx="80" cy="34" r="20" fill="var(--silo)"/>
+    <circle cx="80" cy="34" r="15" fill="var(--hl)" opacity="0.4"/>
+    <line x1="80" y1="34" x2="80" y2="22" stroke="var(--silo)" stroke-width="2"/>
+    <line x1="80" y1="34" x2="90" y2="34" stroke="var(--silo)" stroke-width="2"/>
+  `,
+  "last-tide-map": `
+    <path d="M0 78 Q40 66 80 78 T160 76 V100 H0 Z" fill="var(--silo)"/>
+    <rect x="60" y="30" width="4" height="42" fill="var(--silo)"/>
+    <path d="M64 32 L100 40 L64 50 Z" fill="var(--hl)" opacity="0.7"/>
+    <ellipse cx="60" cy="76" rx="30" ry="10" fill="var(--silo)"/>
+    <circle cx="20" cy="18" r="9" fill="var(--hl)"/>
+    <circle cx="120" cy="26" r="1.6" fill="var(--hl)"/><circle cx="134" cy="16" r="1.2" fill="var(--hl)"/>
+  `,
+  "tiny-stars-first-spell": `
+    <circle cx="80" cy="50" r="65" fill="var(--accent)" opacity="0.12"/>
+    <circle cx="80" cy="50" r="8" fill="var(--hl)"/>
+    <path d="M80 34 L83 46 L95 50 L83 54 L80 66 L77 54 L65 50 L77 46 Z" fill="var(--hl)"/>
+    <circle cx="30" cy="26" r="1.6" fill="var(--hl)"/><circle cx="130" cy="30" r="1.4" fill="var(--hl)"/><circle cx="40" cy="76" r="1.4" fill="var(--hl)"/><circle cx="120" cy="72" r="1.6" fill="var(--hl)"/>
   `
 };
 

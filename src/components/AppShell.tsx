@@ -633,6 +633,7 @@ export default function AppShell({
   function ReaderView() {
     if (!currentStory) return null;
     const s = currentStory;
+    const cat = CAT_MAP[s.category];
     const pages = paginate(s);
     const idx = Math.min(readerIndex, pages.length - 1);
     const pct = Math.round(((idx + 1) / pages.length) * 100);
@@ -655,6 +656,10 @@ export default function AppShell({
             </div>
           </div>
           <div className="reader-progress"><i style={{ width: `${pct}%` }} /></div>
+          <div className="reader-cover" style={{ background: `linear-gradient(155deg, ${s.accent}, color-mix(in srgb, ${s.accent} 45%, #140b28))` }}>
+            <span dangerouslySetInnerHTML={{ __html: renderArt(s) }} />
+            <span className="cover-badge">{cat.emoji}</span>
+          </div>
           <div className="story-text" style={{ ["--font-scale" as any]: fontScale }}>
             {pages[idx].map((p, i) => <p key={i}>{p}</p>)}
           </div>
