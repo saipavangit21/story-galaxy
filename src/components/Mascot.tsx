@@ -23,14 +23,18 @@ export default function Mascot({ size = 96, className }: { size?: number; classN
         <path d="M18 27c-5-7-4-16 1-19 2 5 1 8-1 12 3-2 6-2 9-1-3 3-6 6-6 8z" fill="var(--grad-2)" opacity="0.65" />
         <path d="M54 27c5-7 4-16-1-19-2 5-1 8 1 12-3-2-6-2-9-1 3 3 6 6 6 8z" fill="var(--grad-2)" opacity="0.65" />
 
-        <circle cx="36" cy="52" r="28" fill="var(--grad-4)" />
-        <path d="M20 58c2 9 8 14 16 14s14-5 16-14c-3 4-9 7-16 7s-13-3-16-7z" fill="var(--cream)" />
-        <circle cx="27" cy="48" r="4.2" fill="var(--navy-deep)" />
-        <circle cx="45" cy="48" r="4.2" fill="var(--navy-deep)" />
-        <circle cx="25.6" cy="46.6" r="1.2" fill="var(--cream)" />
-        <circle cx="43.6" cy="46.6" r="1.2" fill="var(--cream)" />
-        <path d="M32 58q4 3 8 0" stroke="var(--navy-deep)" strokeWidth="1.6" fill="none" strokeLinecap="round" />
-        <ellipse cx="36" cy="54" rx="2.6" ry="2" fill="var(--navy-deep)" />
+        <circle cx="36" cy="53" r="28" fill="var(--grad-4)" />
+        <path d="M18 58c2 10 9 16 18 16s16-6 18-16c-3 5-10 9-18 9s-15-4-18-9z" fill="var(--cream)" />
+        <ellipse cx="18" cy="56" rx="5.5" ry="3.6" fill="var(--grad-2)" opacity="0.55" />
+        <ellipse cx="54" cy="56" rx="5.5" ry="3.6" fill="var(--grad-2)" opacity="0.55" />
+        <circle cx="26.5" cy="47" r="5.4" fill="var(--navy-deep)" />
+        <circle cx="45.5" cy="47" r="5.4" fill="var(--navy-deep)" />
+        <circle cx="24.6" cy="44.8" r="1.7" fill="var(--cream)" />
+        <circle cx="43.6" cy="44.8" r="1.7" fill="var(--cream)" />
+        <circle cx="28.3" cy="49.4" r="0.9" fill="var(--cream)" opacity="0.8" />
+        <circle cx="47.3" cy="49.4" r="0.9" fill="var(--cream)" opacity="0.8" />
+        <path d="M31 59q5 4 10 0" stroke="var(--navy-deep)" strokeWidth="1.8" fill="none" strokeLinecap="round" />
+        <ellipse cx="36" cy="54.5" rx="2.4" ry="1.8" fill="var(--navy-deep)" />
 
         <line x1="36" y1="19" x2="36" y2="8" stroke="var(--gold)" strokeWidth="2" strokeLinecap="round" />
         <circle cx="36" cy="6" r="3.4" fill="var(--gold)" />
