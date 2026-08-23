@@ -243,12 +243,8 @@
     padding:1.6rem 1.7rem 2rem;
     box-shadow:0 24px 50px -24px rgba(0,0,0,0.55), inset 0 0 0 1px rgba(140,100,50,0.12);
   }
-  .book-page .reader-cover{margin-bottom:1.2rem;box-shadow:0 6px 16px -8px rgba(0,0,0,0.4);}
-  .page-spine{
-    position:absolute;left:50%;top:0;bottom:0;width:26px;margin-left:-13px;
-    background:linear-gradient(90deg, transparent, rgba(140,100,50,0.16) 45%, rgba(140,100,50,0.16) 55%, transparent);
-    pointer-events:none;
-  }
+  .reader-pics{display:flex;flex-direction:column;gap:0.9rem;margin-bottom:1.4rem;}
+  .book-page .reader-cover{margin-bottom:0;box-shadow:0 6px 16px -8px rgba(0,0,0,0.4);}
   .story-text{font-size:calc(1.08rem * var(--font-scale));position:relative;}
   .story-text p{line-height:1.85;color:#3a2c1a;margin:0 0 1.15rem;}
   .story-text p:first-of-type::first-letter{
