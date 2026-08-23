@@ -219,7 +219,7 @@
   .back-btn svg{width:16px;height:16px;}
   .detail-cover{position:relative;height:200px;border-radius:18px;overflow:hidden;margin-bottom:1.6rem;}
   .detail-cover svg{width:100%;height:100%;display:block;}
-  .reader-cover{position:relative;height:150px;border-radius:16px;overflow:hidden;margin-bottom:1.4rem;}
+  .reader-cover{position:relative;height:150px;border-radius:12px;overflow:hidden;margin-bottom:1.4rem;}
   .reader-cover svg{width:100%;height:100%;display:block;}
   .detail-tags{display:flex;gap:0.5rem;margin-bottom:0.9rem;flex-wrap:wrap;}
   .detail-title{font-size:clamp(1.8rem,4vw,2.4rem);margin:0 0 0.6rem;text-wrap:balance;}
@@ -235,10 +235,23 @@
   .reader-progress > i{display:block;height:100%;background:var(--gold);transition:width .2s ease;}
   .font-controls{display:flex;align-items:center;gap:0.4rem;}
   .font-controls button{width:30px;height:30px;border-radius:50%;background:var(--navy-card);border:1px solid rgba(255,255,255,0.1);color:var(--cream);cursor:pointer;font-weight:700;}
-  .story-text{font-size:calc(1.08rem * var(--font-scale));}
-  .story-text p{line-height:1.85;color:#e9e2f6;margin:0 0 1.15rem;}
+  .book-page{
+    position:relative;
+    background:linear-gradient(155deg, #fbf3e2, #f3e6c9);
+    border-radius:14px;
+    padding:1.6rem 1.7rem 2rem;
+    box-shadow:0 24px 50px -24px rgba(0,0,0,0.55), inset 0 0 0 1px rgba(140,100,50,0.12);
+  }
+  .book-page .reader-cover{margin-bottom:1.2rem;box-shadow:0 6px 16px -8px rgba(0,0,0,0.4);}
+  .page-spine{
+    position:absolute;left:50%;top:0;bottom:0;width:26px;margin-left:-13px;
+    background:linear-gradient(90deg, transparent, rgba(140,100,50,0.16) 45%, rgba(140,100,50,0.16) 55%, transparent);
+    pointer-events:none;
+  }
+  .story-text{font-size:calc(1.08rem * var(--font-scale));position:relative;}
+  .story-text p{line-height:1.85;color:#3a2c1a;margin:0 0 1.15rem;}
   .story-text p:first-of-type::first-letter{
-    font-family:"Baloo 2";font-weight:700;font-size:calc(3rem * var(--font-scale));float:left;line-height:0.8;padding:0.1rem 0.5rem 0 0;color:var(--gold);
+    font-family:"Baloo 2";font-weight:700;font-size:calc(3rem * var(--font-scale));float:left;line-height:0.8;padding:0.1rem 0.5rem 0 0;color:var(--grad-1);
   }
   .page-nav{display:flex;align-items:center;justify-content:space-between;margin-top:2rem;gap:1rem;flex-wrap:wrap;}
   .page-counter{color:var(--lavender);font-size:0.88rem;font-weight:600;}

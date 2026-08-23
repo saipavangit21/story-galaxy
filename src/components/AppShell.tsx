@@ -656,12 +656,15 @@ export default function AppShell({
             </div>
           </div>
           <div className="reader-progress"><i style={{ width: `${pct}%` }} /></div>
-          <div className="reader-cover" style={{ background: `linear-gradient(155deg, ${s.accent}, color-mix(in srgb, ${s.accent} 45%, #140b28))` }}>
-            <span dangerouslySetInnerHTML={{ __html: renderArt(s) }} />
-            <span className="cover-badge">{cat.emoji}</span>
-          </div>
-          <div className="story-text" style={{ ["--font-scale" as any]: fontScale }}>
-            {pages[idx].map((p, i) => <p key={i}>{p}</p>)}
+          <div className="book-page">
+            <div className="reader-cover" style={{ background: `linear-gradient(155deg, ${s.accent}, color-mix(in srgb, ${s.accent} 45%, #140b28))` }}>
+              <span dangerouslySetInnerHTML={{ __html: renderArt(s) }} />
+              <span className="cover-badge">{cat.emoji}</span>
+            </div>
+            <div className="page-spine" />
+            <div className="story-text" style={{ ["--font-scale" as any]: fontScale }}>
+              {pages[idx].map((p, i) => <p key={i}>{p}</p>)}
+            </div>
           </div>
           <div className="page-nav">
             <button className="btn-ghost" disabled={idx === 0} onClick={() => goTo(idx - 1)}>&larr; Previous</button>
