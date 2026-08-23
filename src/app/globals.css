@@ -182,13 +182,15 @@
   .cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;}
   .cat-tile{
     border-radius:18px;padding:1.6rem 1.4rem;cursor:pointer;text-align:left;border:none;
-    background:linear-gradient(150deg, var(--accent), color-mix(in srgb, var(--accent) 45%, #140b28));
-    color:rgba(21,12,43,0.92);transition:transform .15s ease;
+    min-height:160px;display:flex;flex-direction:column;justify-content:flex-end;
+    background-size:cover;background-position:center;
+    color:var(--cream);transition:transform .15s ease;
+    box-shadow:0 16px 30px -18px rgba(0,0,0,0.6);
   }
-  .cat-tile:hover{transform:translateY(-3px);}
-  .cat-tile .emoji{font-size:2.2rem;}
-  .cat-tile .label{font-family:"Baloo 2";font-weight:800;font-size:1.3rem;margin:0.4rem 0 0.15rem;}
-  .cat-tile .feel{font-size:0.85rem;font-weight:600;opacity:0.85;}
+  .cat-tile:hover{transform:translateY(-3px) scale(1.02);}
+  .cat-tile .emoji{font-size:2.2rem;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.5));}
+  .cat-tile .label{font-family:"Baloo 2";font-weight:800;font-size:1.3rem;margin:0.4rem 0 0.15rem;text-shadow:0 2px 6px rgba(0,0,0,0.6);}
+  .cat-tile .feel{font-size:0.85rem;font-weight:600;opacity:0.92;text-shadow:0 1px 4px rgba(0,0,0,0.6);}
 
   .char-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;}
   .char-tile{background:var(--navy-card);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:1.2rem;text-align:center;cursor:pointer;}

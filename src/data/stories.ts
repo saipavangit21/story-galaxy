@@ -180,12 +180,12 @@ export const AGE_BANDS = [
 export const AGE_MAP = Object.fromEntries(AGE_BANDS.map(a => [a.id, a]));
 
 export const CATEGORIES = [
-  { id:"bedtime",   emoji:"🌙",  label:"Bedtime",    feel:"Calm, gentle",             color:"var(--c-bedtime)" },
-  { id:"adventure", emoji:"🏔️", label:"Adventure",  feel:"Exciting exploration",     color:"var(--c-adventure)" },
-  { id:"magical",   emoji:"✨",  label:"Magical",    feel:"Fantasy & imagination",    color:"var(--c-magical)" },
-  { id:"scary",     emoji:"👻",  label:"Scary",      feel:"Mild spooky stories",      color:"var(--c-scary)" },
-  { id:"mystery",   emoji:"🔎",  label:"Mystery",    feel:"Puzzles & investigation",  color:"var(--c-mystery)" },
-  { id:"fairytale", emoji:"🧚",  label:"Fairy Tales",feel:"Classic & fantasy",        color:"var(--c-fairytale)" }
+  { id:"bedtime",   emoji:"🌙",  label:"Bedtime",    feel:"Calm, gentle",             color:"var(--c-bedtime)",   image:"/categories/bedtime.jpg" },
+  { id:"adventure", emoji:"🏔️", label:"Adventure",  feel:"Exciting exploration",     color:"var(--c-adventure)", image:"/categories/adventure.jpg" },
+  { id:"magical",   emoji:"✨",  label:"Magical",    feel:"Fantasy & imagination",    color:"var(--c-magical)",   image:"/categories/magical.jpg" },
+  { id:"scary",     emoji:"👻",  label:"Scary",      feel:"Mild spooky stories",      color:"var(--c-scary)",     image:"/categories/scary.jpg" },
+  { id:"mystery",   emoji:"🔎",  label:"Mystery",    feel:"Puzzles & investigation",  color:"var(--c-mystery)",   image:"/categories/mystery.jpg" },
+  { id:"fairytale", emoji:"🧚",  label:"Fairy Tales",feel:"Classic & fantasy",        color:"var(--c-fairytale)", image:"/categories/fairytale.jpg" }
 ];
 export const CAT_MAP = Object.fromEntries(CATEGORIES.map(c => [c.id, c]));
 
@@ -935,6 +935,228 @@ The moment the words left her, the castle grounds filled with light. The Beast's
 "An enchantress cursed me years ago," he explained, once he'd recovered enough to speak, "for turning away an old woman who came to my door in need, not knowing she was truly a powerful fairy testing my character. She transformed me into a beast until someone could see past my appearance and love me regardless — and warned that if no one ever did, I would remain this way forever."
 
 Beauty, still faintly stunned by the sudden transformation, found she recognized something familiar and steady in his eyes regardless of the face around them — the same patient, gentle creature she'd grown to love over their long, quiet evenings, changed now only on the outside. They were married soon after, with Beauty's father and even, eventually, her sisters in attendance, and the castle that had once felt like a prison became, from that day forward, simply and happily, home.`
+  },
+  {
+    id:"lighthouse-lullaby", age:"6-7", category:"bedtime", character:"sea", tag:"original",
+    title:"The Lighthouse Keeper's Lullaby", accent:"#8393cf", minutes:5, rating:4.8,
+    popular:false, isNew:true, difficulty:"Easy",
+    blurb:"An old lighthouse keeper hums the tide to sleep every night, and one small fishing boat learns to listen for it.",
+    text:`Old Tomas kept the lighthouse at the end of Gull Point, and every single evening, just as the sun dipped below the water, he lit the great lamp and began to hum.
+
+It was not a loud hum. It was a low, rolling sort of tune, the kind that sounded like waves folding gently onto sand, and it drifted out over the harbor along with the beam of light.
+
+Nobody had ever taught Tomas the tune. He said the sea had taught it to him, a little more each year, until one day he simply knew the whole thing by heart.
+
+Down in the harbor, a small fishing boat named the Marigold was often the last one home. Her captain was a young woman named Nell, who fished the farthest waters and always seemed to lose track of time.
+
+On foggy nights, when Nell couldn't see the light through the mist, she would cut her engine and listen instead. And there it was — Tomas's low, rolling hum, floating out across the water, showing her the way home as surely as any beam of light could.
+
+"How do you always find your way back?" her little brother asked her once, tucked into the bow with a blanket around his shoulders.
+
+"I follow the lighthouse's lullaby," Nell said, steering gently toward the sound. "The sea gets sleepy at night, and so does everything on it. You just have to hum along, and it hums you home."
+
+Her brother thought that sounded like magic, but Nell just smiled, because to her it felt like something even better than magic — it felt like being expected, like somebody was always waiting up for her with a warm light and a familiar tune.
+
+That night, as the Marigold slid safely into harbor, Nell hummed the last few notes back toward the lighthouse, soft and sure. Up in his tower, Tomas heard it, smiled to himself, and turned the lamp down low, because the last boat was finally home, and the whole harbor could go to sleep.`
+  },
+  {
+    id:"witch-wool-blanket", age:"10-11", category:"bedtime", character:"witches", tag:"original",
+    title:"The Witch Who Knitted Dreams", accent:"#8393cf", minutes:8, rating:4.7,
+    popular:false, isNew:true, difficulty:"Growing",
+    blurb:"A retired witch knits blankets that give the sleeper one perfect dream — until one night she finally knits one for herself.",
+    text:`Old Hessa had given up spellcasting decades ago, back when her joints grew too stiff for wand-waving and her eyesight too soft for reading tiny curse-labels. But she had not given up magic entirely. She had simply moved it into her knitting needles.
+
+Every blanket Hessa made carried exactly one dream inside it, woven so carefully into the yarn that only the sleeper beneath it would ever notice. She sold them from a small cart at the edge of the village market — deep blue ones for dreams of flying, moss green for dreams of talking to animals, gold-flecked grey for dreams of finding something long lost.
+
+Children saved their coins for months to buy one. Parents whispered that Hessa's blankets were the only reason half the village slept soundly at all, in a world that could otherwise feel a little too loud, a little too uncertain, right before the lights went out.
+
+What almost nobody knew was that Hessa herself hadn't slept properly in nearly thirty years. She had knitted thousands of dreams into thousands of blankets, and never once, not a single time, had she thought to knit one for herself.
+
+"Why not?" asked Pip, a small girl who visited the cart every market day just to watch Hessa's needles click and dance, even though her family could rarely spare the coins to buy one.
+
+Hessa considered this for a long moment, her needles pausing mid-stitch for the first time that anyone could remember. "I suppose," she said slowly, "I never let myself believe I deserved a dream of my own. There's always been another blanket to finish, another child waiting."
+
+Pip thought this was possibly the saddest thing she had ever heard, and she said so, quite plainly, the way only children manage to say the truest things.
+
+That night, after the market closed and the cart was wheeled home, Hessa sat by her fire with a ball of the softest silver-blue wool she owned — wool she'd been saving, she realized now, for exactly this reason, without ever quite admitting it to herself. She knitted slowly, humming as she went, weaving in not someone else's dream, but a small piece of her own oldest wish: to fly, just once, over the village she'd spent her whole long life quietly looking after.
+
+When she finally wrapped the blanket around her own shoulders and closed her eyes, the dream came exactly as she'd stitched it — soaring low over rooftops she knew by heart, past the market cart and the children asleep beneath her handiwork, out over moonlit fields she hadn't properly seen in years.
+
+She woke the next morning feeling lighter than she had in decades, and when Pip came skipping up to the cart that afternoon, Hessa was already halfway through knitting a second blanket for herself — because it turned out, once you started believing you deserved a good dream, it was rather hard to stop.`
+  },
+  {
+    id:"ghost-of-maple-house", age:"8-9", category:"scary", character:"heroes", tag:"original",
+    title:"The Friendly Ghost of Maple House", accent:"#e08a3f", minutes:7, rating:4.6,
+    popular:false, isNew:true, difficulty:"Growing",
+    blurb:"Every new family that moves into Maple House hears footsteps at midnight — until one girl decides to say hello instead of scream.",
+    text:`Every family that had ever lived at Maple House left within a year, and every single one of them gave the same reason: footsteps. Slow, careful footsteps that crossed the upstairs hallway at exactly midnight, every single night, without fail.
+
+When the Okafor family moved in, their daughter Zuri heard about the footsteps from a neighbor before she'd even finished unpacking her books. "Everyone leaves," the neighbor warned, shaking her head. "Nobody's ever stayed past a year."
+
+Zuri, who was not easily frightened and was, if anything, extremely curious, decided this was less a warning and more an invitation.
+
+The first night, she lay awake until midnight arrived exactly on schedule, and sure enough — footsteps, slow and even, crossing the hallway just outside her door. Her heart pounded, but instead of pulling the blanket over her head like the families before her, she sat up, took a breath, and called out, "Hello? I can hear you."
+
+The footsteps stopped completely.
+
+"I'm not scared," Zuri added, which was only slightly true. "Well — not very scared. You can come say hello if you want. I don't mind."
+
+There was a long pause. Then, slowly, a boy appeared at the edge of her doorway — translucent, a little blurry around the edges like an old photograph left in the rain, wearing clothes that looked at least a hundred years out of fashion.
+
+"Nobody's ever asked me to say hello before," he said, sounding surprised. "They usually scream. Or move out. Sometimes both, quite quickly, in that order."
+
+"I'm Zuri," she said. "Who are you?"
+
+"Samuel," he said. "I used to live here. I still do, I suppose, though it's rather lonely, being the only one who stays."
+
+It turned out Samuel wasn't haunting anyone on purpose at all — he simply walked the hallway each midnight out of habit, the way he'd done every night as a boy checking that his little sister's door was shut tight against drafts, back when the house was warm and full and his.
+
+Once Zuri knew that, the footsteps stopped seeming frightening at all. She started leaving her door open a crack each night, and Samuel started pausing to chat before continuing his rounds — about the house's history, about how gardens used to look, about a hundred small things nobody living had thought to ask him in a very long time.
+
+The Okafor family stayed at Maple House for many years after that, far longer than anyone before them. And on quiet midnights, if you listened carefully from the hallway, you might still hear two sets of footsteps instead of one — one very much alive, and one simply glad, after all this time, of the company.`
+  },
+  {
+    id:"attic-that-hummed", age:"12-13", category:"scary", character:"heroes", tag:"original",
+    title:"The Attic That Hummed", accent:"#e08a3f", minutes:11, rating:4.7,
+    popular:false, isNew:true, difficulty:"Confident",
+    blurb:"Every house on Thistle Row has an attic, but only one hums after dark, and Mara is the only one who ever climbs the ladder to find out why.",
+    text:`Every house on Thistle Row had an attic, and every attic on Thistle Row was, by all accounts, perfectly ordinary — dusty, cobwebbed, full of the sort of forgotten boxes that nobody quite had the energy to sort through. Every attic, that is, except the one at number eleven, which had hummed, low and steady, every night for as long as anyone could remember.
+
+The Whitfields had lived at number eleven for three generations, and each generation had simply learned to live with the sound, the way you learn to live with a creaky stair or a draft under a particular door. Mara's grandmother called it "the house breathing." Her father called it "old pipes" and refused to discuss it further. Mara, at thirteen, found both explanations thoroughly unsatisfying.
+
+So one autumn evening, while her parents were occupied downstairs, Mara pulled down the attic ladder and climbed up with a flashlight clutched tightly in one hand.
+
+The humming grew louder as her head cleared the attic floor — not mechanical at all, she realized immediately, nothing like pipes or wind through gaps in the roofing. It was almost musical, a single low note that seemed to come from everywhere in the room at once, vibrating faintly through the floorboards beneath her palms.
+
+Her flashlight beam swept across the usual dusty boxes, an old rocking horse missing one ear, a stack of yellowed newspapers tied with string — and then landed on something Mara had never seen before: a small wooden chest, tucked into the farthest corner, humming so strongly now that the air itself seemed to shiver around it.
+
+Her hand hesitated over the latch for a long moment. Every instinct told her this was precisely the sort of thing that, in the stories her grandmother told, a sensible person left well alone. But Mara had never been especially good at leaving things alone, and the humming, up close, didn't feel threatening so much as patient — like something that had been waiting a very long time for someone curious enough to finally open it.
+
+Inside, nestled in a bed of ancient, moth-eaten velvet, sat a single tuning fork, tarnished with age, still faintly vibrating on its own with no visible cause at all.
+
+Tucked beside it was a folded note, the handwriting shaky and old-fashioned: "To whoever finds this — my sister and I made a promise, long before either of us had families of our own, that whichever of us passed first would send a sound the other could always follow home, no matter how far apart life took us. I never learned how to stop it ringing. I'm not certain I ever wanted to. If you can still hear it, know that it means someone, somewhere, is still waiting for someone else to come home. — E.W., 1931."
+
+Mara sat very still in the dusty attic for a long while after reading it, the tuning fork humming softly in her open palm, feeling considerably less like she'd uncovered something frightening and considerably more like she'd stumbled into the middle of a hundred-year-old promise that was never actually meant to be broken.
+
+She didn't tell her parents exactly what she'd found — only that the humming was nothing to worry about, which was, she decided, entirely true. She wrapped the tuning fork carefully back in its velvet and left it exactly where it was.
+
+That night, and every night after, when Mara heard the house humming faintly beneath her floorboards as she drifted off to sleep, she no longer heard an old, unexplained noise at all. She heard someone, somewhere long ago and far away, quietly keeping a promise — and she found, rather to her own surprise, that she didn't want it to ever stop.`
+  },
+  {
+    id:"case-of-missing-honey", age:"6-7", category:"mystery", character:"animals", tag:"original",
+    title:"The Case of the Missing Honey", accent:"#4fa39c", minutes:5, rating:4.8,
+    popular:true, isNew:true, difficulty:"Easy",
+    blurb:"Detective Bramble the badger investigates who's been sneaking honey from Mrs. Bumble's hive.",
+    text:`Mrs. Bumble the bee kept the finest honey in all of Thistledown Wood, and every morning for a week, a little had gone missing from her hive — just a smear here, a dab there, always overnight, always while she slept.
+
+"This calls," she announced, straightening her tiny apron, "for a detective."
+
+Luckily, Thistledown Wood had exactly one, and his name was Bramble — a badger with round spectacles, a magnifying glass he carried everywhere, and a nose that could sniff out clues nobody else had noticed.
+
+"First," said Bramble, kneeling by the hive, "we look for tracks." Sure enough, in the soft mud below, he found small, round paw prints leading away into the ferns. "Too small for a fox. Too big for a mouse."
+
+Next, he sniffed the empty honey jar left carelessly by the hive's entrance. "Sticky," he announced, "and smells faintly of... pine needles?"
+
+Bramble followed the paw prints and the piney smell together, deeper into the wood, past the old oak, past the stream, until they led straight to a hollow log where a small red squirrel named Ferdie was curled up fast asleep, honey still smeared adorably across his whiskers.
+
+"Ferdie!" gasped Mrs. Bumble, who had followed along the whole way, buzzing indignantly. "Was it you all along?"
+
+Ferdie woke with a guilty start. "I didn't mean to keep taking it," he admitted, cheeks turning pink beneath his fur. "I just moved into that pine grove nearby, and I didn't know anybody yet, and your honey smelled so warm and welcoming, and I suppose I got a bit carried away."
+
+Mrs. Bumble's indignant buzzing softened considerably. "You could have simply asked, you silly squirrel. I always share with neighbors — that's rather the whole point of having any."
+
+Detective Bramble closed his notebook with a satisfied click. "Case solved," he announced. "Though I'd say this one ends less with a culprit and more with a new friend."
+
+And it did — from then on, Ferdie visited Mrs. Bumble's hive every week, honey freely offered instead of secretly taken, and Bramble the badger got an open invitation to the honey-tasting that followed every single time, purely, he insisted, for professional reasons.`
+  },
+  {
+    id:"clockmakers-riddle", age:"10-11", category:"mystery", character:"heroes", tag:"original",
+    title:"The Clockmaker's Riddle", accent:"#4fa39c", minutes:9, rating:4.7,
+    popular:false, isNew:true, difficulty:"Growing",
+    blurb:"When the town's only clock stops at the same minute every day, twelve-year-old Theo sets out to learn why.",
+    text:`The great clock in the tower at the center of Ferrow had kept perfect time for over a hundred years, chiming faithfully on every hour, until the week it started stopping — always, oddly, at exactly seventeen minutes past three, and always for exactly one minute, before starting again as if nothing had happened at all.
+
+The town clockmaker, an elderly man named Aldous, insisted nothing was mechanically wrong. "I've checked every gear twice over," he told the worried town council. "The clock is not broken. It is simply... pausing."
+
+Twelve-year-old Theo, who spent most afternoons apprenticing in Aldous's workshop and had a habit of noticing things other people walked straight past, found this explanation far more interesting than alarming.
+
+"Clocks don't pause for no reason," Theo said thoughtfully, sweeping metal shavings from the workshop floor. "Even if it's not broken, something is making it stop."
+
+Aldous only smiled a small, tired smile and said nothing, which Theo found suspicious in itself.
+
+That afternoon, Theo climbed the tower's spiral staircase alone, arriving at the great clock face at exactly three-fifteen, determined to watch the mystery unfold firsthand. At seventeen minutes past three exactly, the hands froze mid-tick — and in the sudden silence, Theo heard something faint drifting up from below: someone humming, soft and slow, from the small garden at the base of the tower.
+
+Peering down through the clock face's glass, Theo spotted Aldous himself, sitting on the garden bench where he sat every single afternoon, holding a small framed photograph and humming quietly to it for exactly one minute before tucking it away and returning to his workshop.
+
+When Theo asked him about it that evening, Aldous set down his tools and was quiet for a long moment before answering.
+
+"That's my Eleanor," he said finally. "My wife. We were married at three-seventeen in the afternoon, right in that garden, fifty-one years ago come spring. She passed on three years back, and I found I couldn't quite let the minute go by unmarked. So each day, I stop what I'm doing, however briefly, and remember her."
+
+"But the clock," Theo pressed gently. "Why does it stop too?"
+
+Aldous's eyes crinkled with the first real smile Theo had seen from him all week. "Because I built that clock with my own two hands, the same year I married her. I suppose, after all these years together, it's simply learned to pause when I do."
+
+Theo never did tell the town council the full truth of the mystery — only that the clock was working exactly as it should, which, Theo had come to realize, was entirely accurate. Some things, it turned out, weren't puzzles to be solved and fixed at all. They were simply quiet ways of remembering, built to last exactly as long as they needed to.`
+  },
+  {
+    id:"last-tide-map", age:"12-13", category:"adventure", character:"sea", tag:"original",
+    title:"The Last Tide Map", accent:"#6fa15c", minutes:12, rating:4.8,
+    popular:true, isNew:true, difficulty:"Confident",
+    blurb:"A cabin girl inherits a map that only reveals its route at the exact turn of the tide, and races a rival crew to a legendary sandbar island.",
+    text:`The map had belonged to Wren's grandmother, and for most of Wren's life it had looked like nothing more than a blank sheet of aged, salt-stained parchment, rolled up and forgotten in a sea chest below deck.
+
+It was only on the night her grandmother finally told her the truth — dying, propped up in her bunk, voice thin as sea-spray — that Wren learned the parchment wasn't blank at all. "It only shows itself," her grandmother whispered, "at the exact turn of the tide. Low to high, not a moment before or after. Find that moment, and it'll show you the way to Solace Bar."
+
+Solace Bar was a sandbar island that appeared only during the lowest tides of the year, said to hold a cache of pearls beyond counting, left behind by a captain who'd valued freedom over fortune and buried his haul rather than let it corrupt his crew. Most sailors called it a myth. Wren's grandmother, until her final breath, called it home to something she'd seen with her own two eyes as a young woman, decades before.
+
+Wren inherited the map, the small fishing sloop, and precious little else besides. What she also inherited, unfortunately, was a rival — Captain Silas Drummond, who had heard the same old legend from a very different source and commanded a ship three times the size of Wren's, with a crew twice as ruthless.
+
+The race to Solace Bar began the moment word got out that Wren possessed a genuine map, and it very quickly became clear that Drummond intended to follow her sloop rather than chart his own uncertain course.
+
+Wren's small crew — just herself, her steady first mate Ossian, and a sharp-eyed cabin boy named Fenn — knew they couldn't outrun Drummond's larger ship on open water. Their only advantage was the map itself, and the fact that only Wren knew precisely when and how to read it.
+
+She spent three sleepless nights studying the tide tables her grandmother had left behind, calculating the exact turn of the coming spring tide — the lowest of the entire year, when Solace Bar would surface for perhaps an hour before vanishing beneath the waves again for another twelve months.
+
+On the appointed night, with Drummond's ship looming dangerously close behind, Wren unrolled the parchment at precisely the turning of the tide, and watched, breath held, as faint golden lines bloomed slowly across the blank page — a route through a maze of hidden shoals that no chart in Drummond's possession could ever show him.
+
+"Hold tight," Wren called to Ossian at the wheel, tracing the newly revealed path with one finger. "Sharp turn to starboard in three, two, one—"
+
+The little sloop cut hard through water Wren's grandmother had once sailed as a young woman, threading between shoals that would have torn Drummond's heavier ship apart had he dared follow blindly. He didn't dare. His larger vessel fell back, forced onto safer, slower water, while Wren's sloop skimmed on ahead through the only safe channel in the strait.
+
+They reached Solace Bar just as its pale, curved shore broke the surface in the moonlight, and there, exactly where her grandmother's stories had always promised, a weathered chest sat half-buried in the sand — not bursting with pearls after all, Wren discovered, kneeling to open it, but filled instead with letters, dozens of them, written across decades by sailors who had found the island before her and left behind not treasure, but truth: directions, warnings, small kindnesses for whoever came next.
+
+Wren understood, kneeling there with the tide already creeping back toward the buried chest, exactly what her grandmother had truly left her. Not a fortune in pearls. A promise, passed hand to hand across generations, that the sea rewarded patience and care over greed and haste — and that some maps were never meant to lead to gold at all, only to exactly the right person, at exactly the right moment.
+
+She added her own letter to the chest before the tide reclaimed the island, sealed it carefully, and sailed for home with Ossian and Fenn beside her, already looking forward to the day, decades from now, when she might pass the map on to someone else entirely.`
+  },
+  {
+    id:"tiny-stars-first-spell", age:"4-5", category:"magical", character:"witches", tag:"original",
+    title:"The Tiny Star's First Spell", accent:"#b17bea", minutes:4, rating:4.9,
+    popular:true, isNew:true, difficulty:"Easy",
+    blurb:"A baby star wants to learn to twinkle all by herself before the sun comes up.",
+    text:`High up in the velvet sky lived a tiny star named Wink, who was, by star standards, extremely young — so young she hadn't yet learned to twinkle on her own.
+
+Every night, an old friendly moon helped her along, humming a soft little spell that made Wink's light flicker and dance. But Wink wanted very badly to twinkle all by herself, without any help at all.
+
+"Please teach me," she asked the moon one evening. "I want to shine on my own before the sun comes up."
+
+The moon smiled, round and silver. "Twinkling isn't something I can simply teach you," she said gently. "It comes from inside. You have to believe your light is worth sharing, and then — well, then it simply happens."
+
+Wink tried very hard to believe it. She scrunched up tight and thought happy thoughts and wished as hard as any tiny star possibly could. Nothing happened. She just glowed the same small, steady glow she always had.
+
+"I don't think I can do it," she sighed, dimming just a little with disappointment.
+
+Just then, far below on Earth, a little girl looked up from her bedroom window and spotted Wink glowing softly among all the bigger, brighter stars. "Look, Mama!" she whispered. "That little star is my favorite. It doesn't blink too fast — I can always find it."
+
+Wink heard this, faint and faraway, and something warm bubbled up inside her chest. Someone loved her small, steady light exactly the way it already was.
+
+And right then — without even trying — Wink twinkled. Just once, just a tiny flicker, all on her very own.
+
+"There it is," said the moon softly, watching. "I told you it comes from inside."
+
+Wink twinkled again, delighted, and then again, faster and faster, until she was twinkling as merrily as any star in the whole wide sky. Down below, the little girl clapped her hands with joy.
+
+And from that night on, Wink never needed any help at all — she simply remembered that someone, somewhere, loved her light exactly as it was, and that was all the magic she ever needed.`
   }
 ];
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, useRef, useCallback } from "react";
+import { useMemo, useState, useRef, useCallback, useEffect } from "react";
 import { signOut } from "next-auth/react";
 import Mascot from "./Mascot";
 import {
@@ -53,16 +53,61 @@ function splitSentences(text: string): string[] {
   return clean.match(/[^.!?]+[.!?]+(\s|$)/g)?.map((s) => s.trim()) || [clean];
 }
 
+const SENTENCE_PAUSE_MS = 380;
+
+type VoiceProfile = { pitch: number; rate: number; genderHint: "female" | "male" | "any" };
+
+const CHARACTER_VOICE_PROFILE: Record<string, VoiceProfile> = {
+  animals: { pitch: 1.25, rate: 1.0, genderHint: "any" },
+  witches: { pitch: 0.8, rate: 0.9, genderHint: "any" },
+  sea: { pitch: 0.75, rate: 0.88, genderHint: "male" },
+  royalty: { pitch: 1.05, rate: 0.92, genderHint: "female" },
+  heroes: { pitch: 1.0, rate: 0.98, genderHint: "male" },
+};
+
+const CATEGORY_VOICE_PROFILE: Record<string, VoiceProfile> = {
+  bedtime: { pitch: 0.95, rate: 0.82, genderHint: "any" },
+  adventure: { pitch: 1.02, rate: 0.98, genderHint: "any" },
+  magical: { pitch: 1.12, rate: 0.92, genderHint: "any" },
+  scary: { pitch: 0.82, rate: 0.88, genderHint: "any" },
+  mystery: { pitch: 0.9, rate: 0.9, genderHint: "any" },
+  fairytale: { pitch: 1.05, rate: 0.92, genderHint: "any" },
+};
+
+function getVoiceProfile(story: Story): VoiceProfile {
+  return CHARACTER_VOICE_PROFILE[story.character] || CATEGORY_VOICE_PROFILE[story.category] || { pitch: 1, rate: 0.92, genderHint: "any" };
+}
+
+function hashToIndex(text: string, mod: number): number {
+  let h = 0;
+  for (let i = 0; i < text.length; i++) h = (h * 31 + text.charCodeAt(i)) >>> 0;
+  return mod > 0 ? h % mod : 0;
+}
+
+function pickVoiceForStory(story: Story, voices: SpeechSynthesisVoice[]): SpeechSynthesisVoice | undefined {
+  if (!voices.length) return undefined;
+  const english = voices.filter((v) => v.lang?.toLowerCase().startsWith("en"));
+  const pool = english.length ? english : voices;
+  const { genderHint } = getVoiceProfile(story);
+  if (genderHint !== "any") {
+    const match = pool.find((v) => v.name.toLowerCase().includes(genderHint));
+    if (match) return match;
+  }
+  return pool[hashToIndex(story.character + story.id, pool.length)];
+}
+
 export default function AppShell({
   userName,
   initialFavorites,
   initialProgress,
   initialAllowScary,
+  isNewUser,
 }: {
   userName: string;
   initialFavorites: string[];
   initialProgress: ProgressMap;
   initialAllowScary: boolean;
+  isNewUser: boolean;
 }) {
   const [view, setViewRaw] = useState<View>("home");
   const [favorites, setFavorites] = useState<Set<string>>(new Set(initialFavorites));
@@ -77,6 +122,19 @@ export default function AppShell({
   const audioStoryRef = useRef<string | null>(null);
   const audioPlayingRef = useRef(false);
   const audioIndexRef = useRef(0);
+  const audioTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const speakTokenRef = useRef(0);
+  const voicesRef = useRef<SpeechSynthesisVoice[]>([]);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+    function loadVoices() {
+      voicesRef.current = window.speechSynthesis.getVoices();
+    }
+    loadVoices();
+    window.speechSynthesis.addEventListener("voiceschanged", loadVoices);
+    return () => window.speechSynthesis.removeEventListener("voiceschanged", loadVoices);
+  }, []);
 
   function setView(v: View) {
     stopAudio();
@@ -161,31 +219,59 @@ export default function AppShell({
     setView("reader");
   }
 
-  function speakText(text: string) {
+  function configureUtterance(utter: SpeechSynthesisUtterance, story: Story) {
+    const profile = getVoiceProfile(story);
+    utter.pitch = profile.pitch;
+    utter.rate = profile.rate;
+    const voice = pickVoiceForStory(story, voicesRef.current);
+    if (voice) utter.voice = voice;
+  }
+
+  function speakText(text: string, story: Story) {
     if (!("speechSynthesis" in window)) return;
     window.speechSynthesis.cancel();
-    const utter = new SpeechSynthesisUtterance(text);
-    utter.rate = 0.95;
-    window.speechSynthesis.speak(utter);
+    if (audioTimerRef.current) clearTimeout(audioTimerRef.current);
+    const token = ++speakTokenRef.current;
+    const sentences = splitSentences(text);
+    let i = 0;
+    const speakNext = () => {
+      if (token !== speakTokenRef.current || i >= sentences.length) return;
+      const utter = new SpeechSynthesisUtterance(sentences[i]);
+      configureUtterance(utter, story);
+      utter.onend = () => {
+        if (token !== speakTokenRef.current) return;
+        i += 1;
+        audioTimerRef.current = setTimeout(speakNext, SENTENCE_PAUSE_MS);
+      };
+      window.speechSynthesis.speak(utter);
+    };
+    speakNext();
   }
 
   function stopAudio() {
+    speakTokenRef.current += 1;
+    if (audioTimerRef.current) clearTimeout(audioTimerRef.current);
     audioPlayingRef.current = false;
     setAudioPlaying(false);
     if (typeof window !== "undefined" && "speechSynthesis" in window) window.speechSynthesis.cancel();
   }
 
-  const speakCurrentSentence = useCallback((sentences: string[]) => {
+  const speakCurrentSentence = useCallback((sentences: string[], story: Story) => {
     if (!("speechSynthesis" in window) || !audioPlayingRef.current) return;
     window.speechSynthesis.cancel();
+    if (audioTimerRef.current) clearTimeout(audioTimerRef.current);
+    const token = speakTokenRef.current;
     const utter = new SpeechSynthesisUtterance(sentences[audioIndexRef.current]);
-    utter.rate = 0.92;
+    configureUtterance(utter, story);
     utter.onend = () => {
-      if (!audioPlayingRef.current) return;
+      if (!audioPlayingRef.current || token !== speakTokenRef.current) return;
       if (audioIndexRef.current < sentences.length - 1) {
-        audioIndexRef.current += 1;
-        setAudioIndex(audioIndexRef.current);
-        speakCurrentSentence(sentences);
+        audioTimerRef.current = setTimeout(() => {
+          if (!audioPlayingRef.current || token !== speakTokenRef.current) return;
+          audioIndexRef.current += 1;
+          setAudioIndex(audioIndexRef.current);
+          speakCurrentSentence(sentences, story);
+        }, SENTENCE_PAUSE_MS);
       } else {
         audioPlayingRef.current = false;
         setAudioPlaying(false);
@@ -199,29 +285,34 @@ export default function AppShell({
     audioStoryRef.current = id;
     audioIndexRef.current = 0;
     audioPlayingRef.current = false;
+    speakTokenRef.current += 1;
     setAudioIndex(0);
     setAudioPlaying(false);
     setView("audio");
   }
 
-  function toggleAudioPlay(sentences: string[]) {
+  function toggleAudioPlay(sentences: string[], story: Story) {
     if (!("speechSynthesis" in window)) return;
     if (audioPlayingRef.current) {
       audioPlayingRef.current = false;
       setAudioPlaying(false);
+      speakTokenRef.current += 1;
+      if (audioTimerRef.current) clearTimeout(audioTimerRef.current);
       window.speechSynthesis.cancel();
     } else {
       audioPlayingRef.current = true;
       setAudioPlaying(true);
-      speakCurrentSentence(sentences);
+      speakCurrentSentence(sentences, story);
     }
   }
 
-  function audioStep(dir: number, sentences: string[]) {
+  function audioStep(dir: number, sentences: string[], story: Story) {
+    speakTokenRef.current += 1;
+    if (audioTimerRef.current) clearTimeout(audioTimerRef.current);
     if ("speechSynthesis" in window) window.speechSynthesis.cancel();
     audioIndexRef.current = Math.max(0, Math.min(sentences.length - 1, audioIndexRef.current + dir));
     setAudioIndex(audioIndexRef.current);
-    if (audioPlayingRef.current) speakCurrentSentence(sentences);
+    if (audioPlayingRef.current) speakCurrentSentence(sentences, story);
   }
 
   // ---------- filtered library ----------
@@ -312,7 +403,11 @@ export default function AppShell({
 
   function CatTile({ cat }: { cat: (typeof CATEGORIES)[number] }) {
     return (
-      <button className="cat-tile" style={{ ["--accent" as any]: cat.color }} onClick={() => enterLibrary({ category: cat.id })}>
+      <button
+        className="cat-tile"
+        style={{ ["--accent" as any]: cat.color, backgroundImage: `linear-gradient(180deg, color-mix(in srgb, var(--accent) 30%, transparent) 0%, rgba(10,8,20,0.55) 55%, rgba(10,8,20,0.88) 100%), url(${cat.image})` }}
+        onClick={() => enterLibrary({ category: cat.id })}
+      >
         <span className="emoji">{cat.emoji}</span>
         <div className="label">{cat.label}</div>
         <div className="feel">{cat.feel}</div>
@@ -359,7 +454,7 @@ export default function AppShell({
           <div className="hero-card">
             <Mascot size={110} className="hero-mascot" />
             <p className="hero-eyebrow">Story Galaxy</p>
-            <h1>Welcome back, {userName}</h1>
+            <h1>{isNewUser ? `Welcome, ${userName}` : `Welcome back, ${userName}`}</h1>
             <p className="lede">A digital library of classic, curated stories for children ages 4&ndash;13 &mdash; ready to read or listen to, one shelf at a time.</p>
             <div className="hero-actions">
               <button className="btn-gold" onClick={() => enterLibrary({})}>Start Reading</button>
@@ -556,7 +651,7 @@ export default function AppShell({
             <div className="font-controls">
               <button aria-label="Smaller text" onClick={() => setFontScale((f) => Math.max(0.85, f - 0.1))}>A&minus;</button>
               <button aria-label="Larger text" onClick={() => setFontScale((f) => Math.min(1.4, f + 0.1))}>A+</button>
-              <button aria-label="Read this page aloud" onClick={() => speakText(pages[idx].join(" "))}>🔊</button>
+              <button aria-label="Read this page aloud" onClick={() => speakText(pages[idx].join(" "), s)}>🔊</button>
             </div>
           </div>
           <div className="reader-progress"><i style={{ width: `${pct}%` }} /></div>
@@ -596,11 +691,11 @@ export default function AppShell({
           <div className="muted-note">{supported ? "Listen along, sentence by sentence" : "Read-aloud isn't supported in this browser — try Read Now instead."}</div>
           <div className="audio-progress"><i style={{ width: `${pct}%` }} /></div>
           <div className="audio-controls">
-            <button className="audio-btn" aria-label="Previous" onClick={() => audioStep(-1, sentences)}>
+            <button className="audio-btn" aria-label="Previous" onClick={() => audioStep(-1, sentences, s)}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 20L9 12l10-8v16zM5 19V5" /></svg>
             </button>
-            <button className="audio-btn audio-play" aria-label="Play or pause" onClick={() => toggleAudioPlay(sentences)}>{audioPlaying ? PAUSE_SVG : PLAY_SVG}</button>
-            <button className="audio-btn" aria-label="Next" onClick={() => audioStep(1, sentences)}>
+            <button className="audio-btn audio-play" aria-label="Play or pause" onClick={() => toggleAudioPlay(sentences, s)}>{audioPlaying ? PAUSE_SVG : PLAY_SVG}</button>
+            <button className="audio-btn" aria-label="Next" onClick={() => audioStep(1, sentences, s)}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 4l10 8-10 8V4zM19 5v14" /></svg>
             </button>
           </div>
@@ -687,7 +782,13 @@ export default function AppShell({
         {view === "audio" && <AudioView />}
         {view === "parent" && <ParentView />}
       </main>
-      <footer>Story Galaxy &mdash; a shelf of tales for ages 4 to 13.</footer>
+      <footer>
+        Story Galaxy &mdash; a shelf of tales for ages 4 to 13.
+        <br />
+        <span className="muted-note">
+          Category photos: Gregory H. Revera (CC BY-SA 3.0) &middot; NPS/A. Falgoust &middot; U.S. Air Force/J. Strang &middot; Jon Sullivan &middot; Heptagon (CC BY-SA 4.0) &middot; Wilfredor (CC0)
+        </span>
+      </footer>
     </>
   );
 }

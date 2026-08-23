@@ -18,12 +18,19 @@ export default async function HomePage() {
     progRows.map((r) => [r.storyId, { page: r.page, totalPages: r.totalPages, ts: r.updatedAt.getTime() }])
   );
 
+  const isNewUser =
+    favRows.length === 0 &&
+    progRows.length === 0 &&
+    !!user?.createdAt &&
+    Date.now() - user.createdAt.getTime() < 5 * 60 * 1000;
+
   return (
     <AppShell
       userName={user?.name || session.user.email || "reader"}
       initialFavorites={favRows.map((r) => r.storyId)}
       initialProgress={initialProgress}
       initialAllowScary={user?.allowScary ?? true}
+      isNewUser={isNewUser}
     />
   );
 }
