@@ -40,9 +40,16 @@ export default function Mascot({ size = 96, className }: { size?: number; classN
         <circle cx="36" cy="52" r="33" fill="var(--cream)" fillOpacity="0.06" stroke="var(--cream)" strokeWidth="2.6" strokeOpacity="0.85" />
         <ellipse cx="18" cy="30" rx="8" ry="4.2" fill="var(--cream)" opacity="0.6" transform="rotate(-28 18 30)" />
 
-        <g transform="translate(18 84)">
-          <path d="M0 4c4.5-3.5 9.5-3.5 14 0 4.5-3.5 9.5-3.5 14 0v8c-4.5-2.7-9.5-2.7-14 0-4.5-2.7-9.5-2.7-14 0z" fill="var(--cream)" stroke="var(--grad-1)" strokeWidth="1.4" />
-          <line x1="14" y1="4" x2="14" y2="12" stroke="var(--grad-1)" strokeWidth="1.4" />
+        <g transform="translate(17 80)">
+          <rect x="0" y="2" width="12" height="17" rx="1.5" fill="var(--cream)" stroke="var(--grad-1)" strokeWidth="1.2" />
+          <line x1="3" y1="6" x2="9" y2="6" stroke="var(--grad-1)" strokeWidth="1" opacity="0.5" />
+          <line x1="3" y1="9.5" x2="9" y2="9.5" stroke="var(--grad-1)" strokeWidth="1" opacity="0.5" />
+          <line x1="3" y1="13" x2="7" y2="13" stroke="var(--grad-1)" strokeWidth="1" opacity="0.5" />
+          <rect x="12" y="0" width="26" height="21" rx="2" fill="var(--grad-1)" />
+          <rect x="12" y="0" width="5" height="21" fill="#140b28" opacity="0.25" />
+          <rect x="20" y="6" width="14" height="2.2" rx="1.1" fill="var(--gold)" opacity="0.85" />
+          <rect x="20" y="10.5" width="10" height="2.2" rx="1.1" fill="var(--cream)" opacity="0.5" />
+          <path d="M31 0v9l-3-2.4-3 2.4V0z" fill="var(--gold)" />
         </g>
       </g>
     </svg>
