@@ -657,10 +657,19 @@ export default function AppShell({
           </div>
           <div className="reader-progress"><i style={{ width: `${pct}%` }} /></div>
           <div className="book-page">
-            <div className="reader-cover" style={{ background: `linear-gradient(155deg, ${s.accent}, color-mix(in srgb, ${s.accent} 45%, #140b28))` }}>
-              <span dangerouslySetInnerHTML={{ __html: renderArt(s) }} />
-              <span className="cover-badge">{cat.emoji}</span>
-            </div>
+            {idx % 2 === 0 ? (
+              <div className="reader-cover" style={{ background: `linear-gradient(155deg, ${s.accent}, color-mix(in srgb, ${s.accent} 45%, #140b28))` }}>
+                <span dangerouslySetInnerHTML={{ __html: renderArt(s) }} />
+                <span className="cover-badge">{cat.emoji}</span>
+              </div>
+            ) : (
+              <div
+                className="reader-cover reader-cover-photo"
+                style={{ backgroundImage: `linear-gradient(180deg, color-mix(in srgb, ${s.accent} 30%, transparent) 0%, rgba(10,8,20,0.4) 60%, rgba(10,8,20,0.75) 100%), url(${cat.image})` }}
+              >
+                <span className="cover-badge">{cat.emoji}</span>
+              </div>
+            )}
             <div className="page-spine" />
             <div className="story-text" style={{ ["--font-scale" as any]: fontScale }}>
               {pages[idx].map((p, i) => <p key={i}>{p}</p>)}
