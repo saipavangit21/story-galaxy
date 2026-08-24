@@ -236,6 +236,71 @@ export const ART: Record<string, string> = {
     <circle cx="80" cy="50" r="8" fill="var(--hl)"/>
     <path d="M80 34 L83 46 L95 50 L83 54 L80 66 L77 54 L65 50 L77 46 Z" fill="var(--hl)"/>
     <circle cx="30" cy="26" r="1.6" fill="var(--hl)"/><circle cx="130" cy="30" r="1.4" fill="var(--hl)"/><circle cx="40" cy="76" r="1.4" fill="var(--hl)"/><circle cx="120" cy="72" r="1.6" fill="var(--hl)"/>
+  `,
+  "sleepy-seal-pup": `
+    <path d="M0 70 Q40 62 80 70 T160 68 V100 H0 Z" fill="var(--silo)"/>
+    <ellipse cx="70" cy="72" rx="26" ry="14" fill="var(--hl)" opacity="0.85"/>
+    <circle cx="92" cy="64" r="9" fill="var(--hl)" opacity="0.85"/>
+    <circle cx="95" cy="61" r="1.4" fill="var(--silo)"/>
+    <circle cx="24" cy="20" r="10" fill="var(--hl)" opacity="0.6"/>
+    <circle cx="130" cy="30" r="1.4" fill="var(--hl)"/><circle cx="118" cy="16" r="1" fill="var(--hl)"/>
+  `,
+  "coral-lantern": `
+    <path d="M0 20 Q80 8 160 22 V0 H0 Z" fill="var(--silo)" opacity="0.4"/>
+    <path d="M0 96 Q40 88 80 96 T160 94 V100 H0 Z" fill="var(--silo)"/>
+    <circle cx="80" cy="52" r="12" fill="var(--hl)"/>
+    <path d="M70 62c-4 6-4 12 2 16 2-6 2-10 0-14z" fill="var(--accent)"/>
+    <path d="M90 62c4 6 4 12-2 16-2-6-2-10 0-14z" fill="var(--accent)"/>
+    <circle cx="30" cy="30" r="1.6" fill="var(--hl)"/><circle cx="126" cy="26" r="1.4" fill="var(--hl)"/><circle cx="140" cy="60" r="1.2" fill="var(--hl)"/>
+  `,
+  "kind-witch-next-door": `
+    <path d="M0 92 H160 V100 H0 Z" fill="var(--silo)" opacity="0.5"/>
+    <rect x="52" y="56" width="40" height="36" fill="var(--silo)"/>
+    <polygon points="46,56 72,32 98,56" fill="var(--silo)"/>
+    <circle cx="66" cy="46" r="2" fill="var(--hl)"/><circle cx="78" cy="46" r="2" fill="var(--hl)"/>
+    <ellipse cx="118" cy="78" rx="14" ry="10" fill="var(--accent)" opacity="0.6"/>
+    <polygon points="108,78 118,58 128,78" fill="var(--accent)" opacity="0.6"/>
+    <circle cx="30" cy="70" r="7" fill="var(--silo)"/><path d="M23 70 Q30 60 37 70" stroke="var(--silo)" strokeWidth="2" fill="none"/>
+  `,
+  "portrait-that-blinked": `
+    <rect x="52" y="14" width="56" height="66" rx="3" fill="var(--silo)"/>
+    <rect x="60" y="22" width="40" height="50" fill="var(--accent)" opacity="0.5"/>
+    <circle cx="72" cy="42" r="3" fill="var(--hl)"/><circle cx="88" cy="42" r="3" fill="var(--hl)"/>
+    <path d="M0 88 H160 V100 H0 Z" fill="var(--silo)" opacity="0.5"/>
+    <circle cx="130" cy="24" r="8" fill="var(--hl)" opacity="0.6"/>
+  `,
+  "puddle-jumping-knight": `
+    <path d="M0 90 H160 V100 H0 Z" fill="var(--silo)" opacity="0.4"/>
+    <ellipse cx="40" cy="86" rx="16" ry="5" fill="var(--hl)" opacity="0.5"/>
+    <ellipse cx="100" cy="90" rx="22" ry="6" fill="var(--hl)" opacity="0.5"/>
+    <rect x="66" y="48" width="14" height="30" fill="var(--silo)"/>
+    <polygon points="60,48 73,32 86,48" fill="var(--accent)"/>
+    <rect x="70" y="36" width="6" height="10" fill="var(--hl)"/>
+    <circle cx="20" cy="20" r="8" fill="var(--hl)" opacity="0.5"/>
+  `,
+  "tide-caller": `
+    <path d="M0 74 Q40 62 80 74 T160 72 V100 H0 Z" fill="var(--silo)"/>
+    <circle cx="120" cy="22" r="12" fill="var(--hl)"/>
+    <ellipse cx="60" cy="76" rx="18" ry="8" fill="var(--accent)" opacity="0.7"/>
+    <path d="M42 76 Q60 50 78 76" stroke="var(--hl)" strokeWidth="2" fill="none" opacity="0.6"/>
+    <circle cx="20" cy="34" r="1.4" fill="var(--hl)"/><circle cx="140" cy="50" r="1.2" fill="var(--hl)"/>
+  `,
+  "kingdom-under-glass": `
+    <circle cx="80" cy="52" r="40" fill="none" stroke="var(--hl)" strokeWidth="2" opacity="0.6"/>
+    <rect x="56" y="66" width="48" height="28" fill="var(--silo)"/>
+    <polygon points="50,66 80,44 110,66" fill="var(--silo)"/>
+    <rect x="70" y="76" width="6" height="8" fill="var(--hl)"/>
+    <circle cx="66" cy="30" r="1.6" fill="var(--hl)"/><circle cx="96" cy="26" r="1.4" fill="var(--hl)"/>
+    <rect x="10" y="94" width="140" height="6" fill="var(--silo)" opacity="0.5"/>
+  `,
+  "lightkeepers-code": `
+    <path d="M0 90 H160 V100 H0 Z" fill="var(--silo)" opacity="0.6"/>
+    <polygon points="72,88 80,20 88,20 96,88" fill="var(--silo)"/>
+    <rect x="68" y="16" width="24" height="12" fill="var(--silo)"/>
+    <circle cx="80" cy="21" r="4" fill="var(--hl)"/>
+    <path d="M92 18 Q118 12 140 26" stroke="var(--hl)" strokeWidth="1.6" fill="none" opacity="0.7"/>
+    <path d="M92 26 Q118 22 144 40" stroke="var(--hl)" strokeWidth="1.2" fill="none" opacity="0.5"/>
+    <ellipse cx="30" cy="86" rx="20" ry="6" fill="var(--hl)" opacity="0.4"/>
   `
 };
 
@@ -1226,6 +1291,228 @@ And right then — without even trying — Wink twinkled. Just once, just a tiny
 Wink twinkled again, delighted, and then again, faster and faster, until she was twinkling as merrily as any star in the whole wide sky. Down below, the little girl clapped her hands with joy.
 
 And from that night on, Wink never needed any help at all — she simply remembered that someone, somewhere, loved her light exactly as it was, and that was all the magic she ever needed.`
+  },
+  {
+    id:"sleepy-seal-pup", age:"4-5", category:"bedtime", character:"animals", tag:"original",
+    title:"The Sleepy Seal Pup", accent:"#8393cf", minutes:4, rating:4.9,
+    popular:true, isNew:true, difficulty:"Easy",
+    blurb:"A little seal pup can't fall asleep on the rocking waves, until her mother teaches her the tide's own lullaby.",
+    text:`Nia was a small grey seal pup who lived on a rock just off the shore, and every night she had exactly the same problem: the sea would not stop rocking.
+
+"Mama, the waves won't be still," Nia grumbled, wriggling on the smooth rock. "How am I supposed to sleep when everything keeps swaying?"
+
+Her mother nuzzled her gently. "The sea doesn't rock to keep you awake, little one. It rocks to rock you to sleep. You just haven't learned to listen to it yet."
+
+"Listen to the waves?" Nia asked, unconvinced.
+
+"Close your eyes," her mother said, "and count the swells instead of fighting them. One wave in. One wave out. Slow, and soft, and always the same."
+
+Nia closed her eyes and tried. One wave lifted her gently. One wave set her back down. It was, she noticed, rather like being rocked in enormous, gentle arms.
+
+"There," her mother whispered, humming low and warm as the tide rolled in and out beneath them. "The sea has been rocking baby seals to sleep since before there were any rocks to lie on at all. You can trust it."
+
+Slowly, Nia's flippers grew heavy, and her eyes grew heavier still, until the rise and fall of the water felt less like rocking and more like the softest, safest kind of cradle.
+
+By the time the moon was high over the water, Nia was fast asleep, rocked gently by the very same waves that had kept her awake only minutes before — and she slept, warm beside her mother, until the sun came up soft and golden over the sea.`
+  },
+  {
+    id:"coral-lantern", age:"6-7", category:"magical", character:"sea", tag:"original",
+    title:"The Coral Lantern", accent:"#b17bea", minutes:6, rating:4.8,
+    popular:false, isNew:true, difficulty:"Easy",
+    blurb:"A young mer-boy discovers a piece of coral that glows only when he's telling the truth.",
+    text:`Finn found the little piece of coral wedged in a shipwreck's porthole, no bigger than his thumb, and completely unremarkable — until he picked it up and, without thinking, muttered that he definitely hadn't been the one to knock over his sister's shell collection.
+
+The coral flickered dark, just for a moment, like a candle catching a draft.
+
+Finn stared at it. "That was strange," he said out loud, and the coral glowed bright and steady, warm as sunlight through shallow water.
+
+He tried it again. "I am the fastest swimmer in the whole reef," he announced grandly. The coral flickered dark again, and Finn laughed despite himself, because it was absolutely not true — his cousin Coralie could out-swim him without even trying.
+
+"You're a truth-lantern," Finn realized, turning the little piece of coral over in his palm. "You only shine when I mean what I say."
+
+At first, Finn thought this was a marvelous trick to show off to his friends. But he quickly discovered something more useful: whenever he wasn't sure how he truly felt about something — whether he was really fine, or really not upset, or really okay with being left out of a game — the lantern told him plainly, before he'd even fully admitted it to himself.
+
+One afternoon, his sister found him sitting alone by the reef's edge, coral lantern glowing faintly dim in his hand.
+
+"What's wrong?" she asked.
+
+"Nothing," Finn said automatically. The coral went almost completely dark.
+
+He looked down at it, then sighed. "Actually — I'm upset that you never pick me for your games anymore. I said nothing was wrong, but that wasn't true."
+
+The coral blazed bright and warm the moment he said it, and his sister, seeing it glow, understood he meant every word.
+
+"I didn't know you felt that way," she said softly. "I'm sorry. Let's play together tomorrow — properly, this time."
+
+Finn kept the coral lantern for the rest of his life, tucked safely in a little pouch, and though it never once cast light on anything but honesty, he came to think that was, in the end, the most useful kind of light there really was.`
+  },
+  {
+    id:"kind-witch-next-door", age:"6-7", category:"scary", character:"witches", tag:"original",
+    title:"The Kind Witch Next Door", accent:"#e08a3f", minutes:5, rating:4.7,
+    popular:false, isNew:true, difficulty:"Easy",
+    blurb:"Everyone in town whispers that the house at the end of the lane belongs to a scary witch — until a boy actually knocks on her door.",
+    text:`Every child on Willow Lane agreed on one thing: the crooked little house at the very end of the street, with its overgrown garden and crackling purple chimney smoke, belonged to a witch, and witches were not to be trifled with.
+
+"She turns children into toads," Marcus's friends warned him. "She eats spiders for breakfast. Nobody who knocks on that door has ever been seen again."
+
+Marcus, who had recently lost his kite over the witch's garden wall, found himself facing a difficult choice: give up his favorite kite forever, or knock on the door of the scariest house on the street.
+
+He chose the kite.
+
+His knock echoed for a long, terrible moment before the door creaked open, revealing not a cackling monster, but a small, wrinkled old woman in a patchwork shawl, blinking at him through round spectacles.
+
+"Yes?" she said, sounding more surprised than menacing. "Goodness, a visitor. That hasn't happened in years."
+
+"M-my kite," Marcus stammered, pointing at the tangled shape caught high in an apple tree. "It blew into your garden."
+
+"Well, come and get it, then," the old woman said, stepping aside. "Mind the gnomes — Bartholomew bites if you step on his hat."
+
+Marcus crept in, expecting bubbling cauldrons and hanging bats, and found instead a cozy, cluttered garden full of herbs, sleeping cats, and yes, one very grumpy garden gnome. The old woman fetched a ladder, and together they freed his kite from the branches.
+
+"Would you like some tea before you go?" she asked. "I don't get many visitors. People seem to think I'm a witch."
+
+"Aren't you?" Marcus asked, genuinely curious now rather than frightened.
+
+"I grow unusual herbs and talk to my cats more than most people find normal," she said, smiling. "If that makes me a witch, I suppose I am one. But I promise I've never once turned a child into a toad. Terribly impractical — they're dreadful at conversation."
+
+Marcus stayed for tea and biscuits, and left an hour later with his kite, a jar of mint tea for his mother, and a new friend nobody else on Willow Lane had ever bothered to actually meet.
+
+From then on, whenever the other children whispered about the scary witch at the end of the lane, Marcus just smiled and said nothing — he rather liked being the only one who knew the truth.`
+  },
+  {
+    id:"portrait-that-blinked", age:"8-9", category:"mystery", character:"royalty", tag:"original",
+    title:"The Portrait That Blinked", accent:"#4fa39c", minutes:8, rating:4.6,
+    popular:false, isNew:true, difficulty:"Growing",
+    blurb:"A young princess notices the eyes in an old royal portrait seem to follow her — and uncovers a secret hidden behind the frame.",
+    text:`Princess Odette had walked past the portrait of her great-great-grandmother a thousand times without a second glance, until the afternoon she noticed something odd: the painted eyes seemed to have moved, just slightly, to follow her down the hall.
+
+She stopped, walked backward three steps, and watched carefully. The eyes stayed fixed straight ahead.
+
+She walked forward again. This time, she was almost certain the gaze shifted with her.
+
+"Portraits don't move," she told herself firmly, though she said it while backing slowly out of the hallway, just in case.
+
+That night, curiosity got the better of her sensible side, and Odette crept back to the portrait with a single candle. Up close, she noticed something she'd never spotted before: two tiny, almost invisible holes, no bigger than pinpricks, right where the painted eyes were.
+
+She pressed her own eye against one of the holes and gasped — beyond it lay a narrow, dusty passage running behind the wall, wide enough for a person to walk through.
+
+Following the passage with her candle held high, Odette discovered it wound all the way to the library, ending behind a bookshelf that swung open at her touch. Inside, tucked in a small alcove, sat a stack of letters tied with faded ribbon, addressed to her great-great-grandmother from a stable boy named Elias.
+
+The letters told a story the official royal history books had never mentioned — of a queen who had once loved someone entirely unsuitable by the rules of the court, and who'd had the secret passage built specifically so she could watch the hallway safely, in private, waiting for messages that arrived through means far quieter than official post.
+
+Odette read every letter twice, moved by a piece of her family's history nobody alive still remembered. She didn't tell the royal historians, and she didn't seal the passage back up either.
+
+Instead, she left a single flower behind the portrait's hollow eyes each week, in memory of a queen who had once needed somewhere secret to watch and wait and hope — and Odette liked to think that wherever her great-great-grandmother was now, she noticed.`
+  },
+  {
+    id:"puddle-jumping-knight", age:"4-5", category:"adventure", character:"heroes", tag:"original",
+    title:"The Puddle-Jumping Knight", accent:"#6fa15c", minutes:4, rating:4.9,
+    popular:true, isNew:true, difficulty:"Easy",
+    blurb:"A tiny knight sets off on the bravest quest of all: crossing the backyard without touching a single puddle.",
+    text:`Sir Tobias was the smallest knight in the whole kingdom — which was to say, he was four years old and wore a cardboard-box helmet — but he had a quest today that felt enormous: crossing the entire backyard after the rain without touching a single puddle.
+
+"The floor is made of dragon fire," he announced to his loyal steed, who was really just the family dog, Biscuit, wagging his tail by the back door. "One splash, and we're toast."
+
+Sir Tobias eyed the first puddle, took a running start, and leaped — landing safely on dry grass on the other side. "Ha! The dragon fire cannot catch me!"
+
+The second puddle was bigger, shaped almost like a dragon itself if you squinted. Tobias backed up further this time, sprinted, and soared clean over it, arms out like wings, cape (a towel) flapping bravely behind him.
+
+Biscuit barked encouragement from a safe, dry patch of grass, clearly impressed by his knight's heroics.
+
+The third puddle was the largest of all — a proper lake, in knightly terms — stretching almost the whole width of the garden path. Tobias studied it for a long moment, chin in hand, exactly the way he'd seen his father think about tricky problems.
+
+"A true knight doesn't just jump," he decided. "A true knight finds another way." He spotted a row of flat stepping stones along the garden bed, just out of the puddle's reach, and hopped carefully from one to the next until he'd made it safely to the other side.
+
+"Victory!" Tobias shouted, throwing both arms in the air, utterly dry from head to toe. Biscuit bounded over to celebrate, and — being considerably less careful than a knight — jumped straight through the middle of the dragon-fire lake, soaking them both with a triumphant splash.
+
+Tobias laughed so hard he nearly fell over. "Well," he announced, dripping and grinning, "I suppose even knights lose sometimes. Come on, Biscuit — the castle awaits, and I believe warm towels are involved."`
+  },
+  {
+    id:"tide-caller", age:"12-13", category:"fairytale", character:"sea", tag:"original",
+    title:"The Tide-Caller's Daughter", accent:"#e0479a", minutes:11, rating:4.8,
+    popular:false, isNew:true, difficulty:"Confident",
+    blurb:"Born the daughter of a woman who could command the tides, Maren must decide whether to inherit a gift that comes with a devastating price.",
+    text:`Every generation, in the fishing village of Thornwick, one woman was born with the tide-caller's gift — the power to summon the sea's tides early or late, to calm a storm or steer a fleet safely home. Maren's mother had held that gift for thirty years, and everyone in Thornwick assumed, without much discussion, that Maren would inherit it in turn.
+
+What nobody discussed quite so openly was the price. Every tide summoned early, every storm calmed before its time, cost the tide-caller a year of her own life, drawn quietly from her like water pulled by the moon. Maren's mother, though only fifty, moved now like a woman twice that age, her hands trembling, her hair gone entirely silver from decades of calling.
+
+"You don't have to accept it," her mother told her, the night the gift was due to pass between them, as tradition demanded, beneath the full moon on the harbor rocks. "The sea doesn't force the gift on anyone. It only asks."
+
+"But if I refuse, who protects the fleet?" Maren asked. "Who calls the tide home when a storm catches them out past the point?"
+
+Her mother's silence was answer enough.
+
+Maren stood at the harbor's edge as the moon rose full and silver over black water, feeling the old, wordless pull that every tide-caller's daughter reportedly felt at this exact moment — the sea itself, asking.
+
+She thought of her mother's trembling hands. She thought of the fishing boats that returned safely each season because someone, somewhere, was willing to pay a price nobody else could see.
+
+"I have a condition," Maren said aloud, to the water, to the moon, to whatever ancient power had struck this bargain with Thornwick generations ago. "I'll accept the gift. But I won't spend it recklessly, the way it's always been spent before. I'll teach others to read the sky and the swells themselves, so the fleet needs less calling, not more. I'll save the gift only for when it's truly needed — not for every small storm that a good sailor could weather alone."
+
+The water went very still, as though considering.
+
+Then, slowly, warmth spread through Maren's palms, up her arms, settling somewhere deep in her chest — the gift, accepted, but on her own terms rather than the ones tradition had always assumed.
+
+In the years that followed, Maren called far fewer tides than her mother had, and lived to call them far longer, because she had done what no tide-caller before her had thought to try: she'd made the villagers less dependent on her sacrifice, teaching them to read the water themselves, saving her own gift for only the truest emergencies.
+
+Her mother, silver-haired and finally resting, watched her daughter walk the harbor rocks each full moon with something that looked, unmistakably, like relief — because Maren had found a way to carry the family's ancient burden without letting it carry her away entirely.`
+  },
+  {
+    id:"kingdom-under-glass", age:"10-11", category:"magical", character:"royalty", tag:"original",
+    title:"The Kingdom Under Glass", accent:"#b17bea", minutes:9, rating:4.7,
+    popular:false, isNew:true, difficulty:"Growing",
+    blurb:"A prince discovers his family's entire kingdom is a miniature world inside a snow globe, kept safe on a giant's shelf.",
+    text:`Prince Aldric had always found it strange that the sky above his kingdom curved so smoothly at the edges, and that no matter how far any explorer traveled, they always somehow ended up back where they'd started, as though the whole world were shaped like the inside of a ball.
+
+He got his answer on his thirteenth birthday, when a strange old traveler arrived at the palace gates claiming to be from "outside" — a phrase that made no sense to anyone in the kingdom, since there was no such thing as outside.
+
+"Your whole world," the traveler explained, once granted an audience, "sits inside a glass sphere, filled with water and little flecks of silver that fall like snow when it's shaken. It rests on a shelf in a house belonging to someone very large indeed — what your people would call a giant."
+
+The court dissolved into disbelieving laughter, but Aldric, who had always wondered about that suspiciously curved sky, found himself troubled rather than amused.
+
+"Prove it," he demanded.
+
+The traveler led him, that very night, to a hidden spiral staircase behind the throne room's oldest tapestry — one nobody in living memory had thought to climb. It wound upward for what felt like hours, far higher than the castle's tallest tower should have allowed, until it ended at a smooth, curved wall of glass.
+
+Pressed against it, Aldric could see, impossibly, into a vast room beyond — a room so large that a single wooden chair looked like a mountain, and a sleeping cat curled on a rug looked large enough to swallow the entire castle whole.
+
+"We're small," Aldric whispered, pressing his palm flat against the cold glass. "This whole kingdom — we're small enough to fit inside someone's ornament."
+
+"Does it trouble you?" the traveler asked.
+
+Aldric considered this for a long while, watching a giant hand reach into view far beyond the glass, adjusting something on a shelf with a gentleness that seemed strange for something so enormous.
+
+"No," he decided finally. "I think... I think whoever keeps us on their shelf must care for us, in their own giant way. They haven't dropped us. They haven't shaken us too hard. Someone out there has kept our whole world safe, all this time, without us ever knowing to thank them."
+
+He returned to his kingdom that night with a secret he chose to share with no one but his own children, years later — not because it frightened him, but because he'd come to find something rather comforting in it: that even a kingdom small enough to fit in a giant's palm could still be a whole world, fully real, fully theirs, exactly as it was.`
+  },
+  {
+    id:"lightkeepers-code", age:"8-9", category:"mystery", character:"sea", tag:"original",
+    title:"The Lightkeeper's Code", accent:"#4fa39c", minutes:7, rating:4.7,
+    popular:false, isNew:true, difficulty:"Growing",
+    blurb:"A girl discovers her grandfather's old lighthouse logbook is written in a secret code — and that cracking it might explain a decades-old mystery.",
+    text:`When Priya's grandfather passed the old lighthouse down to her family, most of what he left behind was exactly what you'd expect — spare bulbs, coils of rope, decades of weather logs written in careful, boring handwriting.
+
+Except for one logbook, tucked behind a loose brick in the lighthouse wall, filled entirely with numbers instead of words.
+
+"3-15-8. 22-1-19. 8-5-18-5," Priya read aloud, flipping through page after page of the same strange pattern. "Grandpa, what does this mean?"
+
+But her grandfather had passed away that spring, taking whatever answer he had with him, leaving Priya with nothing but a puzzle and a nagging feeling that it mattered.
+
+She spent a full weekend testing ideas. Dates didn't fit. Coordinates didn't fit either. It was her little brother, doodling absentmindedly with the alphabet written out in a numbered list beside him, who accidentally cracked it.
+
+"Look," he said, "3 is C, 15 is O, 8 is H — that spells COH so far."
+
+Priya's heart jumped. Numbers matched to letters, one through twenty-six. She grabbed the logbook and began translating frantically: 3-15-8 became COH — no, wait, she'd miscounted — 3 was C, 15 was O, 8 was H, but the fourth number, 5, was E, and 18 was R, and 5 was E again.
+
+"COHERE," she read slowly, blinking. Then the next line: 22-1-19 became... V-A-S, and 8-5-18-5 became H-E-R-E.
+
+"Coherent... vast... here," Priya muttered, piecing fragments together across dozens of pages, night after night, until finally, weeks later, the full message emerged from what had once looked like meaningless numbers: "The light must stay coherent. Vast dangers lie here where the reef breaks the surface. I mark it so no ship after mine runs aground as we nearly did in the storm of '61."
+
+It wasn't treasure, and it wasn't a scandal — it was simply her grandfather's private, coded reminder to himself, decades old, about a hidden reef just off the point that had nearly wrecked his own boat as a young man, long before he'd become the lighthouse's keeper.
+
+Priya cross-referenced his coded coordinates with a modern marine chart and found, to her astonishment, that the reef was still there, still barely marked, still exactly as dangerous as her grandfather had once discovered the hard way.
+
+She reported it to the coast guard, who updated the charts within the month — a small, quiet correction that would keep sailors safe for generations to come, sparked entirely by a girl who refused to let a stack of numbers stay a mystery.`
   }
 ];
 
