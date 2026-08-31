@@ -58,25 +58,25 @@ const SENTENCE_PAUSE_MS = 380;
 type VoiceProfile = { pitch: number; rate: number; genderHint: "female" | "male" | "any" };
 
 const CHARACTER_VOICE_PROFILE: Record<string, VoiceProfile> = {
-  animals: { pitch: 1.25, rate: 1.0, genderHint: "any" },
-  witches: { pitch: 0.8, rate: 0.9, genderHint: "any" },
-  sea: { pitch: 0.75, rate: 0.88, genderHint: "male" },
-  royalty: { pitch: 1.05, rate: 0.92, genderHint: "female" },
-  heroes: { pitch: 1.0, rate: 0.98, genderHint: "male" },
+  animals: { pitch: 1.3, rate: 1.02, genderHint: "female" },
+  witches: { pitch: 1.08, rate: 0.94, genderHint: "female" },
+  sea: { pitch: 1.05, rate: 0.94, genderHint: "female" },
+  royalty: { pitch: 1.15, rate: 0.96, genderHint: "female" },
+  heroes: { pitch: 1.12, rate: 1.0, genderHint: "female" },
 };
 
 const CATEGORY_VOICE_PROFILE: Record<string, VoiceProfile> = {
   bedtime: { pitch: 1.22, rate: 0.76, genderHint: "female" },
-  adventure: { pitch: 1.02, rate: 0.98, genderHint: "any" },
-  magical: { pitch: 1.12, rate: 0.92, genderHint: "any" },
-  scary: { pitch: 0.82, rate: 0.88, genderHint: "any" },
-  mystery: { pitch: 0.9, rate: 0.9, genderHint: "any" },
-  fairytale: { pitch: 1.05, rate: 0.92, genderHint: "any" },
+  adventure: { pitch: 1.12, rate: 1.0, genderHint: "female" },
+  magical: { pitch: 1.18, rate: 0.94, genderHint: "female" },
+  scary: { pitch: 1.0, rate: 0.92, genderHint: "female" },
+  mystery: { pitch: 1.05, rate: 0.94, genderHint: "female" },
+  fairytale: { pitch: 1.15, rate: 0.94, genderHint: "female" },
 };
 
 function getVoiceProfile(story: Story): VoiceProfile {
   if (story.category === "bedtime") return CATEGORY_VOICE_PROFILE.bedtime;
-  return CHARACTER_VOICE_PROFILE[story.character] || CATEGORY_VOICE_PROFILE[story.category] || { pitch: 1, rate: 0.92, genderHint: "any" };
+  return CHARACTER_VOICE_PROFILE[story.character] || CATEGORY_VOICE_PROFILE[story.category] || { pitch: 1.12, rate: 0.95, genderHint: "female" };
 }
 
 function getSentencePauseMs(story: Story): number {
