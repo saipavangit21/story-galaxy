@@ -66,7 +66,7 @@ const CHARACTER_VOICE_PROFILE: Record<string, VoiceProfile> = {
 };
 
 const CATEGORY_VOICE_PROFILE: Record<string, VoiceProfile> = {
-  bedtime: { pitch: 0.95, rate: 0.82, genderHint: "any" },
+  bedtime: { pitch: 0.88, rate: 0.72, genderHint: "any" },
   adventure: { pitch: 1.02, rate: 0.98, genderHint: "any" },
   magical: { pitch: 1.12, rate: 0.92, genderHint: "any" },
   scary: { pitch: 0.82, rate: 0.88, genderHint: "any" },
@@ -75,7 +75,12 @@ const CATEGORY_VOICE_PROFILE: Record<string, VoiceProfile> = {
 };
 
 function getVoiceProfile(story: Story): VoiceProfile {
+  if (story.category === "bedtime") return CATEGORY_VOICE_PROFILE.bedtime;
   return CHARACTER_VOICE_PROFILE[story.character] || CATEGORY_VOICE_PROFILE[story.category] || { pitch: 1, rate: 0.92, genderHint: "any" };
+}
+
+function getSentencePauseMs(story: Story): number {
+  return story.category === "bedtime" ? 700 : SENTENCE_PAUSE_MS;
 }
 
 function hashToIndex(text: string, mod: number): number {
@@ -241,7 +246,7 @@ export default function AppShell({
       utter.onend = () => {
         if (token !== speakTokenRef.current) return;
         i += 1;
-        audioTimerRef.current = setTimeout(speakNext, SENTENCE_PAUSE_MS);
+        audioTimerRef.current = setTimeout(speakNext, getSentencePauseMs(story));
       };
       window.speechSynthesis.speak(utter);
     };
@@ -271,7 +276,7 @@ export default function AppShell({
           audioIndexRef.current += 1;
           setAudioIndex(audioIndexRef.current);
           speakCurrentSentence(sentences, story);
-        }, SENTENCE_PAUSE_MS);
+        }, getSentencePauseMs(story));
       } else {
         audioPlayingRef.current = false;
         setAudioPlaying(false);
