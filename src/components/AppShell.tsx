@@ -66,7 +66,7 @@ const CHARACTER_VOICE_PROFILE: Record<string, VoiceProfile> = {
 };
 
 const CATEGORY_VOICE_PROFILE: Record<string, VoiceProfile> = {
-  bedtime: { pitch: 0.88, rate: 0.72, genderHint: "any" },
+  bedtime: { pitch: 1.22, rate: 0.76, genderHint: "female" },
   adventure: { pitch: 1.02, rate: 0.98, genderHint: "any" },
   magical: { pitch: 1.12, rate: 0.92, genderHint: "any" },
   scary: { pitch: 0.82, rate: 0.88, genderHint: "any" },
