@@ -53,34 +53,34 @@ function splitSentences(text: string): string[] {
   return clean.match(/[^.!?]+[.!?]+(\s|$)/g)?.map((s) => s.trim()) || [clean];
 }
 
-const SENTENCE_PAUSE_MS = 380;
+const SENTENCE_PAUSE_MS = 650;
 
 type VoiceProfile = { pitch: number; rate: number; genderHint: "female" | "male" | "any" };
 
 const CHARACTER_VOICE_PROFILE: Record<string, VoiceProfile> = {
-  animals: { pitch: 1.3, rate: 1.02, genderHint: "female" },
-  witches: { pitch: 1.08, rate: 0.94, genderHint: "female" },
-  sea: { pitch: 1.05, rate: 0.94, genderHint: "female" },
-  royalty: { pitch: 1.15, rate: 0.96, genderHint: "female" },
-  heroes: { pitch: 1.12, rate: 1.0, genderHint: "female" },
+  animals: { pitch: 1.65, rate: 0.96, genderHint: "female" },
+  witches: { pitch: 1.4, rate: 0.9, genderHint: "female" },
+  sea: { pitch: 1.4, rate: 0.9, genderHint: "female" },
+  royalty: { pitch: 1.5, rate: 0.92, genderHint: "female" },
+  heroes: { pitch: 1.45, rate: 0.94, genderHint: "female" },
 };
 
 const CATEGORY_VOICE_PROFILE: Record<string, VoiceProfile> = {
-  bedtime: { pitch: 1.22, rate: 0.76, genderHint: "female" },
-  adventure: { pitch: 1.12, rate: 1.0, genderHint: "female" },
-  magical: { pitch: 1.18, rate: 0.94, genderHint: "female" },
-  scary: { pitch: 1.0, rate: 0.92, genderHint: "female" },
-  mystery: { pitch: 1.05, rate: 0.94, genderHint: "female" },
-  fairytale: { pitch: 1.15, rate: 0.94, genderHint: "female" },
+  bedtime: { pitch: 1.55, rate: 0.72, genderHint: "female" },
+  adventure: { pitch: 1.45, rate: 0.94, genderHint: "female" },
+  magical: { pitch: 1.55, rate: 0.9, genderHint: "female" },
+  scary: { pitch: 1.35, rate: 0.88, genderHint: "female" },
+  mystery: { pitch: 1.4, rate: 0.9, genderHint: "female" },
+  fairytale: { pitch: 1.5, rate: 0.9, genderHint: "female" },
 };
 
 function getVoiceProfile(story: Story): VoiceProfile {
   if (story.category === "bedtime") return CATEGORY_VOICE_PROFILE.bedtime;
-  return CHARACTER_VOICE_PROFILE[story.character] || CATEGORY_VOICE_PROFILE[story.category] || { pitch: 1.12, rate: 0.95, genderHint: "female" };
+  return CHARACTER_VOICE_PROFILE[story.character] || CATEGORY_VOICE_PROFILE[story.category] || { pitch: 1.45, rate: 0.92, genderHint: "female" };
 }
 
 function getSentencePauseMs(story: Story): number {
-  return story.category === "bedtime" ? 700 : SENTENCE_PAUSE_MS;
+  return story.category === "bedtime" ? 900 : SENTENCE_PAUSE_MS;
 }
 
 function hashToIndex(text: string, mod: number): number {
