@@ -704,7 +704,7 @@ export default function AppShell({
     if (!currentStory) return null;
     const s = currentStory;
     const cat = CAT_MAP[s.category];
-    const sentences = useMemo(() => splitSentences(s.text), [s.id]);
+    const sentences = splitSentences(s.text);
     const idx = Math.min(audioIndex, sentences.length - 1);
     const pct = Math.round((idx / sentences.length) * 100);
     const supported = typeof window !== "undefined" && "speechSynthesis" in window;
@@ -800,17 +800,17 @@ export default function AppShell({
 
   return (
     <>
-      <Nav />
+      {Nav()}
       <main>
-        {view === "home" && <HomeView />}
-        {view === "age" && <AgeView />}
-        {view === "categories" && <CategoriesView />}
-        {view === "characters" && <CharactersView />}
-        {view === "library" && <LibraryView />}
-        {view === "detail" && <DetailView />}
-        {view === "reader" && <ReaderView />}
-        {view === "audio" && <AudioView />}
-        {view === "parent" && <ParentView />}
+        {view === "home" && HomeView()}
+        {view === "age" && AgeView()}
+        {view === "categories" && CategoriesView()}
+        {view === "characters" && CharactersView()}
+        {view === "library" && LibraryView()}
+        {view === "detail" && DetailView()}
+        {view === "reader" && ReaderView()}
+        {view === "audio" && AudioView()}
+        {view === "parent" && ParentView()}
       </main>
       <footer>
         Story Galaxy &mdash; a shelf of tales for ages 4 to 13.
