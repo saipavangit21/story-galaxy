@@ -124,6 +124,7 @@ export default function AppShell({
   const [fontScale, setFontScale] = useState(1);
   const [audioIndex, setAudioIndex] = useState(0);
   const [audioPlaying, setAudioPlaying] = useState(false);
+  const [pageSpeaking, setPageSpeaking] = useState(false);
   const audioStoryRef = useRef<string | null>(null);
   const audioPlayingRef = useRef(false);
   const audioIndexRef = useRef(0);
@@ -238,9 +239,14 @@ export default function AppShell({
     if (audioTimerRef.current) clearTimeout(audioTimerRef.current);
     const token = ++speakTokenRef.current;
     const sentences = splitSentences(text);
+    setPageSpeaking(true);
     let i = 0;
     const speakNext = () => {
-      if (token !== speakTokenRef.current || i >= sentences.length) return;
+      if (token !== speakTokenRef.current) return;
+      if (i >= sentences.length) {
+        setPageSpeaking(false);
+        return;
+      }
       const utter = new SpeechSynthesisUtterance(sentences[i]);
       configureUtterance(utter, story);
       utter.onend = () => {
@@ -253,11 +259,20 @@ export default function AppShell({
     speakNext();
   }
 
+  function togglePageSpeech(text: string, story: Story) {
+    if (pageSpeaking) {
+      stopAudio();
+    } else {
+      speakText(text, story);
+    }
+  }
+
   function stopAudio() {
     speakTokenRef.current += 1;
     if (audioTimerRef.current) clearTimeout(audioTimerRef.current);
     audioPlayingRef.current = false;
     setAudioPlaying(false);
+    setPageSpeaking(false);
     if (typeof window !== "undefined" && "speechSynthesis" in window) window.speechSynthesis.cancel();
   }
 
@@ -644,6 +659,7 @@ export default function AppShell({
     const pct = Math.round(((idx + 1) / pages.length) * 100);
 
     function goTo(nextIdx: number, finished?: boolean) {
+      stopAudio();
       setReaderIndex(nextIdx);
       saveProgress(s.id, finished ? pages.length - 1 : nextIdx, pages.length);
       window.scrollTo({ top: 0 });
@@ -657,7 +673,7 @@ export default function AppShell({
             <div className="font-controls">
               <button aria-label="Smaller text" onClick={() => setFontScale((f) => Math.max(0.85, f - 0.1))}>A&minus;</button>
               <button aria-label="Larger text" onClick={() => setFontScale((f) => Math.min(1.4, f + 0.1))}>A+</button>
-              <button aria-label="Read this page aloud" onClick={() => speakText(pages[idx].join(" "), s)}>🔊</button>
+              <button aria-label={pageSpeaking ? "Stop reading aloud" : "Read this page aloud"} onClick={() => togglePageSpeech(pages[idx].join(" "), s)}>{pageSpeaking ? "⏹" : "🔊"}</button>
             </div>
           </div>
           <div className="reader-progress"><i style={{ width: `${pct}%` }} /></div>
