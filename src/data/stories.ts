@@ -260,7 +260,7 @@ export const ART: Record<string, string> = {
     <circle cx="66" cy="46" r="2" fill="var(--hl)"/><circle cx="78" cy="46" r="2" fill="var(--hl)"/>
     <ellipse cx="118" cy="78" rx="14" ry="10" fill="var(--accent)" opacity="0.6"/>
     <polygon points="108,78 118,58 128,78" fill="var(--accent)" opacity="0.6"/>
-    <circle cx="30" cy="70" r="7" fill="var(--silo)"/><path d="M23 70 Q30 60 37 70" stroke="var(--silo)" strokeWidth="2" fill="none"/>
+    <circle cx="30" cy="70" r="7" fill="var(--silo)"/><path d="M23 70 Q30 60 37 70" stroke="var(--silo)" stroke-width="2" fill="none"/>
   `,
   "portrait-that-blinked": `
     <rect x="52" y="14" width="56" height="66" rx="3" fill="var(--silo)"/>
@@ -282,11 +282,11 @@ export const ART: Record<string, string> = {
     <path d="M0 74 Q40 62 80 74 T160 72 V100 H0 Z" fill="var(--silo)"/>
     <circle cx="120" cy="22" r="12" fill="var(--hl)"/>
     <ellipse cx="60" cy="76" rx="18" ry="8" fill="var(--accent)" opacity="0.7"/>
-    <path d="M42 76 Q60 50 78 76" stroke="var(--hl)" strokeWidth="2" fill="none" opacity="0.6"/>
+    <path d="M42 76 Q60 50 78 76" stroke="var(--hl)" stroke-width="2" fill="none" opacity="0.6"/>
     <circle cx="20" cy="34" r="1.4" fill="var(--hl)"/><circle cx="140" cy="50" r="1.2" fill="var(--hl)"/>
   `,
   "kingdom-under-glass": `
-    <circle cx="80" cy="52" r="40" fill="none" stroke="var(--hl)" strokeWidth="2" opacity="0.6"/>
+    <circle cx="80" cy="52" r="40" fill="none" stroke="var(--hl)" stroke-width="2" opacity="0.6"/>
     <rect x="56" y="66" width="48" height="28" fill="var(--silo)"/>
     <polygon points="50,66 80,44 110,66" fill="var(--silo)"/>
     <rect x="70" y="76" width="6" height="8" fill="var(--hl)"/>
@@ -298,9 +298,66 @@ export const ART: Record<string, string> = {
     <polygon points="72,88 80,20 88,20 96,88" fill="var(--silo)"/>
     <rect x="68" y="16" width="24" height="12" fill="var(--silo)"/>
     <circle cx="80" cy="21" r="4" fill="var(--hl)"/>
-    <path d="M92 18 Q118 12 140 26" stroke="var(--hl)" strokeWidth="1.6" fill="none" opacity="0.7"/>
-    <path d="M92 26 Q118 22 144 40" stroke="var(--hl)" strokeWidth="1.2" fill="none" opacity="0.5"/>
+    <path d="M92 18 Q118 12 140 26" stroke="var(--hl)" stroke-width="1.6" fill="none" opacity="0.7"/>
+    <path d="M92 26 Q118 22 144 40" stroke="var(--hl)" stroke-width="1.2" fill="none" opacity="0.5"/>
     <ellipse cx="30" cy="86" rx="20" ry="6" fill="var(--hl)" opacity="0.4"/>
+  `,
+  "queens-last-watch": `
+    <path d="M0 92 H160 V100 H0 Z" fill="var(--silo)" opacity="0.5"/>
+    <rect x="46" y="16" width="30" height="40" rx="2" fill="var(--silo)"/>
+    <rect x="84" y="16" width="30" height="40" rx="2" fill="var(--silo)"/>
+    <circle cx="61" cy="30" r="2" fill="var(--hl)"/><circle cx="99" cy="30" r="2" fill="var(--hl)"/>
+    <path d="M50 78c4-8 10-12 20-12s16 4 20 12" stroke="var(--hl)" stroke-width="1.4" fill="none" opacity="0.5"/>
+    <circle cx="20" cy="20" r="1.4" fill="var(--hl)"/><circle cx="140" cy="22" r="1.2" fill="var(--hl)"/>
+  `,
+  "smallest-spider-halloween": `
+    <ellipse cx="80" cy="90" rx="70" ry="8" fill="var(--silo)" opacity="0.4"/>
+    <circle cx="120" cy="36" r="10" fill="var(--silo)"/>
+    <path d="M120 30v-16M120 42v16M112 36h-16M128 36h16M112 28l-12-12M128 28l12-12M112 44l-12 12M128 44l12 12" stroke="var(--silo)" stroke-width="1.4"/>
+    <circle cx="30" cy="60" r="3.2" fill="var(--accent)"/>
+    <path d="M30 57v-6M30 63v6M27 60h-6M33 60h6" stroke="var(--accent)" stroke-width="1"/>
+  `,
+  "knight-who-counted-sheep": `
+    <path d="M0 78 Q40 66 80 78 T160 76 V100 H0 Z" fill="var(--silo)"/>
+    <ellipse cx="50" cy="70" rx="14" ry="9" fill="var(--hl)"/><circle cx="62" cy="66" r="5" fill="var(--hl)"/>
+    <ellipse cx="100" cy="66" rx="12" ry="8" fill="var(--hl)" opacity="0.7"/><circle cx="110" cy="62" r="4" fill="var(--hl)" opacity="0.7"/>
+    <circle cx="120" cy="20" r="10" fill="var(--hl)" opacity="0.5"/>
+    <circle cx="24" cy="18" r="1.4" fill="var(--hl)"/>
+  `,
+  "attic-witchs-apprentice": `
+    <path d="M0 92 H160 V100 H0 Z" fill="var(--silo)" opacity="0.5"/>
+    <rect x="54" y="60" width="36" height="30" fill="var(--silo)"/>
+    <polygon points="48,60 72,38 96,60" fill="var(--silo)"/>
+    <ellipse cx="116" cy="74" rx="14" ry="12" fill="var(--accent)" opacity="0.6"/>
+    <path d="M104 72c4-6 10-6 14 0" stroke="var(--hl)" stroke-width="1.4" fill="none" opacity="0.6"/>
+    <circle cx="30" cy="30" r="8" fill="var(--hl)" opacity="0.5"/>
+  `,
+  "first-splash": `
+    <path d="M0 74 Q40 62 80 74 T160 72 V100 H0 Z" fill="var(--silo)"/>
+    <ellipse cx="60" cy="70" rx="20" ry="11" fill="var(--hl)"/>
+    <circle cx="76" cy="62" r="7" fill="var(--hl)"/>
+    <circle cx="26" cy="20" r="9" fill="var(--hl)" opacity="0.5"/>
+    <circle cx="120" cy="30" r="1.6" fill="var(--hl)"/><circle cx="134" cy="46" r="1.2" fill="var(--hl)"/>
+  `,
+  "princes-borrowed-crown": `
+    <path d="M0 90 H160 V100 H0 Z" fill="var(--silo)" opacity="0.4"/>
+    <polygon points="50,66 60,40 72,58 80,36 88,58 100,40 110,66" fill="var(--hl)"/>
+    <rect x="50" y="66" width="60" height="8" fill="var(--hl)"/>
+    <circle cx="72" cy="48" r="2" fill="var(--accent)"/><circle cx="88" cy="48" r="2" fill="var(--accent)"/>
+    <circle cx="20" cy="24" r="1.4" fill="var(--hl)"/>
+  `,
+  "grandmothers-recipe-box": `
+    <rect x="52" y="50" width="56" height="34" rx="3" fill="var(--silo)"/>
+    <rect x="52" y="50" width="56" height="10" fill="var(--accent)" opacity="0.6"/>
+    <rect x="70" y="30" width="20" height="24" fill="var(--silo)" opacity="0.7"/>
+    <circle cx="30" cy="80" r="8" fill="var(--hl)" opacity="0.5"/>
+    <circle cx="130" cy="30" r="1.6" fill="var(--hl)"/>
+  `,
+  "jellyfish-who-glowed-wrong": `
+    <path d="M0 20 Q80 8 160 22 V0 H0 Z" fill="var(--silo)" opacity="0.35"/>
+    <ellipse cx="80" cy="46" rx="22" ry="18" fill="var(--accent)" opacity="0.85"/>
+    <path d="M62 58q4 16-2 24M72 60q2 16-4 22M88 60q4 16 2 22M98 58q6 14 0 24" stroke="var(--accent)" stroke-width="1.6" fill="none" opacity="0.6"/>
+    <circle cx="30" cy="70" r="5" fill="var(--hl)" opacity="0.5"/><circle cx="130" cy="60" r="4" fill="var(--hl)" opacity="0.4"/>
   `
 };
 
@@ -1513,6 +1570,242 @@ It wasn't treasure, and it wasn't a scandal — it was simply her grandfather's 
 Priya cross-referenced his coded coordinates with a modern marine chart and found, to her astonishment, that the reef was still there, still barely marked, still exactly as dangerous as her grandfather had once discovered the hard way.
 
 She reported it to the coast guard, who updated the charts within the month — a small, quiet correction that would keep sailors safe for generations to come, sparked entirely by a girl who refused to let a stack of numbers stay a mystery.`
+  },
+  {
+    id:"queens-last-watch", age:"12-13", category:"bedtime", character:"royalty", tag:"original",
+    title:"The Queen's Last Watch", accent:"#8393cf", minutes:9, rating:4.7,
+    popular:false, isNew:true, difficulty:"Confident",
+    blurb:"An aging queen keeps one final, quiet tradition before bed — walking the palace halls to wish every sleeping portrait goodnight.",
+    text:`Queen Isolde had ruled for forty-one years, and in all that time, she had never once gone to bed without first walking the length of the portrait gallery, candle in hand, wishing each painted ancestor a quiet goodnight.
+
+Her advisors found it a strange habit for a woman who had signed treaties, weathered famines, and buried a husband, but Isolde had her reasons, and she rarely explained herself to anyone who hadn't earned the answer.
+
+"Goodnight, Great-Aunt Rosalind," she murmured to a stern-faced portrait near the gallery's end, exactly as she did every night. "Goodnight, Uncle Ferdinand, and your terrible taste in hats."
+
+Her granddaughter, Princess Elin, only eleven, had taken to following her some evenings, more out of curiosity than tradition.
+
+"Why do you talk to paintings, Grandmother?" Elin finally asked one night, trailing behind with her own small candle. "They can't hear you."
+
+Isolde paused before the portrait of her own mother, brush in her hand still catching candlelight after all these decades on canvas.
+
+"When I was your age," she said slowly, "this castle felt enormous and lonely at night — too many empty rooms, too much silence. My own grandmother told me the portraits were never truly asleep, only resting, and that a kind word before bed helped them rest easier, the way it helps us."
+
+"Is that true?" Elin asked, wide-eyed.
+
+"I don't honestly know," Isolde admitted, smiling. "But it's not really about whether it's true. It's about remembering that this whole quiet castle is full of people who came before us, who worried and hoped just as we do, and who deserve a little kindness even now. It helps me sleep, knowing I've thanked them."
+
+Elin considered this all the way to the end of the gallery, where the last portrait — young, dark-haired, unmistakably her own grandmother as a girl — hung in soft shadow.
+
+"Goodnight, past-you," Elin whispered to it, giggling despite herself.
+
+Isolde laughed too, a warm, tired sound, and blew out her candle. "Goodnight, gallery," she said to the whole dim hall, the way she had every single night for forty-one years. "Sleep well, all of you."
+
+And somewhere down that long quiet corridor, in the hush after the last candle went dark, the castle itself seemed to settle more peacefully into sleep — as it always did, once the queen had said her goodnights.`
+  },
+  {
+    id:"smallest-spider-halloween", age:"4-5", category:"scary", character:"animals", tag:"original",
+    title:"The Smallest Spider's Halloween", accent:"#e08a3f", minutes:4, rating:4.8,
+    popular:true, isNew:true, difficulty:"Easy",
+    blurb:"A tiny spider is sure she's too small to be spooky — until she discovers that even little things can be wonderfully surprising.",
+    text:`Pip was the smallest spider in the whole garden shed, and every year when Halloween came around, she watched the bigger spiders spin enormous, dramatic webs that made visitors gasp.
+
+"I could never make anything that spooky," Pip sighed, looking at her own tiny, wobbly web in the corner. "I'm much too small."
+
+"Small doesn't mean not spooky," said Old Gustav, the biggest spider in the shed, twirling one long leg thoughtfully. "It just means a different kind of surprise."
+
+Pip wasn't sure what that meant, but on Halloween night, she decided to try something new anyway. Instead of a big web, she spun a tiny one — right in the corner of the old lantern, where nobody would think to look.
+
+When the garden mouse family wandered past that evening, admiring the big spiders' impressive webs stretched across the doorway, little Pip stayed perfectly still and silent in her hidden corner.
+
+"Ooooh, look at that huge web!" squeaked the youngest mouse, pointing at Gustav's enormous silky masterpiece.
+
+Then, just as they turned to leave, Pip gave the tiniest, gentlest wiggle from her hidden spot by the lantern.
+
+"EEK! Something moved right there!" the little mouse squealed, jumping back in surprise, before dissolving into giggles. "That was the best kind of scary — the surprise kind!"
+
+Pip beamed with pride. Her web hadn't been the biggest. It hadn't been the fanciest. But it had been exactly the right kind of surprising, precisely because nobody expected anything spooky from somewhere so small.
+
+"See?" said Old Gustav, winking one of his eight eyes. "Small can still be spooky. Sometimes small is spookiest of all."
+
+Pip spent the rest of Halloween night proudly perched by her tiny lantern web, delighting every visitor who wandered past — proof that you didn't need to be the biggest to give the best kind of gentle, giggly fright.`
+  },
+  {
+    id:"knight-who-counted-sheep", age:"8-9", category:"bedtime", character:"heroes", tag:"original",
+    title:"The Knight Who Counted Sheep", accent:"#8393cf", minutes:6, rating:4.6,
+    popular:false, isNew:true, difficulty:"Growing",
+    blurb:"A brave knight who's never once lost a battle discovers his one true weakness: he cannot fall asleep without help.",
+    text:`Sir Rowan had defeated giants, outwitted dragons, and survived three separate curses, but he had never once, in all his adventuring years, managed to fall asleep without a very particular kind of help.
+
+"Counting sheep," he explained to his bewildered new squire, Tam, on their first night camping under the stars. "One must count them properly, or it simply doesn't work."
+
+"Properly, sir?" Tam asked, already half-convinced his new knight was a bit odd.
+
+"Indeed. Ordinary sheep won't do at all. You must imagine each one jumping a fence with real personality — this one's nervous and refuses to jump, that one's showing off, doing a little twirl in midair."
+
+Tam watched, baffled, as Sir Rowan closed his eyes and began muttering under his breath. "One sheep, terribly proud of her wool, struts up to the fence... two sheep, absolutely convinced he can fly, attempts a running jump and clears it by a mile..."
+
+By the time Sir Rowan reached "seven sheep, who has decided the fence is beneath her and walks around it instead," Tam found himself smiling despite his confusion, and by "twelve sheep, who insists on doing the jump backward just to prove he can," the great knight's breathing had slowed into peaceful, even sleep.
+
+The next morning, Tam couldn't resist asking about it.
+
+"Why sheep with personalities, sir? Wouldn't plain counting be simpler?"
+
+Sir Rowan considered this over his morning porridge. "Plain counting is just numbers, Tam — my mind stays busy, worrying over numbers instead of resting. But a silly, specific little sheep with its own funny habits? That's just entertaining enough to keep the worry away, and just gentle enough to drift off to. Battles and dragons are for daytime. At night, I prefer my adventures considerably smaller and sillier."
+
+That night, when Tam himself struggled to sleep in the unfamiliar countryside, he tried it for himself — one sheep, terrified of its own shadow, refusing the fence three times before finally, bravely, hopping over — and found, rather to his surprise, that his knight had been right all along.`
+  },
+  {
+    id:"attic-witchs-apprentice", age:"10-11", category:"scary", character:"witches", tag:"original",
+    title:"The Attic Witch's Apprentice", accent:"#e08a3f", minutes:8, rating:4.7,
+    popular:false, isNew:true, difficulty:"Growing",
+    blurb:"A boy who keeps hearing cackling laughter from his new house's attic finally investigates — and finds an apprenticeship waiting, not a monster.",
+    text:`Every night for a week, Dev had heard it: a low, crackling cackle drifting down from the attic of his family's new house, always right around midnight, always gone by the time he worked up the courage to check.
+
+His parents insisted it was just old pipes settling. Dev, who had watched enough late-night television to know better, was fairly certain his house had come with a genuine, cackling witch.
+
+On the eighth night, tired of lying awake dreading the sound, Dev decided that being frightened of something was considerably worse than actually knowing what it was. He crept up the attic stairs at 11:58 pm, flashlight trembling in one hand.
+
+The cackle came right on schedule — and up close, in the flashlight's beam, Dev found not a monster at all, but a small, wrinkled woman in a patched cloak, hunched over a bubbling cauldron the size of a soup pot, laughing uproariously at absolutely nothing Dev could see.
+
+"Oh!" she said, noticing him, entirely unbothered at being discovered. "A visitor. How lovely. I do apologize for the cackling — it's part of the spell, you see. Laughing potions require genuine laughter to brew properly, and there's nothing much funnier, up here alone every night, than my own memories of terrible party jokes."
+
+"You're a witch," Dev said, somewhat unnecessarily.
+
+"Guilty," she said, bowing slightly. "Agatha, pleased to meet you. I've been brewing in this attic for eleven years — quietly, mind you, never bothering a soul, until apparently my cackling bothers new tenants rather more than old ones."
+
+"What's the laughing potion for?" Dev asked, curiosity rapidly overtaking his fear.
+
+"Hospitals, mostly," Agatha said. "A single drop in a very frightened child's tea, and suddenly a scary situation feels just a touch more bearable. I deliver batches every full moon. Rather important work, if I do say so myself."
+
+Dev, who had been quite frightened himself just minutes earlier, found this explanation oddly reassuring.
+
+"Could I help?" he asked, surprising himself. "I know a lot of terrible jokes."
+
+Agatha's eyes lit up. "An apprentice! Marvelous. Terrible jokes are exactly the qualification I require. Pull up a stool, young man — and mind the cauldron, it does enjoy a good laugh a little too enthusiastically sometimes."
+
+From then on, Dev's nightly attic visits became the best part of his week, and the neighborhood hospital's supply of laughing potion never once ran short, thanks to a boy who'd traded his fear of a midnight cackle for the very best kind of secret job.`
+  },
+  {
+    id:"first-splash", age:"4-5", category:"adventure", character:"sea", tag:"original",
+    title:"The First Splash", accent:"#6fa15c", minutes:4, rating:4.9,
+    popular:true, isNew:true, difficulty:"Easy",
+    blurb:"A baby otter is too scared to leave the riverbank for her very first swim, until her family shows her the best way in.",
+    text:`Bibi the baby otter sat on the riverbank, toes curled tightly around a smooth grey stone, watching the water rush by with enormous, nervous eyes.
+
+"Come on in, Bibi!" called her big brother Otto, already sleek and dripping from the river. "The water's perfect today!"
+
+"It's too big," Bibi said, shrinking back from the edge. "And too fast. And too wet."
+
+Her mother swam over, paddling gently in place near the bank. "Water is always wet, little one — that's rather the whole point of it. But I promise, it won't hurt you. Otters were built for this."
+
+"What if I sink?" Bibi asked in a very small voice.
+
+"Otters don't sink," her mother said warmly. "We float, like little furry boats. Watch." She rolled gently onto her back and bobbed there, completely at ease, whiskers twitching happily in the sunshine.
+
+Bibi inched closer to the edge, one paw dipping in and immediately darting back out. "Cold!"
+
+"Only for a second," Otto promised. "Then it feels wonderful. Trust me — I was scared too, my very first time."
+
+"You were?" Bibi looked at her fearless big brother in surprise.
+
+"Everyone is, their first time," he said. "That's allowed. But I'll hold your paw the whole way, if you like."
+
+Bibi thought about this for a long moment, watching her family bob happily in the sunlit water, looking so free and unafraid. Finally, she reached out and took Otto's paw in hers.
+
+"Okay," she whispered. "Together."
+
+They slipped into the river side by side, and the cold hit Bibi for exactly one startled second — and then, just as her brother had promised, it melted into something wonderful: the water holding her up, gentle and cool, as she paddled her small paws and realized, with a delighted squeak, that she was floating.
+
+"I'm swimming!" Bibi shrieked joyfully, splashing water in every direction. "I'm actually swimming!"
+
+Her whole family cheered, and from that afternoon on, nobody could keep Bibi out of the river — the otter who'd once been too scared to dip a single paw in had become, rather quickly, the one leading everyone else in for a swim.`
+  },
+  {
+    id:"princes-borrowed-crown", age:"4-5", category:"fairytale", character:"heroes", tag:"original",
+    title:"The Prince's Borrowed Crown", accent:"#e0479a", minutes:4, rating:4.8,
+    popular:false, isNew:true, difficulty:"Easy",
+    blurb:"A young prince thinks a real crown will finally make him feel brave — until a kind gardener shows him where courage actually comes from.",
+    text:`Prince Baxter was small for his age, and he was quite certain that everyone's favorite knights and heroes in his storybooks had one thing he simply didn't: an enormous, shining, very impressive crown.
+
+"If I had a bigger crown," he told his father the king one morning, "I would surely feel brave enough to do brave things."
+
+The king, who was busy with royal paperwork, absentmindedly let Baxter borrow his own spare ceremonial crown — a heavy, gleaming thing, twice the size of anything Baxter usually wore.
+
+Baxter placed it carefully on his head and marched straight out to the castle garden, chin held high, waiting to feel wonderfully, enormously brave.
+
+He did not feel brave. He felt, if anything, rather silly, and the crown kept sliding down over his eyes.
+
+"That's a very big crown for such a small prince," observed old Nell, the head gardener, looking up from her rose bushes with a knowing smile.
+
+"I thought it would make me braver," Baxter admitted glumly, pushing the crown back up so he could see. "But it's just heavy and wobbly."
+
+Nell set down her trowel and considered him thoughtfully. "Tell me, young prince — when was the last time you actually felt brave? Not wished for it. Felt it."
+
+Baxter thought hard. "Yesterday," he said slowly. "When I told Cook I didn't like her turnip soup, even though I was worried she'd be upset."
+
+"And were you wearing a crown then?"
+
+"No," Baxter admitted. "Just my regular clothes."
+
+"There's your answer," Nell said, smiling. "Bravery was never in the crown, little prince. It was in you the whole time — you simply used it, right there in the kitchen, without any golden helper at all."
+
+Baxter took off the heavy, borrowed crown and set it carefully aside, feeling suddenly much lighter.
+
+"So I don't need a bigger crown," he said, testing the idea out loud.
+
+"You never did," Nell agreed. "Just your own two feet, and whatever's already inside your chest. That's always been plenty."
+
+Baxter returned his father's crown that very afternoon, and though he went back to wearing his own small, ordinary one, he found — rather wonderfully — that he felt braver in it than he ever had in the big one, simply because he'd finally understood where his courage had been hiding all along.`
+  },
+  {
+    id:"grandmothers-recipe-box", age:"12-13", category:"mystery", character:"animals", tag:"original",
+    title:"Grandmother's Recipe Box", accent:"#4fa39c", minutes:10, rating:4.7,
+    popular:false, isNew:true, difficulty:"Confident",
+    blurb:"A raccoon inherits her grandmother's famous recipe box, only to discover the family's prized secret recipe is written entirely in riddles.",
+    text:`When Grandmother Coraline passed, she left her granddaughter Sable exactly one thing: a battered tin recipe box, and a note that read, "The best recipe I ever made isn't written plainly. Find it, and you'll understand why."
+
+Sable, a young raccoon known throughout Hollow Creek for her sharp mind and sharper claws, flipped through card after card of ordinary family recipes — acorn stew, berry preserves, roasted chestnuts — until she reached the very back of the box and found a single card unlike the rest, covered edge to edge in riddles instead of instructions.
+
+"Three handfuls of what the river gives but never keeps," the first line read. "A pinch of what grows brightest after the coldest night. Stir with patience, which cannot be measured in cups."
+
+Sable groaned. Her grandmother had been famous throughout the whole forest for one extraordinary dish — a stew so beloved that animals traveled from three valleys over just to taste it — and apparently, she'd taken the actual recipe to her grave, hidden inside a puzzle instead.
+
+Sable spent a full week working through each riddle. "What the river gives but never keeps" turned out to be river stones, warmed by the sun then removed before cooking — an old trick for gentle, even heat. "What grows brightest after the coldest night" was frost-berries, which only ripened to their sweetest after the year's harshest freeze.
+
+But it was the final line that stumped her longest: "The last ingredient isn't found in any garden or riverbed at all — it's given, not gathered, and the stew won't work without it."
+
+Sable tried everything she could think of. Nothing worked. The stew came out fine, but never quite like her grandmother's — never quite that specific, beloved magic everyone remembered.
+
+It was only months later, cooking the stew again for a grieving neighbor who'd just lost her own mother, that Sable finally understood. She'd made the dish that day not for herself, but purely to comfort someone else — and stirring it with that particular care, that specific intention of giving comfort rather than simply following steps, the stew came out exactly, unmistakably right for the very first time.
+
+"Given, not gathered," Sable whispered, finally understanding. The last ingredient had never been something you could measure into a pot at all. It was the reason you were cooking in the first place — care, offered freely to someone who needed it.
+
+From then on, Sable made her grandmother's stew only when someone in Hollow Creek truly needed comforting, and it came out perfect every single time, precisely because she finally understood the secret ingredient her grandmother had hidden not in the recipe, but in the reason behind it.`
+  },
+  {
+    id:"jellyfish-who-glowed-wrong", age:"8-9", category:"magical", character:"sea", tag:"original",
+    title:"The Jellyfish Who Glowed the Wrong Color", accent:"#b17bea", minutes:6, rating:4.8,
+    popular:false, isNew:true, difficulty:"Growing",
+    blurb:"Every jellyfish in the reef glows blue except one — until she discovers her different color has a magic all its own.",
+    text:`Every jellyfish in Moonlight Reef glowed the same soft, gentle blue when night fell — every jellyfish, that is, except Pearl, who glowed a strange, uncertain violet that made the other jellyfish whisper and stare.
+
+"You're glowing wrong," a passing jellyfish told her one evening, not unkindly, but not kindly either. "Everyone knows jellyfish glow blue."
+
+Pearl sank a little lower in the water, wishing, not for the first time, that her light would simply match everyone else's.
+
+She tried everything to fix it. She swam near the bluest coral, hoping the color might rub off. She avoided moonlight entirely, thinking perhaps darkness would hide the difference. Nothing worked. Pearl glowed violet, steady and strange, no matter what she tried.
+
+One night, lost and drifting farther from the reef than she'd meant to go, Pearl found herself in a dark, unfamiliar cave, the current too strong to swim back against. Panic set in as the darkness pressed close around her — until she noticed something strange.
+
+Her own violet glow, the color she'd spent so long wishing away, was lighting up the cave walls in a way blue light never could. Deep in the shadowed water, tiny cave fish who'd never seen any light at all began gathering curiously around her unusual glow, drawn to a color their eyes could somehow see far better than ordinary blue.
+
+"You're the light-fish!" one small cave fish exclaimed in wonder. "We've never seen anything glow like that down here. Blue light barely reaches us at all, but yours — yours reaches everywhere."
+
+Pearl realized, with a warm rush of understanding, that her "wrong" color wasn't wrong at all — it simply worked differently, reaching places and creatures that ordinary blue light never could.
+
+The cave fish guided her safely back toward the reef, delighted the whole way by her unusual glow, and when Pearl finally returned home, she swam a little taller — or as tall as a jellyfish can manage — no longer wishing to match everyone else.
+
+"I don't glow wrong," she told the jellyfish who'd once teased her, quite calmly. "I glow differently. And differently, it turns out, is exactly what some dark places have been needing all along."`
   }
 ];
 
