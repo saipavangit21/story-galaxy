@@ -19,7 +19,7 @@ type ProgressMap = Record<string, { page: number; totalPages: number; ts: number
 
 type View =
   | "home" | "age" | "categories" | "characters" | "library"
-  | "detail" | "reader" | "audio" | "parent";
+  | "detail" | "reader" | "audio" | "parent" | "games";
 
 type LibFilter = {
   age: string;
@@ -83,6 +83,16 @@ function getSentencePauseMs(story: Story): number {
   return story.category === "bedtime" ? 900 : SENTENCE_PAUSE_MS;
 }
 
+const DAILY_LIMIT_KEY = "sg_daily_limit_minutes";
+const USAGE_KEY_PREFIX = "sg_usage_minutes_";
+const USAGE_TICK_MS = 30000;
+const USAGE_TICK_MINUTES = USAGE_TICK_MS / 60000;
+
+function todayKey(): string {
+  const d = new Date();
+  return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+}
+
 function hashToIndex(text: string, mod: number): number {
   let h = 0;
   for (let i = 0; i < text.length; i++) h = (h * 31 + text.charCodeAt(i)) >>> 0;
@@ -99,6 +109,84 @@ function pickVoiceForStory(story: Story, voices: SpeechSynthesisVoice[]): Speech
     if (match) return match;
   }
   return pool[hashToIndex(story.character + story.id, pool.length)];
+}
+
+function MemoryGame() {
+  const [deck, setDeck] = useState<{ key: string; char: (typeof CHARACTERS)[number] }[]>([]);
+  const [flipped, setFlipped] = useState<number[]>([]);
+  const [matched, setMatched] = useState<Set<number>>(new Set());
+  const [moves, setMoves] = useState(0);
+  const [locked, setLocked] = useState(false);
+
+  function shuffle() {
+    const pairs = [...CHARACTERS, ...CHARACTERS].map((char, i) => ({ key: `${char.id}-${i}`, char }));
+    for (let i = pairs.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pairs[i], pairs[j]] = [pairs[j], pairs[i]];
+    }
+    setDeck(pairs);
+    setFlipped([]);
+    setMatched(new Set());
+    setMoves(0);
+    setLocked(false);
+  }
+
+  useEffect(() => { shuffle(); }, []);
+
+  function flip(i: number) {
+    if (locked || flipped.includes(i) || matched.has(i)) return;
+    const next = [...flipped, i];
+    setFlipped(next);
+    if (next.length === 2) {
+      setLocked(true);
+      setMoves((m) => m + 1);
+      const [a, b] = next;
+      if (deck[a].char.id === deck[b].char.id) {
+        setTimeout(() => {
+          setMatched((prev) => new Set([...prev, a, b]));
+          setFlipped([]);
+          setLocked(false);
+        }, 500);
+      } else {
+        setTimeout(() => {
+          setFlipped([]);
+          setLocked(false);
+        }, 900);
+      }
+    }
+  }
+
+  const won = deck.length > 0 && matched.size === deck.length;
+
+  return (
+    <div>
+      <div className="game-stats">
+        <span>Moves: {moves}</span>
+        <button className="btn-ghost" onClick={shuffle}>🔄 New Game</button>
+      </div>
+      {won && (
+        <div className="empty-note" style={{ textAlign: "center" }}>
+          <Mascot size={72} className="empty-mascot" />
+          <p>You matched every pair in {moves} moves! 🎉</p>
+        </div>
+      )}
+      <div className="game-grid">
+        {deck.map((card, i) => {
+          const isUp = flipped.includes(i) || matched.has(i);
+          return (
+            <button
+              key={card.key}
+              className={`game-card ${isUp ? "up" : ""} ${matched.has(i) ? "matched" : ""}`}
+              onClick={() => flip(i)}
+              aria-label={isUp ? card.char.label : "Hidden card"}
+            >
+              {isUp ? card.char.emoji : "❓"}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
 }
 
 export default function AppShell({
@@ -131,6 +219,8 @@ export default function AppShell({
   const audioTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const speakTokenRef = useRef(0);
   const voicesRef = useRef<SpeechSynthesisVoice[]>([]);
+  const [dailyLimit, setDailyLimitRaw] = useState<number | null>(null);
+  const [minutesUsed, setMinutesUsed] = useState(0);
 
   useEffect(() => {
     if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
@@ -141,6 +231,46 @@ export default function AppShell({
     window.speechSynthesis.addEventListener("voiceschanged", loadVoices);
     return () => window.speechSynthesis.removeEventListener("voiceschanged", loadVoices);
   }, []);
+
+  useEffect(() => {
+    try {
+      const savedLimit = localStorage.getItem(DAILY_LIMIT_KEY);
+      if (savedLimit) setDailyLimitRaw(Number(savedLimit));
+      const savedUsage = localStorage.getItem(USAGE_KEY_PREFIX + todayKey());
+      if (savedUsage) setMinutesUsed(Number(savedUsage));
+    } catch {}
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (typeof document !== "undefined" && document.visibilityState !== "visible") return;
+      setMinutesUsed((prev) => {
+        const next = prev + USAGE_TICK_MINUTES;
+        try {
+          localStorage.setItem(USAGE_KEY_PREFIX + todayKey(), String(next));
+        } catch {}
+        return next;
+      });
+    }, USAGE_TICK_MS);
+    return () => clearInterval(interval);
+  }, []);
+
+  function setDailyLimit(minutes: number | null) {
+    setDailyLimitRaw(minutes);
+    try {
+      if (minutes === null) localStorage.removeItem(DAILY_LIMIT_KEY);
+      else localStorage.setItem(DAILY_LIMIT_KEY, String(minutes));
+    } catch {}
+  }
+
+  function resetTodayUsage() {
+    setMinutesUsed(0);
+    try {
+      localStorage.setItem(USAGE_KEY_PREFIX + todayKey(), "0");
+    } catch {}
+  }
+
+  const timeIsUp = dailyLimit !== null && minutesUsed >= dailyLimit;
 
   function setView(v: View) {
     stopAudio();
@@ -438,7 +568,7 @@ export default function AppShell({
   function Nav() {
     const items: [View, string][] = [
       ["home", "Home"], ["age", "Ages"], ["categories", "Categories"],
-      ["library", "Library"], ["characters", "Characters"],
+      ["library", "Library"], ["characters", "Characters"], ["games", "Games"],
     ];
     return (
       <header className="topbar">
@@ -779,6 +909,21 @@ export default function AppShell({
               <p className="muted-note">Turning this off hides the 👻 Scary category everywhere on the site for this account.</p>
             </div>
             <div className="parents-card">
+              <h3>Daily time limit</h3>
+              <div className="filters" style={{ marginBottom: "0.6rem" }}>
+                {[null, 15, 30, 45, 60].map((m) => (
+                  <button key={String(m)} className={`chip ${dailyLimit === m ? "active" : ""}`} onClick={() => setDailyLimit(m)}>
+                    {m === null ? "No limit" : `${m} min`}
+                  </button>
+                ))}
+              </div>
+              <p className="muted-note">
+                Used today: {Math.round(minutesUsed)} {dailyLimit !== null ? `of ${dailyLimit}` : ""} minutes.
+                {" "}<button className="link-more" style={{ fontSize: "inherit" }} onClick={resetTodayUsage}>Reset today</button>
+              </p>
+              <p className="muted-note">Stored on this device only &mdash; resets automatically each day.</p>
+            </div>
+            <div className="parents-card">
               <h3>Reading history</h3>
               <ul>
                 {historyEntries.length === 0 && <li>No reading yet.</li>}
@@ -814,19 +959,54 @@ export default function AppShell({
     );
   }
 
+  function TimeUpView() {
+    return (
+      <section>
+        <div className="wrap" style={{ textAlign: "center" }}>
+          <Mascot size={110} className="hero-mascot" />
+          <h1 className="serif">Time&apos;s up for today!</h1>
+          <p className="lede">
+            You&apos;ve reached today&apos;s reading time of {dailyLimit} minutes. Come back tomorrow for more stories &mdash; or ask a grown-up to visit Parents to adjust the limit.
+          </p>
+          <div className="hero-actions" style={{ justifyContent: "center" }}>
+            <button className="btn-gold" onClick={() => setView("parent")}>Go to Parents</button>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  function GamesView() {
+    return (
+      <section>
+        <div className="wrap">
+          <div className="section-head"><h2>Character Match</h2><span className="sub">Flip cards and find every matching pair</span></div>
+          <MemoryGame />
+        </div>
+      </section>
+    );
+  }
+
   return (
     <>
       {Nav()}
       <main>
-        {view === "home" && HomeView()}
-        {view === "age" && AgeView()}
-        {view === "categories" && CategoriesView()}
-        {view === "characters" && CharactersView()}
-        {view === "library" && LibraryView()}
-        {view === "detail" && DetailView()}
-        {view === "reader" && ReaderView()}
-        {view === "audio" && AudioView()}
-        {view === "parent" && ParentView()}
+        {timeIsUp && view !== "parent" ? (
+          TimeUpView()
+        ) : (
+          <>
+            {view === "home" && HomeView()}
+            {view === "age" && AgeView()}
+            {view === "categories" && CategoriesView()}
+            {view === "characters" && CharactersView()}
+            {view === "library" && LibraryView()}
+            {view === "detail" && DetailView()}
+            {view === "reader" && ReaderView()}
+            {view === "audio" && AudioView()}
+            {view === "games" && GamesView()}
+            {view === "parent" && ParentView()}
+          </>
+        )}
       </main>
       <footer>
         Story Galaxy &mdash; a shelf of tales for ages 4 to 13.
