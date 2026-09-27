@@ -199,9 +199,11 @@
   .char-tile .label{font-weight:700;font-size:0.92rem;}
 
   /* ---------- games ---------- */
-  .game-stats{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.2rem;color:var(--lavender);font-weight:600;}
+  .game-stats{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.8rem;margin-bottom:1.2rem;color:var(--lavender);font-weight:600;}
   .game-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0.8rem;}
-  @media (max-width:600px){.game-grid{grid-template-columns:repeat(2,1fr);}}
+  .game-grid-medium{grid-template-columns:repeat(4,1fr);}
+  .game-grid-hard{grid-template-columns:repeat(6,1fr);}
+  @media (max-width:600px){.game-grid,.game-grid-medium,.game-grid-hard{grid-template-columns:repeat(3,1fr);}}
   .game-card{
     aspect-ratio:1;border-radius:14px;border:none;cursor:pointer;
     background:var(--navy-card);font-size:2.2rem;display:flex;align-items:center;justify-content:center;

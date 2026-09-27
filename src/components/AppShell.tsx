@@ -111,15 +111,26 @@ function pickVoiceForStory(story: Story, voices: SpeechSynthesisVoice[]): Speech
   return pool[hashToIndex(story.character + story.id, pool.length)];
 }
 
+type GameSymbol = { id: string; emoji: string; label: string };
+
+const GAME_LEVELS: { id: "easy" | "medium" | "hard"; label: string; symbols: GameSymbol[] }[] = [
+  { id: "easy", label: "Easy · 5 pairs", symbols: CHARACTERS },
+  { id: "medium", label: "Medium · 8 pairs", symbols: [...CHARACTERS, ...CATEGORIES.slice(0, 3)] },
+  { id: "hard", label: "Hard · 11 pairs", symbols: [...CHARACTERS, ...CATEGORIES] },
+];
+
 function MemoryGame() {
-  const [deck, setDeck] = useState<{ key: string; char: (typeof CHARACTERS)[number] }[]>([]);
+  const [levelId, setLevelId] = useState<(typeof GAME_LEVELS)[number]["id"]>("easy");
+  const [deck, setDeck] = useState<{ key: string; symbol: GameSymbol }[]>([]);
   const [flipped, setFlipped] = useState<number[]>([]);
   const [matched, setMatched] = useState<Set<number>>(new Set());
   const [moves, setMoves] = useState(0);
   const [locked, setLocked] = useState(false);
 
-  function shuffle() {
-    const pairs = [...CHARACTERS, ...CHARACTERS].map((char, i) => ({ key: `${char.id}-${i}`, char }));
+  const level = GAME_LEVELS.find((l) => l.id === levelId) || GAME_LEVELS[0];
+
+  function shuffle(symbols: GameSymbol[]) {
+    const pairs = [...symbols, ...symbols].map((symbol, i) => ({ key: `${symbol.id}-${i}`, symbol }));
     for (let i = pairs.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [pairs[i], pairs[j]] = [pairs[j], pairs[i]];
@@ -131,7 +142,7 @@ function MemoryGame() {
     setLocked(false);
   }
 
-  useEffect(() => { shuffle(); }, []);
+  useEffect(() => { shuffle(level.symbols); }, [levelId]);
 
   function flip(i: number) {
     if (locked || flipped.includes(i) || matched.has(i)) return;
@@ -141,7 +152,7 @@ function MemoryGame() {
       setLocked(true);
       setMoves((m) => m + 1);
       const [a, b] = next;
-      if (deck[a].char.id === deck[b].char.id) {
+      if (deck[a].symbol.id === deck[b].symbol.id) {
         setTimeout(() => {
           setMatched((prev) => new Set([...prev, a, b]));
           setFlipped([]);
@@ -161,8 +172,15 @@ function MemoryGame() {
   return (
     <div>
       <div className="game-stats">
+        <div className="filters" style={{ marginBottom: 0 }}>
+          {GAME_LEVELS.map((l) => (
+            <button key={l.id} className={`chip ${levelId === l.id ? "active" : ""}`} onClick={() => setLevelId(l.id)}>
+              {l.label}
+            </button>
+          ))}
+        </div>
         <span>Moves: {moves}</span>
-        <button className="btn-ghost" onClick={shuffle}>🔄 New Game</button>
+        <button className="btn-ghost" onClick={() => shuffle(level.symbols)}>🔄 New Game</button>
       </div>
       {won && (
         <div className="empty-note" style={{ textAlign: "center" }}>
@@ -170,7 +188,7 @@ function MemoryGame() {
           <p>You matched every pair in {moves} moves! 🎉</p>
         </div>
       )}
-      <div className="game-grid">
+      <div className={`game-grid game-grid-${levelId}`}>
         {deck.map((card, i) => {
           const isUp = flipped.includes(i) || matched.has(i);
           return (
@@ -178,9 +196,9 @@ function MemoryGame() {
               key={card.key}
               className={`game-card ${isUp ? "up" : ""} ${matched.has(i) ? "matched" : ""}`}
               onClick={() => flip(i)}
-              aria-label={isUp ? card.char.label : "Hidden card"}
+              aria-label={isUp ? card.symbol.label : "Hidden card"}
             >
-              {isUp ? card.char.emoji : "❓"}
+              {isUp ? card.symbol.emoji : "❓"}
             </button>
           );
         })}
