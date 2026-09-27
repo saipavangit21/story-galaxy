@@ -12,6 +12,7 @@ import {
   CHARACTERS,
   CHAR_MAP,
   renderArt,
+  QUIZZES,
   type Story,
 } from "@/data/stories";
 
@@ -19,7 +20,7 @@ type ProgressMap = Record<string, { page: number; totalPages: number; ts: number
 
 type View =
   | "home" | "age" | "categories" | "characters" | "library"
-  | "detail" | "reader" | "audio" | "parent" | "games";
+  | "detail" | "reader" | "audio" | "parent" | "games" | "quiz";
 
 type LibFilter = {
   age: string;
@@ -231,6 +232,7 @@ export default function AppShell({
   const [audioIndex, setAudioIndex] = useState(0);
   const [audioPlaying, setAudioPlaying] = useState(false);
   const [pageSpeaking, setPageSpeaking] = useState(false);
+  const [quizSelected, setQuizSelected] = useState<number | null>(null);
   const audioStoryRef = useRef<string | null>(null);
   const audioPlayingRef = useRef(false);
   const audioIndexRef = useRef(0);
@@ -855,8 +857,16 @@ export default function AppShell({
           <div className="page-nav">
             <button className="btn-ghost" disabled={idx === 0} onClick={() => goTo(idx - 1)}>&larr; Previous</button>
             <span className="page-counter">Page {idx + 1} of {pages.length}</span>
-            <button className="btn-gold" onClick={() => (idx === pages.length - 1 ? (goTo(idx, true), setView("detail")) : goTo(idx + 1))}>
-              {idx === pages.length - 1 ? "Finish" : "Next →"}
+            <button
+              className="btn-gold"
+              onClick={() => {
+                if (idx !== pages.length - 1) return goTo(idx + 1);
+                goTo(idx, true);
+                setQuizSelected(null);
+                setView(QUIZZES[s.id] ? "quiz" : "detail");
+              }}
+            >
+              {idx === pages.length - 1 ? (QUIZZES[s.id] ? "Finish & Quiz" : "Finish") : "Next →"}
             </button>
           </div>
         </div>
@@ -1005,6 +1015,52 @@ export default function AppShell({
     );
   }
 
+  function QuizView() {
+    if (!currentStory) return null;
+    const s = currentStory;
+    const quiz = QUIZZES[s.id];
+    if (!quiz) return DetailView();
+    const answered = quizSelected !== null;
+    const correct = quizSelected === quiz.answer;
+
+    return (
+      <section>
+        <div className="wrap" style={{ maxWidth: "36rem" }}>
+          <div className="book-page">
+            <Mascot size={72} className="empty-mascot" />
+            <h2 className="serif" style={{ textAlign: "center" }}>Quick Quiz: {s.title}</h2>
+            <p style={{ textAlign: "center", color: "#5a4a30", marginBottom: "1.4rem" }}>{quiz.question}</p>
+            <div className="quiz-options">
+              {quiz.options.map((opt, i) => {
+                let cls = "quiz-option";
+                if (answered && i === quiz.answer) cls += " correct";
+                else if (answered && i === quizSelected) cls += " wrong";
+                return (
+                  <button
+                    key={i}
+                    className={cls}
+                    disabled={answered}
+                    onClick={() => setQuizSelected(i)}
+                  >
+                    {opt}
+                  </button>
+                );
+              })}
+            </div>
+            {answered && (
+              <p style={{ textAlign: "center", marginTop: "1.2rem", fontWeight: 700, color: correct ? "#2f7a4f" : "#a5442a" }}>
+                {correct ? "🎉 That's right!" : `Not quite — the answer was "${quiz.options[quiz.answer]}".`}
+              </p>
+            )}
+            <div className="hero-actions" style={{ justifyContent: "center", marginTop: "1.4rem" }}>
+              <button className="btn-gold" onClick={() => { setQuizSelected(null); setView("detail"); }}>Back to Story</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <>
       {Nav()}
@@ -1022,6 +1078,7 @@ export default function AppShell({
             {view === "reader" && ReaderView()}
             {view === "audio" && AudioView()}
             {view === "games" && GamesView()}
+            {view === "quiz" && QuizView()}
             {view === "parent" && ParentView()}
           </>
         )}
