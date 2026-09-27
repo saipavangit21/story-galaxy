@@ -358,6 +358,126 @@ export const ART: Record<string, string> = {
     <ellipse cx="80" cy="46" rx="22" ry="18" fill="var(--accent)" opacity="0.85"/>
     <path d="M62 58q4 16-2 24M72 60q2 16-4 22M88 60q4 16 2 22M98 58q6 14 0 24" stroke="var(--accent)" stroke-width="1.6" fill="none" opacity="0.6"/>
     <circle cx="30" cy="70" r="5" fill="var(--hl)" opacity="0.5"/><circle cx="130" cy="60" r="4" fill="var(--hl)" opacity="0.4"/>
+  `,
+  "sandmans-apprentice": `
+    <path d="M0 90 H160 V100 H0 Z" fill="var(--silo)" opacity="0.5"/>
+    <circle cx="110" cy="26" r="11" fill="var(--hl)"/>
+    <path d="M30 60c4 10 12 16 24 16s20-6 24-16" stroke="var(--accent)" stroke-width="2" fill="none" opacity="0.7"/>
+    <circle cx="40" cy="72" r="1.4" fill="var(--hl)"/><circle cx="56" cy="80" r="1.2" fill="var(--hl)"/><circle cx="70" cy="70" r="1.6" fill="var(--hl)"/>
+  `,
+  "kings-quiet-hour": `
+    <rect x="60" y="30" width="40" height="50" fill="var(--silo)"/>
+    <polygon points="54,30 80,10 106,30" fill="var(--silo)"/>
+    <circle cx="80" cy="54" r="10" fill="var(--hl)" opacity="0.6"/>
+    <rect x="20" y="90" width="120" height="4" fill="var(--silo)" opacity="0.4"/>
+    <circle cx="24" cy="20" r="1.4" fill="var(--hl)"/>
+  `,
+  "littlest-lamb-lullaby": `
+    <path d="M0 80 Q40 68 80 80 T160 78 V100 H0 Z" fill="var(--silo)"/>
+    <ellipse cx="70" cy="72" rx="20" ry="13" fill="var(--hl)"/>
+    <circle cx="88" cy="64" r="7" fill="var(--hl)"/>
+    <circle cx="24" cy="20" r="9" fill="var(--hl)" opacity="0.5"/>
+  `,
+  "cliffside-courier": `
+    <path d="M0 100 L40 40 L80 70 L120 20 L160 60 V100 Z" fill="var(--silo)"/>
+    <circle cx="122" cy="42" r="3" fill="var(--accent)"/>
+    <circle cx="24" cy="24" r="9" fill="var(--hl)" opacity="0.5"/>
+    <circle cx="140" cy="30" r="1.4" fill="var(--hl)"/>
+  `,
+  "compass-with-no-north": `
+    <circle cx="80" cy="50" r="30" fill="none" stroke="var(--silo)" stroke-width="3"/>
+    <path d="M80 50 L92 26 M80 50 L68 64" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="80" cy="50" r="3" fill="var(--silo)"/>
+    <path d="M0 90 Q40 82 80 90 T160 88 V100 H0 Z" fill="var(--silo)" opacity="0.6"/>
+  `,
+  "princess-who-mapped-storms": `
+    <path d="M0 24 Q40 8 80 24 T160 20 V0 H0 Z" fill="var(--silo)" opacity="0.6"/>
+    <path d="M40 60 L60 60 L50 78 L68 78 L44 100 L52 82 L36 82 Z" fill="var(--hl)"/>
+    <circle cx="120" cy="40" r="12" fill="var(--silo)" opacity="0.4"/>
+  `,
+  "apprentice-who-forgot-spells": `
+    <circle cx="80" cy="50" r="60" fill="var(--accent)" opacity="0.1"/>
+    <ellipse cx="80" cy="76" rx="16" ry="6" fill="var(--silo)" opacity="0.4"/>
+    <path d="M78 76 L80 30" stroke="var(--silo)" stroke-width="2"/>
+    <ellipse cx="80" cy="26" rx="8" ry="12" fill="var(--hl)"/>
+    <circle cx="30" cy="24" r="1.4" fill="var(--hl)"/><circle cx="128" cy="30" r="1.2" fill="var(--hl)"/>
+  `,
+  "fox-who-borrowed-moonlight": `
+    <path d="M0 82 Q40 70 80 82 T160 80 V100 H0 Z" fill="var(--silo)"/>
+    <circle cx="120" cy="24" r="14" fill="var(--hl)"/>
+    <path d="M50 62c-6-8-5-16 2-20 2 5 1 9-2 13 4-2 8-2 12 0-4 3-6 5-6 7z" fill="var(--accent)"/>
+    <path d="M120 38 L60 58" stroke="var(--hl)" stroke-width="1.4" opacity="0.5" stroke-linecap="round"/>
+  `,
+  "prince-and-the-wishing-well": `
+    <ellipse cx="80" cy="80" rx="30" ry="10" fill="var(--silo)"/>
+    <rect x="52" y="50" width="56" height="30" rx="4" fill="var(--silo)" opacity="0.7"/>
+    <circle cx="80" cy="65" r="10" fill="var(--hl)" opacity="0.6"/>
+    <circle cx="30" cy="26" r="1.6" fill="var(--hl)"/><circle cx="128" cy="20" r="1.4" fill="var(--hl)"/>
+  `,
+  "scarecrow-who-was-scared": `
+    <path d="M0 92 H160 V100 H0 Z" fill="var(--silo)" opacity="0.5"/>
+    <line x1="80" y1="86" x2="80" y2="30" stroke="var(--silo)" stroke-width="4"/>
+    <line x1="52" y1="46" x2="108" y2="46" stroke="var(--silo)" stroke-width="4"/>
+    <circle cx="80" cy="24" r="12" fill="var(--accent)" opacity="0.7"/>
+    <polygon points="68,16 80,4 92,16" fill="var(--silo)"/>
+  `,
+  "witch-who-hexed-herself": `
+    <circle cx="120" cy="24" r="10" fill="var(--hl)" opacity="0.5"/>
+    <path d="M40 30 L45 50 L30 62 L50 60 L40 84" stroke="var(--accent)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <path d="M0 92 H160 V100 H0 Z" fill="var(--silo)" opacity="0.55"/>
+  `,
+  "kraken-who-just-wanted-quiet": `
+    <path d="M0 60 Q40 48 80 60 T160 58 V100 H0 Z" fill="var(--silo)"/>
+    <circle cx="80" cy="44" r="18" fill="var(--accent)" opacity="0.75"/>
+    <circle cx="73" cy="40" r="2.4" fill="var(--hl)"/><circle cx="87" cy="40" r="2.4" fill="var(--hl)"/>
+    <path d="M60 60q-10 14 0 26M100 60q10 14 0 26" stroke="var(--accent)" stroke-width="2" fill="none" opacity="0.6"/>
+  `,
+  "case-of-the-backward-clock": `
+    <circle cx="80" cy="50" r="28" fill="none" stroke="var(--silo)" stroke-width="3"/>
+    <line x1="80" y1="50" x2="80" y2="32" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="80" y1="50" x2="66" y2="54" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="80" cy="50" r="3" fill="var(--silo)"/>
+  `,
+  "puppy-detective-agency": `
+    <ellipse cx="80" cy="88" rx="60" ry="8" fill="var(--silo)" opacity="0.4"/>
+    <circle cx="60" cy="60" r="16" fill="var(--accent)"/>
+    <path d="M48 52 L42 38 M72 52 L78 38" stroke="var(--accent)" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="55" cy="58" r="1.6" fill="var(--hl)"/><circle cx="65" cy="58" r="1.6" fill="var(--hl)"/>
+    <circle cx="115" cy="68" r="11" fill="var(--hl)" opacity="0.6"/>
+  `,
+  "vanishing-portrait-gallery": `
+    <rect x="46" y="16" width="30" height="40" rx="2" fill="var(--silo)"/>
+    <rect x="52" y="22" width="18" height="28" fill="var(--accent)" opacity="0.4"/>
+    <rect x="84" y="16" width="30" height="40" rx="2" fill="none" stroke="var(--silo)" stroke-width="2" opacity="0.5"/>
+    <path d="M0 90 H160 V100 H0 Z" fill="var(--silo)" opacity="0.5"/>
+  `,
+  "tailor-of-thistledown": `
+    <rect x="60" y="60" width="40" height="10" rx="5" fill="var(--accent)"/>
+    <circle cx="60" cy="65" r="5" fill="var(--hl)"/>
+    <rect x="20" y="30" width="16" height="60" fill="var(--silo)" opacity="0.7"/>
+    <polygon points="14,30 28,10 42,30" fill="var(--silo)" opacity="0.7"/>
+  `,
+  "stepdaughter-and-the-silver-thread": `
+    <path d="M20 40 Q80 20 140 50" stroke="var(--hl)" stroke-width="2" fill="none" opacity="0.6"/>
+    <ellipse cx="80" cy="70" rx="22" ry="14" fill="var(--accent)" opacity="0.6"/>
+    <circle cx="20" cy="40" r="3" fill="var(--hl)"/><circle cx="140" cy="50" r="3" fill="var(--hl)"/>
+  `,
+  "mermaid-who-collected-storms": `
+    <path d="M0 78 Q40 66 80 78 T160 76 V100 H0 Z" fill="var(--silo)"/>
+    <rect x="60" y="30" width="24" height="34" rx="12" fill="var(--hl)" opacity="0.3" stroke="var(--hl)" stroke-width="1.6"/>
+    <circle cx="72" cy="46" r="6" fill="var(--accent)" opacity="0.7"/>
+    <path d="M69 40 L75 52 M75 40 L69 52" stroke="var(--hl)" stroke-width="1" opacity="0.5"/>
+  `,
+  "last-dragon-of-embervale": `
+    <polygon points="30,90 60,20 90,90" fill="var(--silo)"/>
+    <circle cx="60" cy="60" r="10" fill="var(--hl)" opacity="0.6"/>
+    <path d="M100 50c10-6 20-4 26 4-8 0-14 2-18 6 8 2 14 6 16 12-10-2-18-6-24-12z" fill="var(--accent)"/>
+  `,
+  "seamstress-of-starlight": `
+    <circle cx="80" cy="50" r="65" fill="var(--accent)" opacity="0.1"/>
+    <path d="M80 34 L83 46 L95 50 L83 54 L80 66 L77 54 L65 50 L77 46 Z" fill="var(--hl)"/>
+    <path d="M40 30 Q60 24 80 34" stroke="var(--hl)" stroke-width="1.4" fill="none" opacity="0.6"/>
+    <circle cx="30" cy="26" r="1.6" fill="var(--hl)"/><circle cx="128" cy="70" r="1.4" fill="var(--hl)"/>
   `
 };
 
@@ -1806,6 +1926,538 @@ Pearl realized, with a warm rush of understanding, that her "wrong" color wasn't
 The cave fish guided her safely back toward the reef, delighted the whole way by her unusual glow, and when Pearl finally returned home, she swam a little taller — or as tall as a jellyfish can manage — no longer wishing to match everyone else.
 
 "I don't glow wrong," she told the jellyfish who'd once teased her, quite calmly. "I glow differently. And differently, it turns out, is exactly what some dark places have been needing all along."`
+  },
+  {
+    id:"sandmans-apprentice", age:"6-7", category:"bedtime", character:"witches", tag:"original",
+    title:"The Sandman's Apprentice Witch", accent:"#8393cf", minutes:5, rating:4.8,
+    popular:true, isNew:true, difficulty:"Easy",
+    blurb:"A young witch is training to sprinkle dream-sand, but she keeps giving children the wrong dreams — until she learns to listen first.",
+    text:`Little witch Tansy had one job each night: sprinkle a pinch of shimmering dream-sand over every sleeping child in the village, so they'd have lovely dreams until morning.
+
+The trouble was, Tansy kept guessing wrong. She gave a dream of flying to a boy who was scared of heights, and a dream of a crowded party to a girl who liked things quiet.
+
+"You must be sneaking peeks at everyone's dreams first," Tansy grumbled to old Mother Willow, who had done this job for sixty years without a single mistake.
+
+"I don't peek at dreams," Mother Willow said gently. "I listen to the children themselves, before they even fall asleep — the last thing they say, the last thing they worry about. That tells you everything."
+
+That night, Tansy tried it. She lingered outside little Oskar's window and heard him whisper to his teddy bear, "I hope tomorrow's spelling test isn't too hard."
+
+Instead of her usual guess, Tansy sprinkled a dream of Oskar acing every single word, standing proud in front of his whole class.
+
+Outside Mira's window, she heard, "I miss my grandma." So Tansy gave her a dream of baking cookies together in Grandma's warm, familiar kitchen.
+
+One by one, house by house, Tansy listened first and sprinkled second, and one by one, the children's dreams fit them perfectly — not because Tansy had guessed better, but because she'd finally learned to listen before she gave.
+
+"You've got it now," Mother Willow said the next morning, watching Tansy's dream-sand pouch glow warm and steady. "The secret was never in the sand at all. It was in paying attention."
+
+Tansy smiled, tired and proud, and from that night on, she never guessed a single dream wrong again.`
+  },
+  {
+    id:"kings-quiet-hour", age:"10-11", category:"bedtime", character:"royalty", tag:"original",
+    title:"The King's Quiet Hour", accent:"#8393cf", minutes:7, rating:4.7,
+    popular:false, isNew:true, difficulty:"Growing",
+    blurb:"A busy young king can't understand why his advisors insist on one silent hour before bed, until he finally tries it himself.",
+    text:`King Corwin had ruled for exactly one year, and in that year, he had never once understood why his royal council insisted the entire castle observe a strict, silent hour before every bedtime.
+
+"It's a waste of an hour," he complained to his chief advisor, a wiry old man named Fenwick who had served three kings before him. "I have treaties to read, letters to answer. An entire kingdom's worth of work, and you want me sitting in silence?"
+
+"Try it once," Fenwick said simply. "If it changes nothing, I'll never mention it again."
+
+Reluctantly, Corwin agreed. That evening, he set aside his papers, extinguished all but one candle, and sat in his quiet chambers with nothing at all to do.
+
+The first ten minutes were agony. His mind raced through unfinished business — the grain tax, the border dispute, a dozen unanswered letters. He nearly called for his papers twice.
+
+But slowly, as the candle burned lower, something shifted. The racing thoughts began to settle, like silt sinking in still water. Corwin noticed, for the first time in a year, how tired he truly was — not just in his body, but somewhere deeper, a tiredness he'd been too busy to feel until now.
+
+By the hour's end, he found himself thinking more clearly about the grain tax than he had all week, the answer arriving almost effortlessly now that his mind had room to breathe.
+
+"You were right," he admitted to Fenwick the next morning, somewhat embarrassed. "I didn't waste the hour. I think the hour was saving me from wasting all the others."
+
+"Every king before you learned that the same way," Fenwick said, smiling. "By nearly refusing to try it."
+
+From then on, Corwin kept his quiet hour every single night, and found — to his genuine surprise — that he ruled a good deal better for it.`
+  },
+  {
+    id:"littlest-lamb-lullaby", age:"4-5", category:"bedtime", character:"animals", tag:"original",
+    title:"The Littlest Lamb's Lullaby", accent:"#8393cf", minutes:4, rating:4.9,
+    popular:true, isNew:true, difficulty:"Easy",
+    blurb:"A tiny lamb can't sleep without her mother's song, so she sets off across the meadow to find just the right tune of her very own.",
+    text:`Every night, Mama sheep sang the same soft lullaby, and every night, little Clover the lamb fell fast asleep before the second verse.
+
+But one evening, Mama was busy tending a poorly ewe on the far side of the meadow, and Clover was left alone with no song at all.
+
+"I'll find my own lullaby," Clover decided bravely, trotting off into the twilight meadow.
+
+She found the wind first, humming softly through the tall grass. "Will you be my lullaby?" Clover asked. The wind whispered on, sweet but a little too rushed and rustly for sleeping.
+
+She found the crickets next, chirping their steady evening chorus. "Will you be my lullaby?" she asked them. The crickets chirped on, cheerful but far too busy and buzzy.
+
+Tired and a little discouraged, Clover sat down beneath an old oak tree — and there, she heard it: her own soft, steady heartbeat, thumping gently in her woolly little chest.
+
+"Oh," Clover said softly, listening. "That's rather nice."
+
+She lay down right there beneath the oak, listening to her own quiet heartbeat, thump, thump, thump, steady as anything, and found — to her surprise — that it worked just as well as any song.
+
+That's where Mama found her, fast asleep in the moonlight, and rather than waking her, Mama simply lay down beside her and added her own soft lullaby to the mix — two gentle sounds instead of one, woven together beneath the old oak tree.
+
+Clover never did need to search the whole meadow again. She'd found her lullaby all along, right there inside her own quiet, steady heart.`
+  },
+  {
+    id:"cliffside-courier", age:"8-9", category:"adventure", character:"heroes", tag:"original",
+    title:"The Cliffside Courier", accent:"#6fa15c", minutes:7, rating:4.7,
+    popular:false, isNew:true, difficulty:"Growing",
+    blurb:"When the mountain pass floods, a young messenger boy must find a brand-new route along a cliff nobody has ever dared to cross.",
+    text:`Every week, ten-year-old Finnian carried urgent letters between the mountain village of Crestwick and the valley town below, following the same narrow pass his father had walked before him.
+
+This week, the pass was gone — swallowed by floodwater after three days of relentless rain, with no way through for at least a month, according to the worried village elders.
+
+"The letter has to reach the valley by tomorrow," Finnian's mother said, reading the urgent message about a medicine shipment the village desperately needed. "But there's no other way down."
+
+"There might be," Finnian said slowly, eyeing the jagged cliff face that ran along the mountain's eastern edge — a route so steep and dangerous that nobody in living memory had ever attempted it.
+
+His mother's face went pale. "Absolutely not. It's far too dangerous."
+
+"So is running out of medicine," Finnian said quietly, and before she could argue further, he was already lacing up his sturdiest boots.
+
+The cliff path proved every bit as treacherous as everyone feared — narrow ledges barely wider than his own feet, loose rock that crumbled at the slightest pressure, a drop so steep he didn't dare look down. Finnian moved slowly, testing each foothold twice, keeping one hand pressed against the cold stone at all times.
+
+Halfway across, a ledge crumbled beneath his boot, and only a desperate lunge for a jutting root saved him from a terrible fall. He hung there, heart hammering, before finally hauling himself back to safety, hands scraped and trembling.
+
+He reached the valley just as the sun began to set, letter still safely tucked in his jacket, legs shaking from exhaustion and relief in equal measure.
+
+The medicine shipment arrived in Crestwick two days later, carried back up the same cliff path by three of the village's strongest climbers, now that Finnian had proven, however dangerously, that a way through existed after all.
+
+Finnian never took the cliff route again — one crossing had been quite enough — but the village mapped and secured it properly that summer, all because one boy had decided that "impossible" and "necessary" weren't always the same thing.`
+  },
+  {
+    id:"compass-with-no-north", age:"10-11", category:"adventure", character:"sea", tag:"original",
+    title:"The Compass With No North", accent:"#6fa15c", minutes:8, rating:4.6,
+    popular:false, isNew:true, difficulty:"Growing",
+    blurb:"A young sailor inherits a broken compass that spins wildly in every direction — until she realizes it's pointing toward something other than north.",
+    text:`The compass had belonged to Captain Reyes for thirty years before he passed it to his granddaughter Lucia, along with a warning: "It's broken. Never trusted it a day in my life. But I couldn't bear to throw it out."
+
+Lucia understood why the moment she opened it — the needle spun wildly in every direction, never settling on north no matter which way she turned it, utterly useless for actual navigation.
+
+She brought it along on her first solo voyage anyway, more out of sentiment than expectation, tucked safely in her jacket pocket beside her proper, working compass.
+
+Three days out from harbor, thick fog rolled in without warning, swallowing every landmark and star Lucia needed to navigate by. Her proper compass still pointed reliably north, but north wasn't enough — she needed to know exactly where the safe harbor lay, somewhere in all that grey nothing.
+
+Frustrated, she pulled out her grandfather's broken compass, half out of habit, half out of desperation — and noticed something odd. The needle wasn't spinning randomly at all. It kept drifting, slowly but insistently, toward the same direction, over and over, no matter how she turned it.
+
+Curious, Lucia adjusted her course to follow the broken compass's stubborn pull instead of fighting it — and within the hour, sailed directly into the safe, sheltered cove where her grandfather had always claimed the best fishing grounds lay, a cove that wasn't marked on any official chart at all.
+
+Back at harbor, an old sailor explained it to her, laughing: "That's no ordinary compass, girl. Your grandfather had it modified years back — enchanted, some say, though nobody quite knows by who — to point toward the nearest safe harbor instead of north. Practical fellow, your grandfather. Said knowing which way was safe mattered a good deal more than knowing which way was north."
+
+Lucia kept both compasses after that, one for direction, and one — she now understood — for exactly the kind of guidance a person needed most when the fog rolled in and nothing else made sense anymore.`
+  },
+  {
+    id:"princess-who-mapped-storms", age:"12-13", category:"adventure", character:"royalty", tag:"original",
+    title:"The Princess Who Mapped Storms", accent:"#6fa15c", minutes:10, rating:4.8,
+    popular:true, isNew:true, difficulty:"Confident",
+    blurb:"Tired of being kept safely indoors during storms, a princess sets out to prove that understanding a storm is braver than simply fearing it.",
+    text:`Princess Yara had been kept indoors during every single storm of her sixteen years, tucked safely away by well-meaning guards the moment thunder rumbled on the horizon, and she had grown thoroughly tired of it.
+
+"Storms are dangerous," her father the king reminded her, not unkindly, after the latest incident where she'd been found trying to sneak onto the watchtower during a downpour. "That's precisely why we keep you safe."
+
+"I don't want to hide from storms," Yara argued. "I want to understand them. Nobody in this kingdom has ever properly studied where they come from, or when they'll arrive, or how strong they'll be. We just wait and hope and hide."
+
+Her father, unconvinced but weary of the argument, allowed her one condition: she could study storms all she liked, so long as she did it from careful, documented safety, not reckless bravado.
+
+Yara took this seriously. She spent months interviewing fishermen and shepherds about the signs they watched for — the particular color of a storm-heavy sky, the way birds flew low and urgent before rain, the smell that seemed to arrive hours before the first drop fell. She recorded wind patterns, tracked cloud formations, cross-referenced years of the castle's own weather journals that nobody had thought to properly study before.
+
+Slowly, painstakingly, she built something the kingdom had never had: an actual method for predicting a storm's arrival, hours or even a full day in advance, with real accuracy that even skeptical sailors began to trust.
+
+The true test came the following autumn, when Yara's calculations predicted an enormous storm building far out at sea — three full days before the sky showed any obvious sign of it at all. Her father, still doubtful, allowed the harbor to be evacuated as a precaution.
+
+The storm arrived exactly as she'd predicted, fierce enough to have devastated the unprepared harbor — but by then, every boat was secured, every family sheltered, every warning heeded.
+
+"You didn't need to be braver than the storm," her father admitted afterward, watching the damage that hadn't happened. "You needed to understand it better than any of us. I think, in the end, that turned out to be the braver thing entirely."
+
+Yara's storm charts became standard practice throughout the kingdom within the year, and she never once needed to sneak onto a watchtower again — she'd earned her place there properly, storm after storm, prediction after correct prediction.`
+  },
+  {
+    id:"apprentice-who-forgot-spells", age:"6-7", category:"magical", character:"witches", tag:"original",
+    title:"The Apprentice Who Forgot Her Spells", accent:"#b17bea", minutes:5, rating:4.7,
+    popular:false, isNew:true, difficulty:"Easy",
+    blurb:"A young witch keeps forgetting the words to her spells at the worst moments — until she discovers that meaning matters more than memory.",
+    text:`Zinnia was training to be a witch, and she had one enormous problem: no matter how hard she studied, she always forgot the magic words at exactly the wrong moment.
+
+"Fire-spark, ember-start," she was supposed to say to light a candle, but in the actual moment, flustered and nervous, it always came out as "Um — spark-fire? Ember... something?" and nothing happened at all.
+
+Her teacher, old Madame Ferro, watched Zinnia fumble through spell after spell with gentle patience. "You're trying so hard to remember the words," she observed, "that you've forgotten what the words are actually for."
+
+"What do you mean?" Zinnia asked, frustrated nearly to tears. "The words ARE the spell."
+
+"The words are a door," Madame Ferro corrected gently. "But you have to actually want what's on the other side, or the door won't open no matter how perfectly you knock."
+
+That evening, alone in her room, cold and a little sad after a particularly rough day of failed spells, Zinnia simply wished — with her whole tired heart, no fancy words at all — that her little room might feel warmer and cheerier.
+
+To her astonishment, the candle on her desk flickered to life on its own, glowing warm and golden, filling the room with soft, comforting light.
+
+She hadn't said a single magic word. She'd simply wanted something, truly and completely, and the wanting itself had been enough.
+
+The next day, Zinnia stopped worrying so much about remembering exact phrases. Instead, before every spell, she paused first to feel exactly what she wanted — really feel it — and let the words come however they wanted to, sometimes perfectly, sometimes clumsily, but always, now, actually working.
+
+"You found the door," Madame Ferro said proudly, watching Zinnia light an entire row of candles with a string of half-remembered, thoroughly imperfect words. "I always said you would, once you stopped worrying so much about the knocking."`
+  },
+  {
+    id:"fox-who-borrowed-moonlight", age:"10-11", category:"magical", character:"animals", tag:"original",
+    title:"The Fox Who Borrowed Moonlight", accent:"#b17bea", minutes:8, rating:4.8,
+    popular:true, isNew:true, difficulty:"Growing",
+    blurb:"A clever fox discovers she can borrow a little moonlight to see in the dark — but every gift, she learns, comes with a price worth understanding.",
+    text:`Vela the fox had always envied the owls their perfect night vision, until the night she discovered, quite by accident, that she could reach up and pull a thin thread of moonlight down to wrap around her own paws, lighting her way through even the darkest parts of the forest.
+
+It worked wonderfully. Vela hunted more successfully than ever, navigated the thickest underbrush without a single stumble, and felt, for the first time, that she truly owned the night.
+
+She didn't notice, at first, that each time she borrowed a thread of moonlight, the moon itself grew very slightly dimmer — so slightly that surely, she told herself, it didn't matter at all.
+
+It was old Badger who finally pointed it out, squinting up at a moon that had grown noticeably paler over the past several weeks. "Something's wrong with the moon," he grumbled. "Hasn't shone properly in ages."
+
+Vela's stomach twisted with guilt she hadn't expected. She hadn't meant any harm — she'd simply wanted to see better in the dark, the same as any creature might want.
+
+That night, instead of borrowing more moonlight, Vela sat beneath the pale, dimming moon and, for the first time, really looked at what she'd been taking without asking.
+
+"I'm sorry," she said aloud, feeling rather foolish talking to the sky. "I didn't think it would cost you anything. I should have asked first, instead of just taking what I needed."
+
+To her astonishment, the moon seemed to brighten, just slightly, as though the apology itself mattered.
+
+"You may still borrow a little," came a voice, soft as starlight, "so long as you ask, and so long as you give something back in return — tend the night garden below the old oak, and I'll lend you exactly what you need, no more."
+
+Vela agreed gladly, and from then on, she tended the small moonlit garden faithfully each evening, borrowing only what she asked permission for — and the moon, in turn, shone fuller and brighter than it had in months, glad, it seemed, to finally be asked instead of simply taken from.`
+  },
+  {
+    id:"prince-and-the-wishing-well", age:"4-5", category:"magical", character:"royalty", tag:"original",
+    title:"The Prince and the Wishing Well", accent:"#b17bea", minutes:4, rating:4.9,
+    popular:true, isNew:true, difficulty:"Easy",
+    blurb:"A young prince keeps wishing for enormous, grand things at the castle well — until he learns the well grants small wishes best of all.",
+    text:`Every morning, little Prince Ottoline visited the castle's old stone wishing well and tossed in a coin, wishing for something enormous: a hundred toy soldiers, a dragon of his very own, a mountain made entirely of candy.
+
+Every morning, nothing happened at all.
+
+"The well is broken," he complained to the castle gardener, a kind old woman named Bess, tending roses nearby.
+
+"Maybe," Bess said, not looking up from her flowers. "Or maybe you're wishing wrong."
+
+"How can a wish be wrong?" Ottoline asked, puzzled.
+
+"Try a smaller one," Bess suggested. "Sometimes the biggest wishes are too heavy for a well to lift."
+
+Ottoline considered this, then tossed in another coin. "I wish," he said slowly, "for the sun to feel warm on my face today."
+
+Almost immediately, a cloud drifted away, and warm sunlight spilled down across the garden, settling gently on his upturned face.
+
+Delighted, he tried again the next day. "I wish for a good laugh," he said, and that very afternoon, the court jester tripped magnificently over his own oversized shoes, sending the whole dining hall into helpless giggles.
+
+"I wish for my little sister to smile," he tried the day after that, and sure enough, when he found her later, he made a silly face that had her giggling within seconds — which, he supposed, counted rather nicely.
+
+"The well isn't broken at all," Ottoline told Bess, astonished. "It just likes small wishes better."
+
+"Small wishes fit through the well's narrow opening easier," Bess said, smiling mysteriously. "Big wishes tend to get stuck. But small wishes, made honestly, every single day — those add up to something rather large in the end, don't you think?"
+
+Ottoline thought about all his small, granted wishes — warm sun, good laughs, his sister's smile — and decided that Bess was quite right. He never wished for dragons or candy mountains again, and found, rather happily, that his days were full of exactly the kind of magic a well that size could actually manage.`
+  },
+  {
+    id:"scarecrow-who-was-scared", age:"8-9", category:"scary", character:"heroes", tag:"original",
+    title:"The Scarecrow Who Was Scared", accent:"#e08a3f", minutes:6, rating:4.6,
+    popular:false, isNew:true, difficulty:"Growing",
+    blurb:"A scarecrow built to frighten crows away discovers, to his embarrassment, that he's afraid of the dark himself.",
+    text:`Bramble the scarecrow had one job: stand tall in the cornfield and frighten every crow that dared land nearby. He was rather good at it, too — his painted grin and ragged hat sent crows scattering the moment they spotted him.
+
+What nobody knew, because a scarecrow can hardly admit such things out loud, was that Bramble himself was absolutely terrified of the dark.
+
+Every night, as the sun sank and shadows crept long across the field, Bramble's straw insides seemed to shiver, and every rustle of wind through the corn made him certain something terrible was creeping closer.
+
+"Some scarecrow I am," he muttered miserably one particularly dark, moonless night. "Frightening crows all day, then frightened of my own field come nightfall."
+
+A small voice piped up from near his wooden post. "Everyone's scared of something," said Pip, a young field mouse who'd made her home in the straw near his feet. "Even scarecrows, apparently."
+
+"You're not scared of the dark?" Bramble asked, surprised.
+
+"Terrified," Pip admitted. "But I figured out something that helps. Want to know?"
+
+Bramble, embarrassed but curious, nodded his painted head.
+
+"I remind myself what I actually know is true," Pip said. "The dark feels enormous and full of monsters, but really, it's just the same field I know in daylight, wearing a different coat. Nothing's actually changed except the light."
+
+Bramble considered this through the long, shivering night, repeating it to himself each time a shadow seemed to loom too large: it's just the same field, wearing a different coat.
+
+By dawn, he'd made it through without a single straw of panic, and when the sun rose warm and familiar over the very same cornfield he'd feared just hours before, he understood, properly, what Pip had meant.
+
+"Thank you," he told the little mouse, genuinely grateful. "I think I'm a slightly braver scarecrow now."
+
+"Slightly braver every night," Pip agreed. "That's really all bravery ever is, anyway — not never being scared, just making it through until morning, one dark hour at a time."`
+  },
+  {
+    id:"witch-who-hexed-herself", age:"12-13", category:"scary", character:"witches", tag:"original",
+    title:"The Witch Who Accidentally Hexed Herself", accent:"#e08a3f", minutes:9, rating:4.7,
+    popular:false, isNew:true, difficulty:"Confident",
+    blurb:"A powerful witch curses herself by mistake, condemning her to relive the same unsettling night on repeat — until she figures out why.",
+    text:`Selene had been a powerful witch for over a century, and she never, not once in all that time, expected to be the victim of her own carelessness. But there she was, waking on a stormy October evening for what she gradually realized was the third time in a row — same lightning crack outside, same creaking floorboard, same black cat yowling at exactly the same moment.
+
+"That's impossible," she muttered, checking her calendar, which stubbornly insisted it was the same date as yesterday, and the day before that.
+
+By the fifth repetition, cold dread settled into her stomach. Somehow, somewhere, she'd trapped herself in a loop — and worse, she had absolutely no memory of casting any spell that could do it.
+
+She spent the sixth repetition retracing every step of her previous evening, searching for the answer. She'd brewed a minor protection charm, argued briefly with her familiar about dinner, and gone to bed irritated and distracted.
+
+On the seventh repetition, she paid closer attention to the protection charm itself — a simple spell she'd cast a thousand times before without incident. This time, she noticed something: in her irritation and distraction, she'd rushed the final word, garbling "protect and preserve" into something that sounded uncomfortably close to "protect and repeat."
+
+Selene's blood ran cold with recognition. She'd hexed herself, entirely by accident, simply by being too distracted to speak clearly.
+
+On the eighth repetition, she cast the charm again — slowly this time, deliberately, every syllable precise and unhurried, genuinely meaning "preserve" and nothing else.
+
+The loop broke. The ninth night arrived as an entirely new day, sun rising instead of storm returning, and Selene woke with an exhausted, relieved gasp, finally free.
+
+"Careless words," she wrote afterward in her spellbook, in handwriting far more deliberate than usual, "cost far more than careless actions ever could. A witch's tongue is the sharpest tool she owns — and the most dangerous, when wielded without attention."
+
+She never rushed a spell again, not even the simplest ones, having learned rather thoroughly that magic, much like anything worth doing carefully, punished haste more severely than it ever punished caution.`
+  },
+  {
+    id:"kraken-who-just-wanted-quiet", age:"6-7", category:"scary", character:"sea", tag:"original",
+    title:"The Kraken Who Just Wanted Quiet", accent:"#e08a3f", minutes:5, rating:4.8,
+    popular:true, isNew:true, difficulty:"Easy",
+    blurb:"Sailors flee in terror whenever the enormous kraken surfaces, but all the lonely creature really wants is a little peace and quiet.",
+    text:`Every sailor who ever spotted the enormous kraken rising from the deep did exactly the same thing: screamed, rowed frantically away, and told terrifying tales in every port about the monster of the deep sea.
+
+What none of them ever stopped to notice was that the kraken never actually did anything frightening at all. He simply surfaced, blinked his enormous, gentle eyes at the fleeing ships, and sank back down, disappointed, into the quiet dark below.
+
+"I only wanted to say hello," he sighed to himself, again and again, watching yet another ship's sails vanish over the horizon in a panic.
+
+One day, a small fishing boat carrying a curious young girl named Nell got caught in a sudden current and drifted directly toward the kraken's usual waters, too far from shore to row safely back before nightfall.
+
+When the enormous shape rose from the water beside her tiny boat, Nell's heart pounded with fear — but instead of screaming and rowing blindly, as every sailor before her had done, she made herself sit still and actually look.
+
+The kraken wasn't baring teeth or thrashing wildly. He was simply floating there, watching her with enormous, curious, rather lonely-looking eyes.
+
+"Are you... lonely?" Nell asked, surprising herself.
+
+The kraken blinked, startled that anyone had finally asked instead of fleeing. Slowly, carefully, he extended one massive tentacle — not to grab her boat, but simply to rest gently alongside it, the way a large dog might lean against a friend.
+
+"I think you are," Nell said softly, patting the enormous tentacle. "Everyone's too scared to find out."
+
+She stayed until the current shifted enough to row safely home, and from that day on, made a point of visiting the kraken's waters whenever she could, just to sit quietly nearby while he floated peacefully beside her boat.
+
+The other sailors never did stop fleeing at the sight of him. But the kraken didn't mind quite so much anymore, now that he had one small, brave friend who understood that being enormous and unusual wasn't nearly the same thing as being dangerous.`
+  },
+  {
+    id:"case-of-the-backward-clock", age:"10-11", category:"mystery", character:"heroes", tag:"original",
+    title:"The Case of the Backward Clock", accent:"#4fa39c", minutes:8, rating:4.7,
+    popular:false, isNew:true, difficulty:"Growing",
+    blurb:"A boy detective investigates why his neighbor's clock always runs exactly one hour backward, no matter how many times it's fixed.",
+    text:`Every clock repairman in town had tried and failed to fix old Mr. Aldous's grandfather clock, which stubbornly ran exactly one hour behind correct time, no matter how carefully it was adjusted.
+
+Twelve-year-old detective-in-training Ravi took the case mostly out of curiosity, armed with nothing more than a notebook and a healthy dose of skepticism about "unfixable" mysteries.
+
+"It's been wrong for exactly eleven years," Mr. Aldous told him, settling into his armchair. "Ever since my wife passed. I've had it serviced a dozen times. Always runs an hour slow, like clockwork — if you'll pardon the joke."
+
+Ravi examined the clock's mechanism thoroughly and found nothing mechanically wrong at all — the gears turned perfectly, the pendulum swung true. By every measure a clock repairman could check, it should have kept flawless time.
+
+"When did it start running slow?" Ravi asked. "The very day your wife passed, or sometime after?"
+
+Mr. Aldous thought hard. "The very day, now that you mention it. I remember because I was so distracted, I forgot to wind it that evening — first time in thirty years of marriage I'd forgotten."
+
+Ravi's eyes lit up with the particular thrill of a mystery clicking into place. "What time did she pass, if you don't mind my asking?"
+
+"Four in the afternoon," Mr. Aldous said quietly. "I remember exactly."
+
+"And what time does the clock currently show?"
+
+Mr. Aldous checked. "Three."
+
+Ravi did the math carefully. If the actual time now was four, and the clock showed three, the gap was exactly one hour — the same gap, he realized, as the moment Mr. Aldous had forgotten to wind it, distracted by grief, all those years ago.
+
+"I don't think it's broken at all," Ravi said gently. "I think it simply stopped catching up to real time from the exact moment your world changed, and it's been running one loyal hour behind ever since — the hour you lost that day, still ticking along quietly beside you."
+
+Mr. Aldous was quiet for a long moment, looking at the old clock with fresh eyes. "I always assumed it was a fault," he said finally, voice a little rough. "I rather like your explanation better."
+
+"Some things," Ravi said, closing his notebook, "aren't really mysteries to solve. Just things worth understanding properly." He never did "fix" the clock — and Mr. Aldous never asked him to.`
+  },
+  {
+    id:"puppy-detective-agency", age:"4-5", category:"mystery", character:"animals", tag:"original",
+    title:"The Puppy Detective Agency", accent:"#4fa39c", minutes:4, rating:4.9,
+    popular:true, isNew:true, difficulty:"Easy",
+    blurb:"A determined puppy sets out to solve the biggest case of her young life: who keeps stealing her favorite squeaky toy?",
+    text:`Biscuit the puppy had a big problem: every single morning, her favorite squeaky toy went missing, and every single evening, it mysteriously reappeared right back in her basket.
+
+"This calls for detective work," Biscuit announced to her stuffed rabbit, puffing out her fuzzy chest importantly.
+
+She started with clues. The toy always vanished sometime between breakfast and lunch. It always came back smelling faintly of the garden. And there were always small, muddy paw prints leading to and from the back door — paw prints far too small to be her own.
+
+"A mystery paw-print culprit," Biscuit declared, and set off to investigate, nose to the ground exactly like a real detective on television.
+
+She followed the tiny muddy prints out the back door, across the yard, and straight to a gap beneath the garden fence — where, peeking through, she spotted the culprit at last: a small, scruffy neighborhood kitten, batting Biscuit's squeaky toy happily around the grass.
+
+"Aha!" Biscuit barked triumphantly, squeezing through the gap. "Caught you!"
+
+The kitten froze, toy still clutched guiltily in her paws. "I'm sorry," she mewed in a very small voice. "I don't have any toys of my own, and yours squeaks so wonderfully. I always meant to bring it back before you noticed."
+
+Biscuit's fierce detective face softened at once. "You could have just asked," she said. "We could've played together instead."
+
+The kitten's eyes went wide with surprise. "You'd share it? Really?"
+
+"Detectives share," Biscuit decided grandly, though she wasn't entirely sure that was true of real detectives. "Come on. Let's squeak it together."
+
+From that day on, the toy still went missing every morning — but now Biscuit knew exactly where to find it, and exactly who she'd be playing with when she did.`
+  },
+  {
+    id:"vanishing-portrait-gallery", age:"12-13", category:"mystery", character:"royalty", tag:"original",
+    title:"The Vanishing Portrait Gallery", accent:"#4fa39c", minutes:10, rating:4.7,
+    popular:false, isNew:true, difficulty:"Confident",
+    blurb:"One by one, the royal family's portraits are vanishing from their frames overnight, and only the youngest princess suspects the truth.",
+    text:`It began with the portrait of Great-Uncle Aldric — there one evening, gone the next morning, frame hanging empty on the gallery wall. Within a fortnight, four more paintings had vanished the same way, always overnight, always without a trace of forced entry or theft.
+
+The royal guards were baffled. The court accused traveling merchants, jealous rivals, even ghosts. But thirteen-year-old Princess Imogen, youngest and most frequently overlooked of the royal children, noticed something nobody else had bothered to check: every single missing portrait depicted an ancestor who had died while estranged from the family — banished, disowned, or simply forgotten by history.
+
+She began her own quiet investigation, sneaking into the gallery each night to watch. On the sixth night, exhausted and about to give up, she finally saw it: the portrait of her great-grandmother's disgraced sister, Lady Viola, simply faded from its frame, the canvas going blank and then entirely empty, as though the paint itself had dissolved.
+
+Imogen searched the family archives for answers and found, tucked in a dusty ledger, an old family curse recorded generations back: any ancestor cast out from the family in life would be erased from memory in death, once enough time had passed for their story to be fully forgotten by everyone living.
+
+Racing against the pattern, Imogen realized the remaining portraits — including one of her own grandmother's brother, banished decades ago in a family dispute nobody discussed anymore — were next.
+
+She spent the following weeks doing something no one in the family had bothered to do in generations: actually learning these forgotten ancestors' real stories. She interviewed the oldest servants, read old letters, pieced together who these banished relatives had truly been — not just the scandal that had erased them, but their whole, complicated, human lives.
+
+At dinner one evening, she shared what she'd learned, telling her family the real story of Great-Uncle Aldric's kindness to the poor, of Lady Viola's brilliant gardens, of her grandmother's brother's lost love — stories nobody had spoken aloud in years.
+
+The remaining portraits stopped fading that very night. Whatever ancient magic guarded the family's memory, it seemed, cared only that its subjects were remembered by someone, truly — and Imogen, quietly and without seeking credit, had made sure they finally were.`
+  },
+  {
+    id:"tailor-of-thistledown", age:"6-7", category:"fairytale", character:"heroes", tag:"classic",
+    title:"The Tailor of Thistledown", accent:"#e0479a", minutes:6, rating:4.6,
+    popular:false, isNew:true, difficulty:"Easy",
+    blurb:"A humble tailor outwits a boastful giant not through strength, but through cleverness and a very convincing belt.",
+    text:`In the village of Thistledown lived a small, clever tailor who, having killed seven flies in one swat, stitched a belt boasting "Seven at One Blow" and set off to seek his fortune, letting everyone assume it meant something far more impressive than flies.
+
+He soon crossed paths with a giant, enormous and boastful, who read the tailor's belt and sneered. "Seven at one blow? I've never met a man strong enough to match me."
+
+"Care to test it?" the tailor said coolly, hiding his nervousness behind a confident smile.
+
+The giant, eager to prove himself superior, picked up a stone and squeezed it so hard that water trickled out. "Match that, little tailor."
+
+The clever tailor, who happened to have a soft round cheese hidden in his pocket, pulled it out instead of a stone and squeezed it hard enough that whey dribbled between his fingers, looking for all the world like a man of astonishing strength.
+
+The giant, impressed despite himself, hurled a boulder farther than any man could throw. "Match that."
+
+"I'll throw mine so far it never comes back," the tailor said grandly, and instead threw a small bird from his pocket, which flew off into the sky and, naturally, never returned.
+
+By now thoroughly unsettled, the giant challenged him to carry a fallen tree. The tailor agreed cheerfully — then asked the giant to lift the trunk onto his shoulder first, "so I might carry the branches, which are the heavier part, as any strong man knows."
+
+The giant, hoisting the entire tree onto his own back without realizing he'd been tricked into doing all the actual work, staggered under the full weight while the tailor strolled along beside him, carrying nothing but his own confident smile.
+
+By the time the giant realized he'd been thoroughly outwitted at every turn, he was too embarrassed to admit it, and simply wished the little tailor well before hurrying off, quite certain he wanted nothing more to do with a man who could apparently defeat seven at one blow.
+
+The tailor returned to Thistledown with a fine reputation and an even finer story, having proven — as clever tailors so often do — that wit beats strength every single time, so long as you're quick enough to prove it.`
+  },
+  {
+    id:"stepdaughter-and-the-silver-thread", age:"8-9", category:"fairytale", character:"witches", tag:"original",
+    title:"The Stepdaughter and the Silver Thread", accent:"#e0479a", minutes:7, rating:4.8,
+    popular:true, isNew:true, difficulty:"Growing",
+    blurb:"A kind girl mistreated by her stepmother is given a single silver thread by a forest witch, with instructions that seem impossibly simple.",
+    text:`Mira's stepmother had never once been unkind exactly — simply cold, and endlessly demanding, piling chore after chore onto Mira while her own daughters lounged idle by the fire.
+
+One evening, sent into the forest for firewood far past dark, Mira stumbled upon a small cottage glowing with warm lantern light, and inside, an old woman who introduced herself simply as the Weaver.
+
+"You look tired, child," the Weaver said, studying Mira with sharp, kind eyes. "Here." She pressed a single strand of silver thread into Mira's palm. "Use it only once, on the thing you need most. Not want, mind you — need."
+
+Mira thanked her, confused but grateful, and hurried home before her absence was noticed.
+
+For weeks, she carried the thread, uncertain what to use it for. She wanted new shoes, an evening free of chores, a kinder stepmother. But each time she nearly used it, she remembered the Weaver's word — need, not want — and held back, unsure.
+
+The answer came on a bitter winter night, when Mira's youngest stepsister fell dangerously ill with fever, and the village healer, summoned in a panic, admitted she had no more medicine left to give.
+
+Without hesitation, Mira pulled out the silver thread. She didn't wish for riches, or freedom, or anything at all for herself. "I need my sister to recover," she said simply, tying the thread gently around the sick girl's wrist.
+
+By morning, the fever had broken completely, and the girl sat up, weak but smiling, asking for breakfast.
+
+Mira's stepmother, who had sat vigil all night fearing the worst, found Mira afterward and, for the first time in years, actually looked at her properly. "You could have wished for anything," she said quietly. "You chose her."
+
+"She needed it more than I needed anything," Mira said simply.
+
+Something shifted in the household after that night — not all at once, and not perfectly, but genuinely. Mira's stepmother began noticing her, thanking her, including her by the fire in the evenings. The chores didn't disappear, but the coldness slowly did, thread by thread, much like the silver one Mira had given away without a second thought.`
+  },
+  {
+    id:"mermaid-who-collected-storms", age:"10-11", category:"fairytale", character:"sea", tag:"original",
+    title:"The Mermaid Who Collected Storms", accent:"#e0479a", minutes:9, rating:4.7,
+    popular:false, isNew:true, difficulty:"Growing",
+    blurb:"A young mermaid gathers bottled storms as a hobby, until one enormous storm she's captured begins to grow far too large to contain.",
+    text:`Marisol had collected small bottled storms since she was a tiny mer-child — miniature swirling clouds no bigger than a fist, captured in glass jars and displayed proudly on the coral shelves of her underwater home, crackling with tiny bolts of harmless lightning.
+
+It was a respectable hobby among merfolk, mostly harmless, mostly decorative — until the day Marisol, growing bolder, decided to capture something far larger than she'd ever attempted before: a full, real storm, raging on the surface above.
+
+She swam up during the tempest's fiercest hour and, using every trick she'd learned over years of smaller captures, managed to draw the entire storm down into an enormous glass vessel, sealing it tight with practiced hands.
+
+It was, without question, her greatest triumph — a genuine storm, thunder and all, swirling magnificently in her collection.
+
+But over the following days, Marisol noticed something troubling: the storm wasn't shrinking the way her smaller captures always had. If anything, it seemed to be growing, the glass straining audibly against pressure that hadn't been there before.
+
+She sought out the eldest sea-witch in the reef, worry finally outweighing pride. "I've caught something too big," she admitted. "I don't know how to let it go safely."
+
+The old witch examined the straining bottle with grave concern. "A storm that size isn't meant to be kept, child. Storms serve a purpose on the surface — clearing stale air, stirring the sea, bringing rain to lands that need it. Trap one too long, and it doesn't calm. It simply gets angrier, waiting."
+
+"How do I release it without causing harm?" Marisol asked, genuinely frightened now.
+
+"Not all at once," the witch said. "Take it back to where you found it, and open the bottle slowly, giving it room to spread naturally instead of bursting free all at once."
+
+Marisol did exactly that, swimming the enormous bottle back to open water and easing the seal loose bit by careful bit, watching the storm disperse gradually across the surface exactly where it had always belonged, rain falling gently instead of violently, thunder rolling soft instead of furious.
+
+She kept collecting small storms after that, the harmless decorative kind — but she never again tried to hold something that size, having learned, rather thoroughly, that some things were only ever meant to be witnessed, not owned.`
+  },
+  {
+    id:"last-dragon-of-embervale", age:"12-13", category:"fairytale", character:"heroes", tag:"original",
+    title:"The Last Dragon of Embervale", accent:"#e0479a", minutes:12, rating:4.9,
+    popular:true, isNew:true, difficulty:"Confident",
+    blurb:"A young knight sent to slay the last dragon in the kingdom discovers the dragon has been quietly protecting the very village that fears her.",
+    text:`Sir Aldous was seventeen, freshly knighted, and utterly determined to slay the last dragon of Embervale — a task every knight before him had attempted and failed, though notably, none had ever actually died trying, a detail Aldous found strange but didn't dwell on.
+
+He found the dragon's mountain lair after three days of climbing, and rather than the roaring, fire-breathing monster he expected, he found an enormous, ancient creature curled quietly around something small and glowing at the center of her cave.
+
+"You've come to kill me," the dragon said calmly, not moving, "same as all the others. Go ahead, if you must. I'm rather tired of running from young men with swords."
+
+Aldous, sword raised, hesitated. "You're not even defending yourself."
+
+"Would it matter?" the dragon asked. "You'd only return with more knights, more swords, more certainty that I'm the monster this story requires."
+
+"Are you not?" Aldous asked, genuinely uncertain now.
+
+The dragon shifted, revealing what she'd been curled protectively around: not treasure, as every legend insisted, but a spring — the very spring, Aldous realized with a jolt, that fed Embervale's entire river, the water source the whole valley depended on for every crop, every well, every drop of drinking water in the kingdom.
+
+"There used to be dozens of us," the dragon said quietly. "Guardians, each tending a spring, a grove, a mountain pass — keeping the world's quiet, essential places safe and unspoiled. One by one, we were hunted down as monsters by knights who never bothered asking what we actually did all day. I'm the last. When I'm gone, this spring goes unprotected, and I don't know what becomes of it, or of Embervale below."
+
+Aldous lowered his sword slowly, sword suddenly feeling absurd in his hand. "Nobody in the village knows this?"
+
+"Nobody's ever asked," the dragon said simply. "They only know the stories about knights who tried and failed to kill me. It's a far more exciting tale than the true one."
+
+Aldous returned to Embervale not with a dragon's head, but with her actual story, and though many villagers remained skeptical, enough listened — enough came to see the spring for themselves, enough began, slowly, to understand what they'd nearly lost through a story nobody had questioned.
+
+The dragon lived another two hundred years after that, tending her spring in relative peace, visited occasionally by a knight who came, not to fight, but simply to talk — and Embervale's river ran clear and full the whole while, protected exactly as it always had been, by the very creature everyone had once wanted dead.`
+  },
+  {
+    id:"seamstress-of-starlight", age:"4-5", category:"fairytale", character:"witches", tag:"original",
+    title:"The Seamstress of Starlight", accent:"#e0479a", minutes:4, rating:4.9,
+    popular:true, isNew:true, difficulty:"Easy",
+    blurb:"A gentle witch stitches new stars for the night sky, and one evening lets a curious little girl help sew her very first one.",
+    text:`High in a tower that touched the clouds lived Nan Cassiopeia, a kind old witch whose one job was stitching new stars for the night sky, one careful silver thread at a time.
+
+Every evening, a little girl named Pearl watched from her window as tiny new lights blinked on, one by one, high above the rooftops.
+
+One night, Pearl's window happened to be open when Nan Cassiopeia floated by on her star-stitching broom. "Would you like to help?" the old witch asked, smiling down at her.
+
+Pearl, delighted, climbed aboard, and together they flew up into the soft dark sky, Nan Cassiopeia's basket overflowing with spools of glimmering silver thread.
+
+"How do you make a star?" Pearl asked, watching the old witch's needle flash and glimmer.
+
+"You stitch a wish into the thread," Nan Cassiopeia explained, "and a bit of light to hold it together. Would you like to try your own?"
+
+Pearl nodded eagerly, took the tiny needle in her small hands, and thought very hard about her wish. "I wish," she said softly, "for everyone down there to always have someone who loves them."
+
+She stitched clumsily, her small star coming out slightly lopsided, dimmer than the others around it — but when she finally tied it off and let it go, it floated upward and settled into the sky, twinkling proudly despite its wobbly shape.
+
+"It's not as pretty as yours," Pearl said, a little disappointed.
+
+"Nonsense," said Nan Cassiopeia warmly. "Look closer." Pearl squinted up and saw that her small, lopsided star twinkled in a gentle, unusual rhythm all its own — softer, warmer, somehow kinder-looking than the star beside it.
+
+"Every star made with a good wish shines a little differently," the old witch explained. "Yours will twinkle exactly like that, every night, for as long as the sky remembers it — a little reminder, right up there, of what you wished for everyone below."
+
+Pearl flew home glowing with pride, and every night after that, she'd search the sky until she found her own small, wobbly, softly twinkling star, exactly where she'd left it, still quietly wishing everyone well.`
   }
 ];
 
